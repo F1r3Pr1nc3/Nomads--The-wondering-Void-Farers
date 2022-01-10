@@ -1,0 +1,60 @@
+
+voidfarer_starbase_influence_cost_0 = {
+	country_starbase_influence_cost_mult = -1000
+}
+
+voidfarer_starbase_influence_cost_1 = {
+	country_starbase_influence_cost_mult = 0.25
+}
+
+voidfarer_starbase_influence_cost_2 = {
+	country_starbase_influence_cost_mult = 0.50
+}
+
+voidfarer_starbase_influence_cost_3 = {
+	country_starbase_influence_cost_mult = 0.75
+}
+
+voidfarer_starbase_influence_cost_4 = {
+	country_starbase_influence_cost_mult = 1.00
+}
+
+voidfarer_starbase_influence_cost_5 = {
+	country_starbase_influence_cost_mult = 1.25
+}
+
+voidfarer_starbase_influence_cost_6 = {
+	country_starbase_influence_cost_mult = 1.50
+}
+
+voidfarer_starbase_influence_cost_7 = {
+	country_starbase_influence_cost_mult = 1.75
+}
+
+voidfarer_starbase_influence_cost_8 = {
+	country_starbase_influence_cost_mult = 2.00
+}
+
+
+### Job Modifiers
+add_replicators = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 2
+	job_replicator_add = 2
+}
+
+### Habitat
+designed_habitation = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+	planet_max_buildings_add = 15
+}
+# Shroud
+cult_of_the_shroud_undivided = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_shroud_eaten_population.dds"
+	# icon = "gfx/interface/icons/modifiers/mod_country_ascension_perks_add.dds"
+	icon_frame = 1
+	country_admin_cap_add = 15
+	country_command_limit_add = 15
+	country_community_gdf_naval_capacity = 15
+}

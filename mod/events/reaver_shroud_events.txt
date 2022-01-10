@@ -1,0 +1,230 @@
+namespace = reaver_shroud
+# Reaver Shroud # 1 (initial)
+country_event = {
+	id = reaver_shroud.1
+	title = reaver_shroud.1.name
+	desc = reaver_shroud.1a.desc
+	desc = reaver_shroud.1b.desc
+	desc = reaver_shroud.1c.desc
+	desc = reaver_shroud.1d.desc
+	desc = reaver_shroud.1e.desc
+	desc = reaver_shroud.1f.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+	picture_event_data = {
+		portrait = shroud1
+		room = shroud_room
+	}
+	trigger = {
+		OR = {
+			from = { is_country_type = vf_reaver_shroud }
+			has_country_flag = reaver_shroud_intro
+		}
+		NOT = { has_country_flag = reaver_shroud_diplomacy_engaged }
+	}
+	immediate = {
+		set_country_flag = reaver_shroud_diplomacy_engaged
+		from = { save_event_target_as = reaver_shroud }
+	}
+	after = {
+		hidden_effect = { remove_country_flag = reaver_shroud_diplomacy_engaged }
+	}
+	option = {
+		# Minerals
+		name = reaver_shroud.105.a
+		trigger = { is_homicidal = no }
+		hidden_effect = {
+			country_event = { id = reaver_shroud.34 }
+		}
+	}
+	option = {
+		name = reaver_shroud.105.d
+		trigger = { is_homicidal = no }
+		default_hide_option = yes
+		hidden_effect = { remove_country_flag = reaver_shroud_diplomacy_engaged }
+	}
+}
+
+# reaver_shroud_contacted
+country_event = {
+	id = reaver_shroud.2
+	title = reaver_shroud.2.name
+	desc = reaver_shroud.2.desc
+	is_triggered_only = yes
+	immediate = {
+		random_country = {
+			limit = { is_country_type = vf_reaver_shroud }
+			save_event_target_as = reaver_shroud_country
+		}
+	}
+	option = {
+		name = "reaver_shroud.2.a"
+		establish_communications_no_message = event_target:reaver_shroud_country
+		hidden_effect = {
+			set_country_flag = reaver_shroud_intro
+			country_event = { id = reaver_shroud.1 }
+		}
+	}
+}
+
+# # The Reaver country create
+# country_event = {
+# 	id = reaver_shroud.10
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	immediate = {
+# 		create_country = {
+# 			name = "NAME_reaver_shroud"
+# 			type = vf_reaver_shroud
+# 			ignore_initial_colony_error = yes
+# 			flag = {
+# 				icon = { category = "human" file = "flag_human_1.dds" }
+# 				background= { category = "backgrounds" file = "circle.dds" }
+# 				colors={ "dark_purple" "red" "null" "null" }
+# 			}
+# 			effect = {
+# 				save_event_target_as = reaver_shroud_country
+# 			}
+# 		}
+# 	}
+# }
+# The Reaver Seance reaver_shroud_contacted
+country_event = {
+	id = reaver_shroud.11
+	title = reaver_shroud.11.name
+	desc = reaver_shroud.11.desc
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = { exists = event_target:reaver_shroud_country }
+			}
+			create_country = {
+				name = "NAME_reaver_shroud"
+				type = vf_reaver_shroud
+				ignore_initial_colony_error = yes
+				flag = {
+					icon = { category = "special" file = "the_shroud.dds" }
+					background = { category = "backgrounds" file = "stripes.dds" }
+					colors = { "dark_purple" "red" "null" "null" }
+				}
+				effect = { save_global_event_target_as = reaver_shroud_country }
+			}
+		}
+	}
+	option = {
+		name = "REAVER_SHROUD_PROJECT"
+		hidden_effect = { save_event_target_as = reaver_shroud_owner }
+		capital_scope = {
+			enable_special_project = {
+				name = "REAVER_SHROUD_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+############################
+#
+# Reaver Shroud events
+#
+############################
+# Reaver Shroud ship gain
+country_event = {
+	id = reaver_shroud.34
+	title = "reaver_shroud_ship_gain_header"
+	desc = {
+		text = reaver_shroud.34.1.desc
+		trigger = {
+			exists = event_target:reaver_shroud_country
+			event_target:reaver_shroud_country = { is_country_type = vf_reaver_shroud }
+		}
+	}
+	diplomatic = yes
+	picture_event_data = {
+		portrait = shroud1
+		room = shroud_room
+	}
+	is_triggered_only = yes
+	immediate = { set_country_flag = reaver_shroud_diplomacy_engaged }
+	after = {
+		hidden_effect = { remove_country_flag = reaver_shroud_diplomacy_engaged }
+	}
+	# Hire Reaver Shroud fleet
+	option = {
+		name = reaver_shroud_ship_hire.34.3.c
+		trigger = {
+			exists = event_target:reaver_shroud_country
+			event_target:reaver_shroud_country = { is_country_type = vf_reaver_shroud }
+		}
+		allow = {
+			has_resource = { type = energy amount < @smallmercallow }
+		}
+		add_resource = { energy = @smallmerccost }
+		custom_tooltip = reaver_shroud_small_hire
+		hidden_effect = {
+			create_shroud_admiral = yes
+			create_fleet = {
+				name = "Shrouded Fleet"
+				effect = {
+					set_owner = root
+					save_event_target_as = summoned_shroud_fleet
+					create_reaver_shroud_fleet_small = yes
+					assign_leader = last_created_leader
+					set_location = root.capital_scope
+					set_fleet_flag = twilight_congregation
+				}
+				settings = {
+					can_upgrade = no
+					can_disband = no
+					can_change_composition = no
+					can_change_leader = no
+					uses_naval_capacity = no
+				}
+			}
+		}
+	}
+	option = {
+		name = marauder.34.d
+		hidden_effect = {
+			country_event = { id = reaver_shroud.1 }
+		}
+	}
+	option = {
+		name = marauder.34.e
+		default_hide_option = yes
+	}
+}
+
+############################
+#
+# Reaver offerings event
+#
+############################
+# Reaver offerings Count (HIDDEN)
+country_event = {
+	id = reaver_shroud.217
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = void_farer
+		exists = from
+	}
+	immediate = {
+		if = {
+			limit = {
+				from = { has_event_chain = "shrouded_reaver_offerings" }
+			}
+			from = {
+				add_event_chain_counter = {
+					event_chain = "shrouded_reaver_offerings"
+					counter = "offered_souls"
+					amount = 1
+				}
+			}
+		}
+	}
+}

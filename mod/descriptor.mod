@@ -1,0 +1,15 @@
+version="3.2.2.0"
+tags={
+	"Spaceships"
+	"Overhaul"
+	"Marauders"
+	"Nomads"
+	"Nomadic"
+	"Reavers"
+	"Scavengers"
+	"Void Farers"
+}
+picture="thumbnail.png"
+name="Nomads: The wondering Void Farers [3.2]"
+supported_version="3.2.*"
+remote_file_id="2714200698"

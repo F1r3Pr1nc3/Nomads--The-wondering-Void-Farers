@@ -1,0 +1,124 @@
+# possible section models:
+# SHIPYARD_STARBASE_SECTION
+# REFINERY_STARBASE_SECTION
+# SCIENCE_STARBASE_SECTION
+# HANGAR_STARBASE_SECTION
+# ASSEMBLYYARD_STARBASE_SECTION
+#
+nomad_trade_hub = {
+	icon = "GFX_solar_panel_network"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 180
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_void_farer_engineering }
+	}
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 50 }
+		produces = { energy = 3 }
+		produces = {
+			trigger = { has_starbase_building = offworld_trading_company }
+			energy = 2
+		}
+		produces = {
+			trigger = { has_starbase_building = nomad_trading_company }
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_power_plant_2 }
+			}
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_power_plant_3 }
+			}
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_power_plant_4 }
+			}
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_civic = civic_corporate_dominion }
+			}
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				# owner = { has_active_tradition = tr_prosperity_trans_stellar_corporations }
+				owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+			}
+			energy = 1
+		}
+	}
+	ai_build_at_chokepoint = no
+	ai_weight = { weight = 15 }
+}
+
+nomad_production_hub = {
+	icon = "GFX_spaceport_nebula_refinery"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 180
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_void_farer_engineering }
+	}
+	resources = {
+		category = starbase_modules
+		cost = { alloys = 50 }
+		produces = { minerals = 3 }
+		upkeep = { energy = 2 }
+		produces = {
+			trigger = { has_starbase_building = offworld_trading_company }
+			minerals = 2
+		}
+		produces = {
+			trigger = { has_starbase_building = nomad_trading_company }
+			minerals = 2
+		}
+		produces = {
+			trigger = { has_starbase_building = nebula_refinery }
+			minerals = 3
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_mining_2 }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_technology = tech_mining_3 }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				# owner = { has_technology = tech_mining_4 }
+				owner = { has_technology = tech_mineral_purification_2 }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_civic = civic_corporate_dominion }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				# owner = { has_active_tradition = tr_prosperity_trans_stellar_corporations }
+				owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+			}
+			minerals = 1
+		}
+	}
+	ai_build_at_chokepoint = no
+	ai_weight = { weight = 15 }
+}

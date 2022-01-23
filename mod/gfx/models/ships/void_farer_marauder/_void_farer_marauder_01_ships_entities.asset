@@ -170,7 +170,7 @@ entity = {
 entity = {
 	name = "vf_marauder_galleon_hull_entity"
 	pdxmesh = "pirate_01_galleon_mesh"
-	scale = 1.0
+	scale = 1.0 # 2.7
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle"

@@ -238,6 +238,12 @@ entity = {
 	name = "vf_scavenger_battleship_entity"
 	pdxmesh = "eventship_09_mesh"
 
+	locator = { name = "root" }
+	locator = { name = "medium_gun_01_l" position = { 0.8 0 0 } }
+	locator = { name = "medium_gun_01_r" position = { -0.8 0 0 } }
+	locator = { name = "medium_gun_02_l" position = { 1 1 0 } }
+	locator = { name = "medium_gun_02_r" position = { -1 1 0 } }
+
 	default_state = "idle"
 	state = { name = "idle"	 animation = "idle" animation_blend_time = 4
 		start_event = { trigger_once = yes sound = { soundeffect = "ancient_drone_idle" } }

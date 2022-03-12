@@ -20,7 +20,7 @@ country_event = {
 		has_origin = origin_void_marauders
 		has_ascension_perk = ap_khan
 		NOR = {
-			is_country_type = default
+			merg_is_default_empire = yes
 			has_country_flag = void_nomads
 			has_country_flag = void_reavers
 			any_owned_leader = { has_trait = leader_trait_great_khan }
@@ -242,8 +242,8 @@ country_event = {
 # Khan Returns (on_ship_destroyed_victim)
 # This = owner of fleet 1 (destroyed)
 # From = owner of fleet 2 (combatant)
-# FromFrom = fleet 1
-# FromFromFrom = fleet 2
+# Fromfrom = fleet 1
+# Fromfromfrom = fleet 2
 country_event = {
 	id = new_khan.20
 	hide_window = yes
@@ -326,7 +326,7 @@ country_event = {
 }
 
 # New Khan
-# The canidate for New Khan
+# The canidate for New Khan.
 country_event = {
 	id = new_khan.30
 	title = "new_khan.30.name"
@@ -342,13 +342,11 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		AND = {
-			is_country_type = void_farer
-			has_origin = origin_void_marauders
-			has_ascension_perk = ap_khan
-		}
+		is_country_type = void_farer
+		has_origin = origin_void_marauders
+		has_ascension_perk = ap_khan
 		NOR = {
-			is_country_type = default
+			merg_is_default_empire = yes
 			has_country_flag = void_nomads
 			has_country_flag = void_reavers
 			any_owned_leader = { has_trait = leader_trait_great_khan }

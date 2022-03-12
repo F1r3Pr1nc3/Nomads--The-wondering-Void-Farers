@@ -1,5 +1,5 @@
 #############################
-### Basic Ark Ship    ###
+### Basic Ark Ship	###
 #############################
 
 # Starting Ark
@@ -265,7 +265,6 @@ ship_design = {
 	required_component="TITAN_DARK_MATTER_REACTOR"
 	required_component="TITAN_SHIP_THRUSTER_5"
 
-
 	allow_buildable_trigger = is_void_farer
 }
 
@@ -360,7 +359,6 @@ ship_design = {
 	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
 	required_component="BATTLESHIP_SHIP_THRUSTER_5"
 
-
 	allow_buildable_trigger = is_void_farer
 }
 
@@ -442,7 +440,6 @@ ship_design = {
 	required_component="COMBAT_COMPUTER_PICKET_SAPIENT"
 	required_component="DESTROYER_DARK_MATTER_REACTOR"
 	required_component="DESTROYER_SHIP_THRUSTER_5"
-
 
 	allow_buildable_trigger = is_void_farer
 }
@@ -528,7 +525,6 @@ ship_design = {
 	required_component="COMBAT_COMPUTER_PLATFORM_SAPIENT"
 	required_component="PLATFORM_DARK_MATTER_REACTOR"
 
-
 	allow_buildable_trigger = is_void_farer
 }
 
@@ -553,7 +549,6 @@ ship_design = {
 	required_component="SHIP_THRUSTER_5"
 	required_component="SENSOR_4"
 	required_component="CORVETTE_DARK_MATTER_REACTOR"
-
 
 	allow_buildable_trigger = is_void_farer
 }

@@ -1,4 +1,4 @@
-# see README.txt for example
+# See README.txt for example
 
 habitat_0 = {
 	entity = ""
@@ -9,10 +9,10 @@ habitat_0 = {
 	build_time = 1800
 
 	resources = {
-		category = megastructures
+		category = megastructures_habitat
 		cost = {
-			alloys = 3000
-			influence = 200
+			alloys = 1500
+			influence = 150
 		}
 	}
 	construction_blocks_others = no
@@ -39,7 +39,7 @@ habitat_0 = {
 		planet_possible = {
 			custom_tooltip = {
 				fail_text = "requires_surveyed_planet"
-				is_surveyed = {			# prevent leaking habitability information
+				is_surveyed = {			# Prevent leaking habitability information
 					who = prev.from
 					status = yes
 				}
@@ -54,9 +54,7 @@ habitat_0 = {
 				NOR = {
 					has_planet_flag = megastructure
 					has_planet_flag = has_megastructure
-					solar_system = {
-						has_star_flag = ring_world_built
-					}
+					solar_system = { has_star_flag = ring_world_built }
 					is_planet_class = pc_ringworld_habitable
 					is_planet_class = pc_ringworld_habitable_damaged
 					is_planet_class = pc_ringworld_tech
@@ -66,12 +64,12 @@ habitat_0 = {
 					is_planet_class = pc_habitat
 				}
 			}
-			custom_tooltip = {
-				fail_text = "requires_no_orbital_station"
-				has_orbital_station = no
-			}
+			# custom_tooltip = {
+			# 	fail_text = "requires_no_orbital_station"
+			# 	has_orbital_station = no
+			# }
 
- 			# balance for habitats
+ 			# Balance for habitats
 			custom_tooltip = {
 				fail_text = "requires_not_minor_planetary_body"
 				NOR = {
@@ -83,17 +81,49 @@ habitat_0 = {
 				fail_text = "requires_not_star"
 				is_star = no
 			}
-		} # use these for all non-star megastructures
+			if = {
+				limit = {
+					from = { is_ai = yes }
+				}
+				or = {
+					has_deposit_for = shipclass_mining_station
+	 				has_deposit_for = shipclass_research_station
+				}
+			}
+		} # Use these for all non-star megastructures
 	}
 
 	# root = system
 	# from = country
 	ai_weight = {
-		factor = 10
+		factor = 5
 
 		modifier = {
 			factor = 0
 			starbase = { NOT = { has_starbase_size >= starbase_starport } }
+		}
+
+		modifier = {
+			factor = 0
+			any_system_planet = {
+				is_planet_class = pc_habitat
+				is_colony = no
+			}
+		}
+
+		modifier = {
+			factor = 3
+			solar_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
+		}
+		modifier = {
+			factor = 2
+			any_neighbor_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
 		}
 
 		modifier = {
@@ -115,7 +145,7 @@ habitat_0 = {
 			orbit_location = yes
 			orbit_angle_offset = 45
 			orbit_distance_offset = 9.899
-			size = 6
+			size = 4
 			has_ring = no
 
 			init_effect = {
@@ -130,20 +160,14 @@ habitat_0 = {
 				}
 				set_all_comms_surveyed = yes
 				clear_blockers = yes
-				add_modifier = {
-					modifier = designed_habitation
-					days = -1
-				}
-				if = {
-					limit = {
-						from = { has_ascension_perk = ap_voidborn }
-						NOT = { has_modifier = master_builders_habitats }
-					}
-					add_modifier = {
-						modifier = master_builders_habitats
-						days = -1
-					}
-				}
+				add_modifier = { modifier = designed_habitation }
+				# if = {
+				# 	limit = {
+				# 		from = { has_ascension_perk = ap_voidborn }
+				# 		NOT = { has_modifier = master_builders_habitats }
+				# 	}
+				# 	add_modifier = { modifier = master_builders_habitats }
+				# }
 				set_planet_flag = megastructure
 				set_planet_flag = habitat
 
@@ -310,18 +334,21 @@ habitat_0 = {
 						fromfrom.planet = { has_deposit = d_zro_deposit_1 }
 					}
 					add_deposit = d_hab_zro_1
+					set_planet_flag = research_habitat
 				}
 				if = {
 					limit = {
 						fromfrom.planet = { has_deposit = d_zro_deposit_2 }
 					}
 					add_deposit = d_hab_zro_2
+					set_planet_flag = research_habitat
 				}
 				if = {
 					limit = {
 						fromfrom.planet = { has_deposit = d_zro_deposit_3 }
 					}
 					add_deposit = d_hab_zro_3
+					set_planet_flag = research_habitat
 				}
 
 				if = {
@@ -329,18 +356,21 @@ habitat_0 = {
 						fromfrom.planet = { has_deposit = d_dark_matter_deposit_1 }
 					}
 					add_deposit = d_hab_dark_matter_1
+					set_planet_flag = research_habitat
 				}
 				if = {
 					limit = {
 						fromfrom.planet = { has_deposit = d_dark_matter_deposit_2 }
 					}
 					add_deposit = d_hab_dark_matter_2
+					set_planet_flag = research_habitat
 				}
 				if = {
 					limit = {
 						fromfrom.planet = { has_deposit = d_dark_matter_deposit_3 }
 					}
 					add_deposit = d_hab_dark_matter_3
+					set_planet_flag = research_habitat
 				}
 
 				if = {
@@ -348,6 +378,7 @@ habitat_0 = {
 						fromfrom.planet = { has_deposit = d_living_metal_deposit }
 					}
 					add_deposit = d_hab_living_metal_1
+					set_planet_flag = research_habitat
 				}
 
 				if = {
@@ -385,10 +416,23 @@ habitat_0 = {
 					add_deposit = d_hab_alloy_5
 					set_planet_flag = mining_habitat
 				}
+				if = {
+					limit = {
+						fromfrom.planet = { has_deposit = d_nanites_deposit }
+					}
+					add_deposit = d_hab_nanites_1
+					set_planet_flag = research_habitat
+				}
 			}
 		}
 		fromfrom.planet = {
 			set_planet_flag = has_megastructure
+			save_event_target_as = habitat_planet
+
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = { dismantle = yes }
+			}
 		}
 		remove_megastructure = fromfrom
 		from = { country_event = { id = utopia.61 } }

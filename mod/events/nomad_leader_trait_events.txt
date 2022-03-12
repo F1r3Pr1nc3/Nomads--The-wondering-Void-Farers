@@ -19,7 +19,7 @@ namespace = marauder_leader_trait
 # cloud
 #######################
 
-# New Leaders Get Erudite Trait
+# New Leaders Get Erudite Trait.
 country_event = {
 	id = marauder_leader_trait.1
 	is_triggered_only = yes

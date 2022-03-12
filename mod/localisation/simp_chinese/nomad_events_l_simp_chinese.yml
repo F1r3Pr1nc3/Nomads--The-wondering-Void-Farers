@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  UNKNOWN_HEIRS_ARCHEOLOGY_1: "Antediluvian Fleet Battle"
- UNKNOWN_HEIRS_ARCHEOLOGY_2: "Dead Colony"
+ UNKNOWN_HEIRS_ARCHEOLOGY_2: "$precursor.1525.name$"
  UNKNOWN_HEIRS_ARCHEOLOGY_3: "Broken Fortress"
  cryptic_heirdom.01.desc: "Once again our systems have been bombarded with technological templates of an even higher level of technology almost more than twice the effectiveness of the Enigmatic Patterns. We can start the research into these technologies at your orders but even then we won't have a complete understanding of how these wonders work. It would be safe to refer to these technologies as the Cryptic Pattern."
  cryptic_heirdom.01.enigmatic_heirs.a: "Our Adolescents if almost over it seems."
@@ -30,7 +30,7 @@
  enigmatic_precursors.2006.desc: ""
  enigmatic_precursors.2006.name: "Antediluvian Fleet Battle"
  enigmatic_precursors.2010.desc: "We have found to what we believe to be a colony of these Heirs an expedition may give us an insight to how they lived."
- enigmatic_precursors.2010.name: "Dead Colony"
+ enigmatic_precursors.2010.name: "$precursor.1525.name$"
  enigmatic_precursors.2011.desc: "Under most of the ruble and melted slag we found a faulty datacore which strangely we were able to interface with. Though most of the data is corrupted and faulty we were able to get some images and video feeds which showed something disturbing to say the least. Though oddly we weren't able to get well...any images of the heirs as a race but the feeds showed use the colony under attack by even stranger ships and I dare say...monsters and at times it seems that events were playing out differently at the same time… .We could chalk up those events to the faulty datacore but if they were happening at the same time well...what kind of war did these Heirs engage in?"
  enigmatic_precursors.2015.desc: "We have found a space station of a near megastructure level it is massive and seems to have all sorts of gun ports and weapon batteries all over the structure a more in-depth study is needed for more clues."
  enigmatic_precursors.2015.name: "Broken Fortress"

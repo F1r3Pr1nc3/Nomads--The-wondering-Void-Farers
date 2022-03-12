@@ -1,4 +1,4 @@
-# possible section models:
+# Possible section models:
 # SHIPYARD_STARBASE_SECTION
 # REFINERY_STARBASE_SECTION
 # SCIENCE_STARBASE_SECTION

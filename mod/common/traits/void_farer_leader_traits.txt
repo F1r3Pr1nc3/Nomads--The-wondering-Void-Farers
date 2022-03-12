@@ -1,5 +1,5 @@
 
-# All leaders will have a common trait-point value set in defines, which they use to grab traits
+# All leaders will have a common trait-point value set in defines, which they use to grab traits.
 
 # leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
 # initial = no - if set to no, this trait can not be granted to leaders when they are generated
@@ -13,7 +13,7 @@
 ###########
 # Balance #
 ###########
-# effects on research traits
+# Effects on research traits
 @categorybonus = 0.05
 
 ####################
@@ -22,7 +22,6 @@
 
 leader_trait_expertise_void_engineer = {
 	cost = 1
-	modification = no
 	modifier = {
 		category_materials_research_speed_mult = @categorybonus
 		category_propulsion_research_speed_mult = @categorybonus
@@ -44,7 +43,6 @@ leader_trait_expertise_void_engineer = {
 
 leader_trait_expertise_void_governor = {
 	cost = 1
-	modification = no
 	modifier = {
 		starbase_shipyard_build_speed_mult = 0.10
 		starbase_shipyard_build_cost_mult = -0.05
@@ -65,7 +63,6 @@ leader_trait_expertise_void_governor = {
 
 leader_trait_expertise_void_ruler = {
 	cost = 1
-	modification = no
 	modifier = {
 		ships_upkeep_mult = -0.05
 		country_ship_upgrade_cost_mult = -0.1

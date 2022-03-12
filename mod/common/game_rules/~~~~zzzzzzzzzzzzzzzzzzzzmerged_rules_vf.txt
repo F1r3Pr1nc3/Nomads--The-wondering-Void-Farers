@@ -1,0 +1,344 @@
+# Extended Merger of Rules with Nomads: The wondering Void Farers
+# Tooltips will be generated from these rules when they fail. Use of custom_tooltip is recommended.
+# There are still multiple hard-coded rules that apply in addition to these.
+# If rules here evaluate to true, there might still be other rules that make the action unavailable.
+# If a rule here evaluates to false the action will become unavailable.
+
+# Root = taker country
+# This = giver country
+can_get_claim_from_lost_system = {
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_NOT_VALID_EMPIRE
+		merg_is_standard_empire = yes
+		root = {
+			merg_is_standard_empire = yes
+		}
+	}
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_DEVOURING_SWARM
+		NOT = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_ASSIMILATOR
+		NOT = { has_valid_civic = civic_machine_assimilator }
+	}
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_PURIFIERS
+		NAND = {
+			has_valid_civic = civic_fanatic_purifiers
+			NOT = {	is_same_species = root }
+		}
+	}
+	custom_tooltip = {
+		fail_text = CANNOT_ADD_CLAIM_EXTERMINATOR
+		NAND = {
+			has_valid_civic = civic_machine_terminator
+			NOR = {
+				is_same_species = root
+				has_country_flag = synthetic_empire
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+# Root = country
+# This = pop
+should_abduct_pop = {
+	planet = {
+		exists = owner
+		owner = { is_hostile = root }
+	}
+}
+
+# this = country
+can_spawn_occupation_armies = {
+	merg_is_standard_empire = yes
+}
+
+# This = country
+can_build_branch_offices = {
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_MEGACORP
+		OR = {
+			is_megacorp = yes
+			# Warship Girls R And MIST Species
+			AND = {
+				has_authority = auth_shenhai
+				OR = {
+					has_country_flag = pantsu_shop_origin
+					has_valid_civic = civic_sh_criminal_syndicate
+				}
+			}
+			# Azur Lane Stellaris DLC
+			has_authority = auth_azur_lane_0
+			has_authority = auth_azur_lane_1
+			has_authority = auth_azur_lane_2
+			has_authority = auth_azur_lane_K
+			# Human Fallen Empires
+			is_country_type = hfe_pirate
+			# More Corporate Authorities
+			has_valid_civic = civic_galactic_sovereign_megacorp
+			# Arknights Near Future
+			has_valid_civic = civic_business_union
+			# Girls Frontline
+			has_civic = civic_gf_GK
+			# Nomads
+			is_country_type = void_farer
+		}
+	}
+}
+
+# This = planet
+# Root = country
+# This = planet
+# Root = country
+can_build_branch_office_on_planet = {
+	custom_tooltip = {
+		fail_text = requires_recipient_not_fanatic_purifiers
+		exists = owner
+		owner = {
+			OR = {
+				is_same_species = root
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_NOT_COMMERCIAL_PACT
+		exists = owner
+		OR = {
+			root = {
+				OR = {
+					is_criminal_syndicate = yes
+					# Azur Lane Stellaris DLC
+					has_authority = auth_azur_lane_1
+					# Nomads
+					is_void_ancient_drones= yes
+					# is_machine_scavengers = yes ?
+				}
+			}
+			owner = { has_commercial_pact = root }
+			owner = { is_in_federation_with = root }
+			# Expanded Traits, Civics, Pops, and More
+			AND = {
+				has_expanded_pops = yes
+				owner = { has_country_flag = cb_markets_opened@root }
+			}
+			# Warship Girls R And MIST Species
+			AND = {
+				owner = {
+					has_country_flag = lose_wg_shop_war
+				}
+				root = {
+					OR = {
+						has_country_flag = pantsu_shop_origin
+						has_valid_civic = civic_sh_criminal_syndicate
+					}
+				}
+			}
+			# Azur Lane Stellaris DLC
+			owner = {
+				AND = {
+					OR = {
+						has_authority = auth_azur_lane_2
+						has_authority = auth_azur_lane_0
+						has_authority = auth_azur_lane_K
+					}
+					is_same_value = root
+				}
+			}
+			# Human Fallen Empires
+			root = {
+				is_country_type = hfe_pirate
+				is_forced_friendly = prev.owner
+			}
+			# Vanilla
+			# allow branch offices in subsidiaries and vice versa
+			root = {
+				is_subject = yes
+				OR = {
+					is_subject_type = subsidiary
+					# Reworked Advanced Ascension
+					is_subject_type = AAR_SBJ_subsidiary
+				}
+				overlord = { is_same_value = prevprev.owner }
+			}
+			owner = {
+				is_subject = yes
+				OR = {
+					is_subject_type = subsidiary
+					# Reworked Advanced Ascension
+					is_subject_type = AAR_SBJ_subsidiary
+					# Warship Girls R And MIST Species
+					overlord = { has_authority = auth_warshipgirls }
+				}
+				overlord = { is_same_value = root }
+			}
+			AND = {
+				root = { has_valid_civic = civic_galactic_sovereign_megacorp }
+				owner = { is_galactic_community_member = yes }
+			}
+			AND = {
+				root = { has_modifier = imperial_charter }
+				owner = { is_galactic_community_member = yes }
+			}
+			# Vassals Expanded and Reworked
+			# allow branch offices in all subjects and vice versa
+			AND = {
+				has_vassals_expanded = yes
+				OR = {
+					root = {
+						is_subject = yes
+						overlord = { is_same_value = prevprev.owner }
+					}
+					owner = {
+						is_subject = yes
+						overlord = { is_same_value = root }
+					}
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_CRIMINAL_HERITAGE_HAS_TRUCE
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = no }
+			owner = {
+				NOR = {
+					has_truce = root
+					is_at_war_with = root
+				}
+			}
+		}
+		# Azur Lane Stellaris DLC
+		NOT = {
+			root = {
+				has_authority = auth_azur_lane_1
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
+		exists = owner
+		OR = {
+			root = { is_criminal_syndicate = no }
+			AND = {
+				root = {
+					is_criminal_syndicate = yes
+				}
+				NOT = { has_planet_flag = criminal_branch_closed_cooldown_planet@root }
+			}
+		}
+		# Azur Lane Stellaris DLC
+		NOT = {
+			root = {
+				has_authority = auth_azur_lane_1
+			}
+		}
+	}
+	# Warship Girls R And MIST Species
+	custom_tooltip = {
+		fail_text = requires_recipient_not_warshipgirls
+		exists = owner
+		owner = {
+			NOR = {
+				has_authority = auth_warshipgirls
+				AND = {
+					has_authority = auth_shenhai
+					OR = {
+						has_country_flag = pantsu_shop_origin
+						has_valid_civic = civic_sh_criminal_syndicate
+					}
+				}
+			}
+		}
+	}
+	# More Corportate Authorities
+	# principled rogues won't build branch offices in countries they like
+	hidden_trigger = {
+		OR = {
+			NOT = {
+				root = {
+					has_ai_personality = principled_rogues
+					is_ai = yes
+				}
+			}
+			owner = {
+				their_opinion = { who = root value < 0 }
+			}
+			owner = {
+				their_opinion = { who = root value < 20 }
+				NOT = {
+					has_opinion_modifier = { who = root modifier = opinion_new_contact is_reverse = yes }
+				}
+			}
+		}
+	}
+}
+
+# This = country
+# Checked by is_criminal_syndicate trigger
+is_criminal_syndicate_rule = {
+	OR = {
+		is_megacorp = yes
+		has_valid_civic = civic_criminal_heritage
+		# The Empty Vagrant
+		has_valid_civic = civic_ev_criminal_ship
+		# Nomads
+		has_valid_civic = civic_marauders
+		has_valid_civic = civic_reavers
+	}
+}
+
+# This = country
+can_use_galactic_market = {
+	OR = {
+		merg_is_default_empire = yes
+		# ACOT
+		is_country_type = original_empire_active
+		# The Empty Vagrant
+		AND = {
+			is_country_type = default_ev
+			NOT = { has_policy_flag = ev_no_use_galactic_market }
+		}
+	}
+	NOR = {
+		is_homicidal = yes
+		# Underground Realms
+		has_country_flag = dark_side
+	}
+}
+
+# This = country
+can_be_part_of_galactic_community = {
+	custom_tooltip = {
+		fail_text = "community_default_failtext"
+		merg_is_default_empire = yes
+	}
+	custom_tooltip = {
+		fail_text = "community_homicidal_failtext"
+		NOR = {
+			is_homicidal = yes
+			# Underground Realms
+			has_country_flag = dark_side
+			# Nomads
+			has_origin = origin_void_reavers
+		}
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		has_been_declared_crisis = no
+	}
+	custom_tooltip = {
+		fail_text = "community_declared_crisis_failtext"
+		#fail_text = "community_overlord_declared_crisis_failtext"
+		OR = {
+			NOT = { exists = overlord }
+			overlord = { has_been_declared_crisis = no }
+			# Warship Girls R And MIST Species
+			NOT = { has_country_flag = wgfm_quit_community }
+		}
+	}
+}

@@ -1,9 +1,432 @@
-###########################
-# Branch Office Buildings #
-###########################
+### Minerals
+building_vf_astro_mining_bay = {
+	base_buildtime = @b1_time
+	category = resource
+	icon = building_private_shipyards
+	potential = {
+		is_planet_class = pc_habitat
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_miner_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_1
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_2
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_3
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_4
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_5
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_1
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_2
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_3
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_4
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_5
+			}
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			minerals = 5
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+	prerequisites = {
+		tech_void_farer_engineering
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = job_miner_effect_desc
+	}
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 5
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 5
+				}
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+### Energy
+building_vf_power_conduits = {
+	base_buildtime = @b1_time
+	category = resource
+	icon = building_power_plant
+	potential = {
+		is_planet_class = pc_habitat
+	}
+	prerequisites = {
+		"tech_void_farer_engineering"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_country_type = void_farer
+			}
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_1
+			}
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_2
+			}
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_3
+			}
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_4
+			}
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_country_type = void_farer
+				has_technology = tech_space_mining_5
+			}
+		}
+		modifier = {
+			job_technician_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_1
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_2
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_3
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_4
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_country_type = void_farer
+				has_technology = tech_space_mining_5
+			}
+		}
+		modifier = {
+			job_technician_drone_add = 1
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			energy = 5
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = job_miner_effect_desc
+	}
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 5
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value < 5
+				}
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
 ## Scavenger buildings ##
 building_drone_miners = {
-	base_buildtime = 360
+	base_buildtime = @b1_time
 	icon = building_wildcat_miners
 	branch_office_building = yes
 	potential = {
@@ -39,7 +462,7 @@ building_drone_miners = {
 }
 
 building_drone_wrecking_yards = {
-	base_buildtime = 360
+	base_buildtime = @b1_time
 	icon = building_wrecking_yards
 	branch_office_building = yes
 	potential = {
@@ -78,7 +501,7 @@ building_drone_wrecking_yards = {
 }
 
 building_drone_hangers = {
-	base_buildtime = 360
+	base_buildtime = @b1_time
 	branch_office_building = yes
 	potential = {
 		has_branch_office = yes
@@ -117,7 +540,7 @@ building_drone_hangers = {
 }
 
 building_scavenger_generators = {
-	base_buildtime = 480
+	base_buildtime = @b2_time
 	base_cap_amount = 1
 	branch_office_building = yes
 	potential = {
@@ -132,7 +555,7 @@ building_scavenger_generators = {
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
-			minerals = 800
+			minerals = @b3_minerals
 		}
 		produces = {
 			energy = 10
@@ -153,7 +576,7 @@ building_scavenger_generators = {
 }
 
 building_scavenger_research_labs = {
-	base_buildtime = 480
+	base_buildtime = @b2_time
 	base_cap_amount = 1
 	icon = building_illicit_research_labs
 	branch_office_building = yes
@@ -169,7 +592,7 @@ building_scavenger_research_labs = {
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
-			minerals = 800
+			minerals = @b3_minerals
 		}
 		produces = {
 			physics_research = 6

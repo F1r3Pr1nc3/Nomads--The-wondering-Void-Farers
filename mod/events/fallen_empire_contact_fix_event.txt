@@ -14,9 +14,9 @@ country_event = {
 		is_at_war = no
 		any_country = {
 			OR = {
-				is_country_type_with_subjects = yes # is_country_type = default
+				merg_is_default_empire = yes
 				AND = {
-					# if we're both fallen empires, we know of each other
+					# If we're both fallen empires, we know of each other.
 					num_fallen_empires > 1
 					NOT = { is_same_empire = root }
 					is_country_type = fallen_empire
@@ -27,7 +27,7 @@ country_event = {
 				has_communications = root
 			}
 			OR = {
-				is_country_type = fallen_empire # if we're both fallen empires, we know of each other
+				is_country_type = fallen_empire # If we're both fallen empires, we know of each other.
 				AND = {
 					root = { has_ai_personality = fallen_empire_spiritualist }
 					any_owned_planet = { has_modifier = "holy_planet" }
@@ -45,7 +45,7 @@ country_event = {
 						}
 					}
 				}
-				# also contact if we border them
+				# Also contact if we border them.
 				any_system_within_border = {
 					any_neighbor_system = {
 						has_hyperlane_to = prev
@@ -59,7 +59,7 @@ country_event = {
 		random_country = {
 			limit = {
 				OR = {
-					is_country_type_with_subjects = yes # is_country_type = default
+					merg_is_default_empire = yes
 					is_country_type = fallen_empire
 				}
 				NOR = {
@@ -90,9 +90,9 @@ country_event = {
 							}
 						}
 					}
-					# if we're both fallen empires, we know of each other
+					# If we're both fallen empires, we know of each other.
 					is_country_type = fallen_empire
-					# also contact if we border them
+					# Also contact if we border them.
 					any_system_within_border = {
 						any_neighbor_system = {
 							has_hyperlane_to = prev

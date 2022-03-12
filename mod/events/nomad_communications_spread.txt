@@ -15,17 +15,17 @@ country_event = {
 	desc = "nomad_communications_spread.1.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_alien_signal
-	
+
 	trigger = {
 		is_country_type = void_farer
 		NOT = { has_country_flag = starting_event }
 		any_neighbor_country = {
-			is_country_type = default
+			merg_is_default_empire = yes
 			NOT = { is_country = root }
 			has_communications = root
 			any_neighbor_country = {
 				OR = {
-					is_country_type = default
+					merg_is_default_empire = yes
 					is_country_type = fallen_empire
 				}
 				NOT = { is_country = root }
@@ -34,28 +34,28 @@ country_event = {
 			}
 		}
 	}
-	
+
 	immediate = {
 		random_neighbor_country = {
-			limit = {		
-				is_country_type = default
+			limit = {
+				merg_is_default_empire = yes
 				NOT = { is_country = root }
 				has_communications = root
 				any_neighbor_country = {
 					OR = {
-						is_country_type = default
+						merg_is_default_empire = yes
 						is_country_type = fallen_empire
 					}
 					NOT = { is_country = root }
 					has_communications = prev
 					NOT = { has_communications = root }
-				}				
+				}
 			}
 			save_event_target_as = CommSpreader
 			random_neighbor_country = {
 				limit = {
 					OR = {
-						is_country_type = default
+						merg_is_default_empire = yes
 						is_country_type = fallen_empire
 					}
 					NOT = { is_country = root }
@@ -64,7 +64,7 @@ country_event = {
 				}
 				save_event_target_as = contact_empire
 				establish_communications_no_message = root
-			}				
+			}
 		}
 	}
 
@@ -81,22 +81,22 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			years_passed > 150
-		}		
+		}
 		modifier = {
 			factor = 0.5
 			years_passed > 200
-		}		
+		}
 	}
 
 	option = {
-		name = "communications_spread.1.a"		
+		name = "communications_spread.1.a"
 		custom_tooltip = communications_spread.1.tooltip
 		hidden_effect = {
 			country_event = { id = action.1 }
 			event_target:contact_empire = {
 				country_event = { id = communications_spread.2 }
 			}
-		}			
+		}
 	}
 }
 
@@ -106,15 +106,15 @@ country_event = {
 	desc = "nomad_communications_spread.2.desc"
 	picture = GFX_evt_star_chart
 	show_sound = event_alien_signal
-	
+
 	is_triggered_only = yes
 
 	option = {
-		name = "nomad_communications_spread.2.a"			
+		name = "nomad_communications_spread.2.a"
 		custom_tooltip = nomad_communications_spread.2.tooltip
 		hidden_effect = {
 			from = { save_event_target_as = contact_empire }
-			country_event = { id = action.1 }		
+			country_event = { id = action.1 }
 		}
 	}
 }

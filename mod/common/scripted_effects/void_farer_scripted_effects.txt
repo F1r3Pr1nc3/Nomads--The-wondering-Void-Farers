@@ -5,13 +5,13 @@
 # 	log = "- This: [This.GetName] - [This.GetScopeName]"
 # 	log = "- Root: [Root.GetName] - [Root.GetScopeName]"
 # 	log = "- Prev: [Prev.GetName] - [Prev.GetScopeName]"
-# 	log = "- PrevPrev: [Prev.Prev.GetName] - [Prev.Prev.GetScopeName]"
-# 	log = "- PrevPrevPrev: [Prev.Prev.Prev.GetName] - [Prev.Prev.Prev.GetScopeName]"
-# 	log = "- PrevPrevPrevPrev: [Prev.Prev.Prev.Prev.GetName] - [Prev.Prev.Prev.Prev.GetScopeName]"
+# 	log = "- Prevprev: [Prev.prev.GetName] - [Prev.prev.GetScopeName]"
+# 	log = "- Prevprevprev: [Prev.prev.prev.GetName] - [Prev.prev.prev.GetScopeName]"
+# 	log = "- Prevprevprevprev: [Prev.prev.prev.prev.GetName] - [Prev.prev.prev.prev.GetScopeName]"
 # 	log = "- From: [From.GetName] - [From.GetScopeName]"
-# 	log = "- FromFrom: [From.From.GetName] - [From.From.GetScopeName]"
-# 	log = "- FromFromFrom: [From.From.From.GetName] - [From.From.From.GetScopeName]"
-# 	log = "- FromFromFromFrom: [From.From.From.From.GetName] - [From.From.From.From.GetScopeName]"
+# 	log = "- Fromfrom: [From.from.GetName] - [From.from.GetScopeName]"
+# 	log = "- Fromfromfrom: [From.from.from.GetName] - [From.from.from.GetScopeName]"
+# 	log = "- Fromfromfromfrom: [From.from.from.from.GetName] - [From.from.from.from.GetScopeName]"
 # 	log = "- This's Solar System: [This.GetStarName] - [This.Solar_System.GetScopeName]"
 # 	log = "- This's Planet: [This.Planet.GetName] - [This.Planet.GetScopeName]"
 # 	log = "- This's Sector: [This.Sector.GetName] - [This.Sector.GetScopeName]"
@@ -22,7 +22,7 @@
 # }
 
 # Checks if Reaver Shroud Entity country (global event target) exists
-# Creates the country and saves it if it does not
+# Creates the country and saves it if it does not.
 # create_reaver_shroud_country = {
 # 	if = {
 # 		limit = {
@@ -114,24 +114,25 @@ remove_xuracorp_trades = {
 		limit = { has_modifier = enclave_trade_5_xur }
 		remove_modifier = enclave_trade_5_xur
 	}
-	remove_modifier = enclave_mineral_trade_1_xur
-	remove_modifier = enclave_mineral_trade_2_xur
-	remove_modifier = enclave_mineral_trade_3_xur
-	remove_modifier = enclave_energy_trade_1_xur
-	remove_modifier = enclave_energy_trade_2_xur
-	remove_modifier = enclave_energy_trade_3_xur
-	remove_modifier = enclave_mineral_food_trade_1_xur
-	remove_modifier = enclave_mineral_food_trade_2_xur
-	remove_modifier = enclave_mineral_food_trade_3_xur
-	remove_modifier = enclave_energy_food_trade_1_xur
-	remove_modifier = enclave_energy_food_trade_2_xur
-	remove_modifier = enclave_energy_food_trade_3_xur
-	remove_modifier = enclave_food_minerals_trade_1_xur
-	remove_modifier = enclave_food_minerals_trade_2_xur
-	remove_modifier = enclave_food_minerals_trade_3_xur
-	remove_modifier = enclave_food_energy_trade_1_xur
-	remove_modifier = enclave_food_energy_trade_2_xur
-	remove_modifier = enclave_food_energy_trade_3_xur
+	## removed in 2.2
+	# remove_modifier = enclave_mineral_trade_1_xur
+	# remove_modifier = enclave_mineral_trade_2_xur
+	# remove_modifier = enclave_mineral_trade_3_xur
+	# remove_modifier = enclave_energy_trade_1_xur
+	# remove_modifier = enclave_energy_trade_2_xur
+	# remove_modifier = enclave_energy_trade_3_xur
+	# remove_modifier = enclave_mineral_food_trade_1_xur
+	# remove_modifier = enclave_mineral_food_trade_2_xur
+	# remove_modifier = enclave_mineral_food_trade_3_xur
+	# remove_modifier = enclave_energy_food_trade_1_xur
+	# remove_modifier = enclave_energy_food_trade_2_xur
+	# remove_modifier = enclave_energy_food_trade_3_xur
+	# remove_modifier = enclave_food_minerals_trade_1_xur
+	# remove_modifier = enclave_food_minerals_trade_2_xur
+	# remove_modifier = enclave_food_minerals_trade_3_xur
+	# remove_modifier = enclave_food_energy_trade_1_xur
+	# remove_modifier = enclave_food_energy_trade_2_xur
+	# remove_modifier = enclave_food_energy_trade_3_xur
 }
 
 remove_riggan_trades = {
@@ -155,24 +156,25 @@ remove_riggan_trades = {
 		limit = { has_modifier = enclave_trade_5_rig }
 		remove_modifier = enclave_trade_5_rig
 	}
-	remove_modifier = enclave_mineral_trade_1_rig
-	remove_modifier = enclave_mineral_trade_2_rig
-	remove_modifier = enclave_mineral_trade_3_rig
-	remove_modifier = enclave_energy_trade_1_rig
-	remove_modifier = enclave_energy_trade_2_rig
-	remove_modifier = enclave_energy_trade_3_rig
-	remove_modifier = enclave_mineral_food_trade_1_rig
-	remove_modifier = enclave_mineral_food_trade_2_rig
-	remove_modifier = enclave_mineral_food_trade_3_rig
-	remove_modifier = enclave_energy_food_trade_1_rig
-	remove_modifier = enclave_energy_food_trade_2_rig
-	remove_modifier = enclave_energy_food_trade_3_rig
-	remove_modifier = enclave_food_minerals_trade_1_rig
-	remove_modifier = enclave_food_minerals_trade_2_rig
-	remove_modifier = enclave_food_minerals_trade_3_rig
-	remove_modifier = enclave_food_energy_trade_1_rig
-	remove_modifier = enclave_food_energy_trade_2_rig
-	remove_modifier = enclave_food_energy_trade_3_rig
+	## removed in 2.2
+	# remove_modifier = enclave_mineral_trade_1_rig
+	# remove_modifier = enclave_mineral_trade_2_rig
+	# remove_modifier = enclave_mineral_trade_3_rig
+	# remove_modifier = enclave_energy_trade_1_rig
+	# remove_modifier = enclave_energy_trade_2_rig
+	# remove_modifier = enclave_energy_trade_3_rig
+	# remove_modifier = enclave_mineral_food_trade_1_rig
+	# remove_modifier = enclave_mineral_food_trade_2_rig
+	# remove_modifier = enclave_mineral_food_trade_3_rig
+	# remove_modifier = enclave_energy_food_trade_1_rig
+	# remove_modifier = enclave_energy_food_trade_2_rig
+	# remove_modifier = enclave_energy_food_trade_3_rig
+	# remove_modifier = enclave_food_minerals_trade_1_rig
+	# remove_modifier = enclave_food_minerals_trade_2_rig
+	# remove_modifier = enclave_food_minerals_trade_3_rig
+	# remove_modifier = enclave_food_energy_trade_1_rig
+	# remove_modifier = enclave_food_energy_trade_2_rig
+	# remove_modifier = enclave_food_energy_trade_3_rig
 }
 
 remove_muutagan_trades = {
@@ -196,22 +198,23 @@ remove_muutagan_trades = {
 		limit = { has_modifier = enclave_trade_5_mut }
 		remove_modifier = enclave_trade_5_mut
 	}
-	remove_modifier = enclave_mineral_trade_1_mut
-	remove_modifier = enclave_mineral_trade_2_mut
-	remove_modifier = enclave_mineral_trade_3_mut
-	remove_modifier = enclave_energy_trade_1_mut
-	remove_modifier = enclave_energy_trade_2_mut
-	remove_modifier = enclave_energy_trade_3_mut
-	remove_modifier = enclave_mineral_food_trade_1_mut
-	remove_modifier = enclave_mineral_food_trade_2_mut
-	remove_modifier = enclave_mineral_food_trade_3_mut
-	remove_modifier = enclave_energy_food_trade_1_mut
-	remove_modifier = enclave_energy_food_trade_2_mut
-	remove_modifier = enclave_energy_food_trade_3_mut
-	remove_modifier = enclave_food_minerals_trade_1_mut
-	remove_modifier = enclave_food_minerals_trade_2_mut
-	remove_modifier = enclave_food_minerals_trade_3_mut
-	remove_modifier = enclave_food_energy_trade_1_mut
-	remove_modifier = enclave_food_energy_trade_2_mut
-	remove_modifier = enclave_food_energy_trade_3_mut
+	## removed in 2.2
+	# remove_modifier = enclave_mineral_trade_1_mut
+	# remove_modifier = enclave_mineral_trade_2_mut
+	# remove_modifier = enclave_mineral_trade_3_mut
+	# remove_modifier = enclave_energy_trade_1_mut
+	# remove_modifier = enclave_energy_trade_2_mut
+	# remove_modifier = enclave_energy_trade_3_mut
+	# remove_modifier = enclave_mineral_food_trade_1_mut
+	# remove_modifier = enclave_mineral_food_trade_2_mut
+	# remove_modifier = enclave_mineral_food_trade_3_mut
+	# remove_modifier = enclave_energy_food_trade_1_mut
+	# remove_modifier = enclave_energy_food_trade_2_mut
+	# remove_modifier = enclave_energy_food_trade_3_mut
+	# remove_modifier = enclave_food_minerals_trade_1_mut
+	# remove_modifier = enclave_food_minerals_trade_2_mut
+	# remove_modifier = enclave_food_minerals_trade_3_mut
+	# remove_modifier = enclave_food_energy_trade_1_mut
+	# remove_modifier = enclave_food_energy_trade_2_mut
+	# remove_modifier = enclave_food_energy_trade_3_mut
 }

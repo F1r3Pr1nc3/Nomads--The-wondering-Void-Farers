@@ -1,7 +1,7 @@
 ##################
 ### TECH COSTS ###
 ##################
-# If you change any of these, use replace in files so the values are the same across all files
+# If you change any of these, use replace in files so the values are the same across all files.
 # @tier1cost1 = 360
 # @tier1cost2 = 480
 # @tier1cost3 = 600
@@ -44,7 +44,7 @@ tech_nomad_ships = {
 	category = { voidcraft }
 	tier = 0
 	start_tech = yes
-	## unlock the ability to build nomad ships and stations
+	## Unlock the ability to build nomad ships and stations.
 	potential = {
 		is_void_farer = yes
 		# OR = {
@@ -65,7 +65,7 @@ tech_void_farer_engineering = {
 	tier = 0
 	start_tech = yes
 	potential = { has_origin = origin_void_nomads }
-	## unlock the ability to build nomad ships and stations
+	## Unlock the ability to build nomad ships and stations.
 	# weight_modifier = { factor = 0 }
 }
 
@@ -84,7 +84,7 @@ tech_arm_civilian_fleet = {
 			has_ascension_perk = ap_voidborn
 		}
 	}
-	## unlock armed sections for nomad civilian ships
+	## Unlock armed sections for nomad civilian ships.
 	weight_modifier = { factor = 0 }
 }
 
@@ -95,7 +95,7 @@ tech_arm_civilian_fleet = {
 # 	tier = 3
 # 	is_rare = yes
 # 	ai_update_type = all
-# 	## unlock armed sections for nomad civilian ships
+# 	## Unlock armed sections for nomad civilian ships.
 # 	weight_modifier = { factor = 0 }
 # }
 
@@ -114,7 +114,7 @@ tech_marauder_ships = {
 			has_origin = origin_void_reavers
 		}
 	}
-	## unlock the ability to build nomad ships and stations
+	## Unlock the ability to build nomad ships and stations.
 	# weight_modifier = { factor = 0 }
 }
 
@@ -188,7 +188,7 @@ tech_marauder_corvette_hull_1 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -245,7 +245,7 @@ tech_marauder_corvette_hull_2 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -325,7 +325,7 @@ tech_marauder_frigate_hull_1 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -382,7 +382,7 @@ tech_marauder_frigate_hull_2 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -462,7 +462,7 @@ tech_marauder_cruiser_hull_1 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -520,7 +520,7 @@ tech_marauder_cruiser_hull_2 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -600,7 +600,7 @@ tech_marauder_galleon_hull_1 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -658,7 +658,7 @@ tech_marauder_galleon_hull_2 = {
 		}
 	}
 	ai_weight = {
-		factor = 3		# ship upgrades are supposed to be good!
+		factor = 3		# Ship upgrades are supposed to be good!
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -679,7 +679,7 @@ tech_old_ai_designs = {
 	tier = 0
 	start_tech = yes
 	potential = { has_valid_civic = civic_ancient_drones }
-	## unlock the ability to build ancient drone ships and stations
+	## Unlock the ability to build ancient drone ships and stations.
 	# weight_modifier = { factor = 0 }
 }
 
@@ -728,7 +728,7 @@ tech_way_stations = {
 	tier = 0
 	start_tech = yes
 	potential = { is_country_type = void_farer }
-	## unlock the ability to build nomad ships and stations
+	## Unlock the ability to build nomad ships and stations.
 	# weight_modifier = { factor = 0 }
 }
 
@@ -739,6 +739,6 @@ tech_way_stations = {
 # 	tier = 2
 # 	is_rare = yes
 # 	ai_update_type = all
-# 	## unlock the ability to build nomad ships and stations
+# 	## Unlock the ability to build nomad ships and stations.
 # 	weight_modifier = { factor = 0 }
 # }

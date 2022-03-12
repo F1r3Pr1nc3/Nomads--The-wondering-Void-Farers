@@ -1,4 +1,4 @@
-# This is called in initializers for all standard empires, before the empire actually exists
+# This is called in initializers for all standard empires, before the empire actually exists.
 
 create_start_void_farer_ark = {
 	if = {
@@ -51,8 +51,7 @@ generate_start_void_farer_buildings_and_districts = {
 					ethos = random
 				}
 			}
-		}
-		else_if = {
+		} else_if = {
 			limit = { owner = { has_civic = civic_ancient_drones } }
 			while = {
 				limit = { num_pops < 31 }
@@ -92,7 +91,7 @@ generate_start_void_farer_buildings_and_districts = {
 			limit = { owner = { has_civic = civic_ancient_drones } }
 			add_modifier = {
 				modifier = designed_habitation
-				days = -1
+
 			}
 			add_district = district_hab_housing
 			add_district = district_hab_housing

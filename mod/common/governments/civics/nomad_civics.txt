@@ -1,13 +1,13 @@
 # civic_example = {
 #	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
-#	potential = {}								# requirements list, see ../readme_requirements.txt
-#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	potential = {}								# Requirements list, see ../readme_requirements.txt
+#	possible = {}								# Requirements list, see ../readme_requirements.txt
 #	pickable_at_start = yes / no				# default: yes
 #	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
 #
-#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#	random_weight = { base = 1 }				# Scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly.
 #
-#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	modifier = {}								# Modifier added to the country if the civic is selected and valid.
 #	can_build_ruler_military_station = yes / no	# default: no
 #	can_build_ruler_ship = yes / no				# default: no
 #}
@@ -33,7 +33,7 @@ civic_nomads = {
 	random_weight = {
 		base = 0
 		modifier = {
-			# civic has no efect after galaxy generation, disable for random generation
+			# Civic has no efect after galaxy generation, disable for random generation.
 			factor = 0
 			has_global_flag = game_started
 		}
@@ -84,7 +84,7 @@ civic_marauders = {
 	random_weight = {
 		base = 0
 		modifier = {
-			# civic has no efect after galaxy generation, disable for random generation
+			# Civic has no efect after galaxy generation, disable for random generation.
 			factor = 0
 			has_global_flag = game_started
 		}
@@ -136,7 +136,7 @@ civic_reavers = {
 	random_weight = {
 		base = 0
 		modifier = {
-			# civic has no efect after galaxy generation, disable for random generation
+			# Civic has no efect after galaxy generation, disable for random generation.
 			factor = 0
 			has_global_flag = game_started
 		}
@@ -165,7 +165,7 @@ civic_ancient_drones = {
 	random_weight = {
 		base = 0
 		modifier = {
-			# civic has no efect after galaxy generation, disable for random generation
+			# Civic has no efect after galaxy generation, disable for random generation.
 			factor = 0
 			has_global_flag = game_started
 		}

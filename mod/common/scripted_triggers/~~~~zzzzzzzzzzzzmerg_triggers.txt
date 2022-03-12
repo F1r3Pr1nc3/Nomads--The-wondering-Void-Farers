@@ -2,7 +2,7 @@
 
 is_country_type_with_subjects = {
 	OR = {
-		is_country_type = default
+		merg_is_default_empire = yes
 		is_country_type = awakened_fallen_empire
 		# ZOFE
 		is_country_type = ascended_empire
@@ -13,14 +13,14 @@ is_country_type_with_subjects = {
 		is_country_type = original_empire
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
-		# Nomads: The wondering Void Farers
+		# Nomads: The wondering Void Farers.
 		is_country_type = void_farer
 	}
 }
 
 # is_regular_empire = {
 # 	OR = {
-# 		is_country_type = default
+# 		merg_is_default_empire = yes
 # 		is_country_type = fallen_empire
 # 		is_country_type = awakened_fallen_empire
 # 		# ZOFE

@@ -671,7 +671,7 @@ vf_mining_station = {
 	components_add_to_cost = no
 	base_buildtime = 180
 
-	enable_default_design = yes	# if yes, countries will have an auto-generated design at start
+	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
 	class = shipclass_military_station
 	construction_type = starbase_defenses
 	is_designable = no
@@ -718,7 +718,7 @@ vf_alloy_station = {
 	components_add_to_cost = no
 	base_buildtime = 180
 
-	enable_default_design = yes	# if yes, countries will have an auto-generated design at start
+	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
 	class = shipclass_military_station
 	construction_type = starbase_defenses
 	is_designable = no
@@ -766,7 +766,7 @@ vf_factory_station = {
 	components_add_to_cost = no
 	base_buildtime = 180
 
-	enable_default_design = yes	# if yes, countries will have an auto-generated design at start
+	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
 	class = shipclass_military_station
 	construction_type = starbase_defenses
 	is_designable = no
@@ -814,7 +814,7 @@ vf_energy_station = {
 	components_add_to_cost = no
 	base_buildtime = 180
 
-	enable_default_design = yes	# if yes, countries will have an auto-generated design at start
+	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
 	class = shipclass_military_station
 	construction_type = starbase_defenses
 	is_designable = no
@@ -858,7 +858,7 @@ vf_research_station = {
 	components_add_to_cost = no
 	base_buildtime = 180
 
-	enable_default_design = yes	# if yes, countries will have an auto-generated design at start
+	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
 	class = shipclass_military_station
 	construction_type = starbase_defenses
 	is_designable = no

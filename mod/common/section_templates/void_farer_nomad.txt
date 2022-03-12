@@ -308,7 +308,7 @@ ship_section_template = {
 ### Starbase ###
 ################
 
-### sections to sort
+### Sections to sort
 
 ship_section_template = {
 	key = "nomad_probe_section"

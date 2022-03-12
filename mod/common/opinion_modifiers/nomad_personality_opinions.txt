@@ -1,5 +1,5 @@
 ##########################################################################
-# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE
+# HARD FIXED STATE - DO NOT REMOVE OR RENAME ANY OF THESE.
 ##########################################################################
 
 triggered_opinion_from_reaver_personality = {

@@ -330,8 +330,7 @@ citizenship_purge = {
 		if = {
 			limit = { is_lonely_hive_mind_pop = yes }
 			hidden_trigger = { always = yes }
-		}
-		else = {
+		} else = {
 			custom_tooltip = {
 				fail_text = same_species_disallowed
 				NOT = { is_same_species = from }
@@ -381,7 +380,7 @@ citizenship_purge = {
 				NOR = {
 					has_ai_personality_behaviour = purger
 					AND = {
-					has_ai_personality_behaviour = displacer
+						has_ai_personality_behaviour = displacer
 						if = {
 							limit = {
 								has_origin = origin_necrophage
@@ -403,8 +402,10 @@ citizenship_purge = {
 			factor = 0
 			from = {
 				has_authority = auth_hive_mind
-				NOT = { has_valid_civic = civic_hive_devouring_swarm }
-				NOT = { has_origin = origin_necrophage }
+				NOR = {
+					has_valid_civic = civic_hive_devouring_swarm
+					has_origin = origin_necrophage
+				}
 				OR = {
 					has_valid_civic = civic_hive_one_mind
 					has_valid_civic = civic_hive_subsumed_will

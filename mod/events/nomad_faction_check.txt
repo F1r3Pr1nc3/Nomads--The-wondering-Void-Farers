@@ -1,6 +1,6 @@
 namespace = nomad
 
-# Destroy Nomads if no planets, systems and no ships remain
+# Destroy Nomads if no planets, systems and no ships remain.
 # On yearly pulse
 event = {
 	id = nomad.208

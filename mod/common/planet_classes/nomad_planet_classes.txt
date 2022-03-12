@@ -1,6 +1,6 @@
 # Star glow from sun is set under atmosphere in  00_planet_classes
-# Star surface is set in worldgfx file for each star
-# Effects are set in particle effect for each star
+# Star surface is set in worldgfx file for each star.
+# Effects are set in particle effect for each star.
 # New planets also need planet tiles (game\gfx\interface\icons\tile_backgrounds)
 # New planets need surface background (game\gfx\portraits\environments)
 
@@ -9,7 +9,7 @@
 #	entity = "gaia_planet"
 #	entity_scale = 8.0
 #
-#	picture = pc_tropical	# Use tropical portrait art instead of gaia
+#	picture = pc_tropical	# Use tropical portrait art instead of gaia.
 #
 #	atmosphere_color 		= hsv { 0.58	0.3 0.7 }
 #	atmosphere_intensity 	= 1.0
@@ -34,7 +34,6 @@
 #}
 ###
 
-
 # Planet Variables
 
 @planet_standard_scale = 11
@@ -51,7 +50,6 @@
 # ###########
 
 
-
 # ####################
 # Nomad Megastructures
 # ####################
@@ -65,7 +63,7 @@ pc_nomad_habitat = {
 	enable_tilt = no
 	fixed_entity_scale = yes
 	place_entity_on_planet_plane = no
-	entity_face_object = no # disable rotation towards sun or planet we orbit around
+	entity_face_object = no # Disable rotation towards sun or planet we orbit around.
 	atmosphere_color 		= hsv { 0.0 0.0 1.0 }		# DONE
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -80,7 +78,7 @@ pc_nomad_habitat = {
 	ideal = yes
 	starting_planet = no
 	orbit_lines = no
-	has_colonization_influence_cost = no			# applies when within own borders
+	has_colonization_influence_cost = no			# Applies when within own borders.
 }
 
 pc_ark_habitat = {
@@ -92,7 +90,7 @@ pc_ark_habitat = {
 	enable_tilt = no
 	fixed_entity_scale = yes
 	place_entity_on_planet_plane = no
-	entity_face_object = no # disable rotation towards sun or planet we orbit around
+	entity_face_object = no # Disable rotation towards sun or planet we orbit around.
 	atmosphere_color 		= hsv { 0.0 0.0 1.0 }		# DONE
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -107,5 +105,5 @@ pc_ark_habitat = {
 	ideal = yes
 	starting_planet = no
 	orbit_lines = no
-	has_colonization_influence_cost = no			# applies when within own borders
+	has_colonization_influence_cost = no			# Applies when within own borders.
 }

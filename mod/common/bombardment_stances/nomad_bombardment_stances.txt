@@ -1,4 +1,4 @@
-# only added origins
+# Only added origins
 raiding = {
 	trigger = {
 		owner = {

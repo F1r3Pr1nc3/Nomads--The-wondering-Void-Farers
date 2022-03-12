@@ -5,14 +5,14 @@
 #
 # AI:
 # Base AI-weight is 100, if unchanged
-# AI will grab whatever policy-option has the highest weight
+# AI will grab whatever policy-option has the highest weight.
 #
 # #####
 #
 ##########################################################################
 void_farer_war_doctrine = {
 	potential = {
-		is_country_type = default
+		merg_is_default_empire = yes
 		has_tradition = tr_supremacy_finish
 	}
 	option = {

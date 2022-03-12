@@ -1,4 +1,4 @@
-# see README.txt for example
+# See README.txt for example
 
 habitat_nomad = {
 	entity = ""
@@ -41,7 +41,7 @@ habitat_nomad = {
 		planet_possible = {
 			custom_tooltip = {
 				fail_text = "requires_surveyed_planet"
-				is_surveyed = {			# prevent leaking habitability information
+				is_surveyed = {			# Prevent leaking habitability information
 					who = prev.from
 					status = yes
 				}
@@ -73,7 +73,7 @@ habitat_nomad = {
 				has_orbital_station = no
 			}
 
- 			# balance for habitats
+ 			# Balance for habitats
 			custom_tooltip = {
 				fail_text = "requires_not_minor_planetary_body"
 				NOR = {
@@ -85,7 +85,7 @@ habitat_nomad = {
 				fail_text = "requires_not_star"
 				is_star = no
 			}
-		} # use these for all non-star megastructures
+		} # Use these for all non-star megastructures
 	}
 
 	ai_weight = {
@@ -119,7 +119,7 @@ habitat_nomad = {
 				clear_blockers = yes
 				add_modifier = {
 					modifier = designed_habitation
-					days = -1
+
 				}
 				if = {
 					limit = {
@@ -128,7 +128,7 @@ habitat_nomad = {
 					}
 					add_modifier = {
 						modifier = master_builders_habitats
-						days = -1
+
 					}
 				}
 				create_colony = {

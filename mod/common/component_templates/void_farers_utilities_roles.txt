@@ -739,7 +739,6 @@ utility_component_template = {
 	}
 }
 
-
 utility_component_template = {
 	key = "COMBAT_COMPUTER_ARTILLERY_AUTONOMOUS_VOIDFARER"
 	size = small

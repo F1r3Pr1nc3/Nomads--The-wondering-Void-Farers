@@ -97,7 +97,6 @@
 @platform_cost_5 = 56
 @platform_cost_6 = 74
 
-
 #############
 # REACTORS #
 #############

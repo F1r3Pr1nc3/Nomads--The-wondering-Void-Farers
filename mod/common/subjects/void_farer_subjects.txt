@@ -20,7 +20,7 @@ marauder_satrapy = {
 	}
 
 	potential = {
-		is_country_type = default
+		merg_is_default_empire = yes
 		has_been_declared_crisis = no
 		from = { is_country_type = void_farer }
 	}

@@ -8,7 +8,7 @@
 
 namespace = void_marauder_raid_event
 
-# Pop is abducted by raiding stance
+# Pop is abducted by raiding stance.
 # This = Pop scope
 # From = planet abducted from
 pop_event = {
@@ -79,8 +79,7 @@ planet_event = {
 		if = {
 			limit = { NOT = { has_planet_flag = raided_three } }
 			set_planet_flag = raided_three
-		}
-		else = {
+		} else = {
 			set_planet_flag = raided_four
 		}
 		if = {
@@ -108,7 +107,7 @@ planet_event = {
 					}
 				}
 			}
-			root.From = {
+			root.from = {
 				add_resource = {
 					food = @raiding_gain_max
 					minerals = @raiding_gain_max
@@ -117,8 +116,7 @@ planet_event = {
 					consumer_goods = @raiding_gain_max
 				}
 			}
-		}
-		else_if = {
+		} else_if = {
 			limit = {
 				OR = {
 					has_building = building_major_capital
@@ -138,7 +136,7 @@ planet_event = {
 					}
 				}
 			}
-			root.From = {
+			root.from = {
 				add_resource = {
 					food = @raiding_gain_med
 					minerals = @raiding_gain_med
@@ -147,8 +145,7 @@ planet_event = {
 					consumer_goods = @raiding_gain_med
 				}
 			}
-		}
-		else_if = {
+		} else_if = {
 			limit = {
 				OR = {
 					has_building = building_capital
@@ -162,7 +159,7 @@ planet_event = {
 					has_building = building_slave_major_capital
 				}
 			}
-			root.From = {
+			root.from = {
 				add_resource = {
 					food = @raiding_gain_low
 					minerals = @raiding_gain_low
@@ -171,9 +168,8 @@ planet_event = {
 					consumer_goods = @raiding_gain_low
 				}
 			}
-		}
-		else = {
-			root.From = {
+		} else = {
+			root.from = {
 				add_resource = {
 					food = @raiding_gain_min
 					minerals = @raiding_gain_min

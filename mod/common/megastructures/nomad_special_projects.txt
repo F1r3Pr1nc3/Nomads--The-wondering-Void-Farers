@@ -1,4 +1,4 @@
-# see README.txt for example
+# See README.txt for example
 
 ###########################
 # Special Projects
@@ -49,12 +49,12 @@ dragon_hatching = {
 				fail_text = "requires_no_orbital_station"
 				has_orbital_station = no
 			}
- 			# balance for habitats
+ 			# Balance for habitats
 			custom_tooltip = {
 				fail_text = "requires_not_star"
 				is_star = no
 			}
-		} # use these for all non-star megastructures
+		} # Use these for all non-star megastructures
 	}
 
 	ai_weight = {
@@ -134,12 +134,12 @@ salvage_fallen_empire_ships = {
 				fail_text = "requires_no_orbital_station"
 				has_orbital_station = no
 			}
- 			# balance for habitats
+ 			# Balance for habitats
 			custom_tooltip = {
 				fail_text = "requires_not_star"
 				is_star = no
 			}
-		} # use these for all non-star megastructures
+		} # Use these for all non-star megastructures
 	}
 
 	ai_weight = {

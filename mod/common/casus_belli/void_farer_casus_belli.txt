@@ -1,11 +1,11 @@
 # my_casus_belli = {
-#	potential = { ... }		# trigger to make some CBs invalid for certain types of countries; this = attacker (CB owner); default: { always = yes }
+#	potential = { ... }		# Trigger to make some CBs invalid for certain types of countries; this = attacker (CB owner); default: { always = yes }
 #	is_valid = { ... }		# trigger, evaluated daily to check if CB should be created or destroyed automatically, does not affect CBs granted via script;
 #								# this = attacker (CB owner), from = defender (target country); default: { always = yes }
 #	destroy_if = { ... }	# trigger, evaluated daily to destroy CBs that have been granted via script ahead of expiration date;
 #								# this = attacker (CB owner), from = defender (target country); default: { always = no }
-#	show_notification = no/yes	# optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate
-# 								# notification when a claim CB is generated)
+#	show_notification = no/yes	# Optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate
+# 								# Notification when a claim CB is generated)
 #}
 
 cb_defeat_Khan = {
@@ -13,10 +13,10 @@ cb_defeat_Khan = {
 	show_notification = no
 	potential = {
 		OR = {
-			is_country_type_with_subjects = yes # is_country_type = default
+			merg_is_default_empire = yes
 			# is_country_type = celestial_empire
 			# is_country_type = dimensional_shroud
-			is_country_type = void_farer
+			# is_country_type = void_farer
 		}
 		NOR = {
 			has_ascension_perk = ap_khan
@@ -53,10 +53,10 @@ cb_defeat_wild_hunt = {
 	show_notification = no
 	potential = {
 		OR = {
-			is_country_type_with_subjects = yes # is_country_type = default
+			merg_is_default_empire = yes
 			# is_country_type = celestial_empire
 			# is_country_type = dimensional_shroud
-			is_country_type = void_farer
+			# is_country_type = void_farer
 		}
 		NOR = {
 			has_ascension_perk = ap_khan
@@ -111,7 +111,7 @@ cb_nomad_humiliation = {
 	show_notification = no
 	potential = {
 		OR = {
-			is_country_type_with_subjects = yes # is_country_type = default
+			merg_is_default_empire = yes
 			is_country_type = fallen_empire
 		}
 	}
@@ -140,7 +140,7 @@ cb_nomad_ideology = {
 	is_valid = {
 		has_policy_flag = liberation_wars
 		is_neighbor_of = from
-		from = { is_country_type_with_subjects = yes }
+		from = { merg_is_default_empire = yes }
 		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
 		has_total_war_cb = no
 		OR = {
@@ -198,7 +198,7 @@ cb_marauder_subjugation = {
 		is_subject = no
 	}
 	is_valid = {
-		is_country_type_with_subjects = yes # is_country_type = default
+		merg_is_default_empire = yes
 		NOT = { has_authority = auth_machine_intelligence }
 	}
 }

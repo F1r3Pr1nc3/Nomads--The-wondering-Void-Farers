@@ -147,7 +147,7 @@ ap_cult_of_the_shroud_undivided = {
 		hidden_effect = {
 			country_event = { id = reaver_shroud.11 }
 		}
-		add_modifier = { modifier = "cult_of_the_shroud_undivided" days = -1 }
+		add_modifier = { modifier = "cult_of_the_shroud_undivided" }
 		add_research_option = tech_telepathy
 	}
 	possible = {
@@ -305,7 +305,7 @@ ap_cult_of_the_shroud_undivided = {
 # ap_cult_of_the_end = {
 # 	on_enabled = {
 # 		custom_tooltip = "transcendence_tooltip"
-# 		add_modifier = { modifier = "cult_of_the_end" days = -1 }
+# 		add_modifier = { modifier = "cult_of_the_end" }
 # 		add_research_option = tech_telepathy
 # 	}
 # 	possible = {

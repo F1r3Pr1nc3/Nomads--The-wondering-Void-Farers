@@ -20,7 +20,7 @@ decision_add_replicators_law = {
 	}
 
 	effect = {
-		add_modifier = { modifier = add_replicators days = -1 }
+		add_modifier = { modifier = add_replicators }
 	}
 
 	ai_weight = {
@@ -38,7 +38,7 @@ decision_remove_replicators_law = {
 	}
 
 	potential = {
-		# owner = { is_void_ancient_drones = yes } # if you conquer the planet as a different type you need to be able to disable it
+		# owner = { is_void_ancient_drones = yes } # If you conquer the planet as a different type you need to be able to disable it.
 		has_modifier = add_replicators
 	}
 

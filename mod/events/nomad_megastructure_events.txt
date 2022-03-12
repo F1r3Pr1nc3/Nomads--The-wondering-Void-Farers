@@ -12,7 +12,7 @@ country_event = {
 	show_sound = event_mystic_reveal
 	picture = GFX_evt_colony_settlement
 	is_triggered_only = yes
-	location = FromFromFrom
+	location = fromfromfrom
 
 	option = {
 		name = EXCELLENT
@@ -27,7 +27,7 @@ country_event = {
 	show_sound = event_mystic_reveal
 	picture = GFX_evt_colony_settlement
 	is_triggered_only = yes
-	location = FromFromFrom
+	location = fromfromfrom
 
 	option = {
 		name = nomad_ark_ship_build

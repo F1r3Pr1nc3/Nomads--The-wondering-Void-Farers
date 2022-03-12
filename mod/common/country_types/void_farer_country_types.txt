@@ -367,7 +367,7 @@ void_farer = {
 		}
 	}
 
-	# planet scope
+	# Planet scope
 	branch_office_resources = {
 		category = planet_branch_offices
 		cost = {

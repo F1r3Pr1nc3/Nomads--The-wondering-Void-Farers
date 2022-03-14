@@ -114,7 +114,7 @@ remove_xuracorp_trades = {
 		limit = { has_modifier = enclave_trade_5_xur }
 		remove_modifier = enclave_trade_5_xur
 	}
-	## removed in 2.2
+	## Removed in 2.2
 	# remove_modifier = enclave_mineral_trade_1_xur
 	# remove_modifier = enclave_mineral_trade_2_xur
 	# remove_modifier = enclave_mineral_trade_3_xur
@@ -156,7 +156,7 @@ remove_riggan_trades = {
 		limit = { has_modifier = enclave_trade_5_rig }
 		remove_modifier = enclave_trade_5_rig
 	}
-	## removed in 2.2
+	## Removed in 2.2
 	# remove_modifier = enclave_mineral_trade_1_rig
 	# remove_modifier = enclave_mineral_trade_2_rig
 	# remove_modifier = enclave_mineral_trade_3_rig
@@ -198,7 +198,7 @@ remove_muutagan_trades = {
 		limit = { has_modifier = enclave_trade_5_mut }
 		remove_modifier = enclave_trade_5_mut
 	}
-	## removed in 2.2
+	## Removed in 2.2
 	# remove_modifier = enclave_mineral_trade_1_mut
 	# remove_modifier = enclave_mineral_trade_2_mut
 	# remove_modifier = enclave_mineral_trade_3_mut

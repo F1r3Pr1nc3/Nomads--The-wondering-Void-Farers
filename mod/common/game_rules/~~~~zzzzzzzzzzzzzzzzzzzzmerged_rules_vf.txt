@@ -62,7 +62,7 @@ can_build_branch_offices = {
 		fail_text = BRANCH_OFFICE_NOT_MEGACORP
 		OR = {
 			is_megacorp = yes
-			# Warship Girls R And MIST Species
+			# Warship Girls R And MIST Species.
 			AND = {
 				has_authority = auth_shenhai
 				OR = {
@@ -122,10 +122,10 @@ can_build_branch_office_on_planet = {
 			owner = { is_in_federation_with = root }
 			# Expanded Traits, Civics, Pops, and More
 			AND = {
-				has_expanded_pops = yes
+				has_global_flag = expanded_pops_active
 				owner = { has_country_flag = cb_markets_opened@root }
 			}
-			# Warship Girls R And MIST Species
+			# Warship Girls R And MIST Species.
 			AND = {
 				owner = {
 					has_country_flag = lose_wg_shop_war
@@ -139,14 +139,12 @@ can_build_branch_office_on_planet = {
 			}
 			# Azur Lane Stellaris DLC
 			owner = {
-				AND = {
-					OR = {
-						has_authority = auth_azur_lane_2
-						has_authority = auth_azur_lane_0
-						has_authority = auth_azur_lane_K
-					}
-					is_same_value = root
+				OR = {
+					has_authority = auth_azur_lane_2
+					has_authority = auth_azur_lane_0
+					has_authority = auth_azur_lane_K
 				}
+				is_same_value = root
 			}
 			# Human Fallen Empires
 			root = {
@@ -154,7 +152,7 @@ can_build_branch_office_on_planet = {
 				is_forced_friendly = prev.owner
 			}
 			# Vanilla
-			# allow branch offices in subsidiaries and vice versa
+			# Allow branch offices in subsidiaries and vice versa.
 			root = {
 				is_subject = yes
 				OR = {
@@ -170,7 +168,7 @@ can_build_branch_office_on_planet = {
 					is_subject_type = subsidiary
 					# Reworked Advanced Ascension
 					is_subject_type = AAR_SBJ_subsidiary
-					# Warship Girls R And MIST Species
+					# Warship Girls R And MIST Species.
 					overlord = { has_authority = auth_warshipgirls }
 				}
 				overlord = { is_same_value = root }
@@ -184,9 +182,9 @@ can_build_branch_office_on_planet = {
 				owner = { is_galactic_community_member = yes }
 			}
 			# Vassals Expanded and Reworked
-			# allow branch offices in all subjects and vice versa
+			# Allow branch offices in all subjects and vice versa.
 			AND = {
-				has_vassals_expanded = yes
+				has_global_flag = gf_veru_activated
 				OR = {
 					root = {
 						is_subject = yes
@@ -238,7 +236,7 @@ can_build_branch_office_on_planet = {
 			}
 		}
 	}
-	# Warship Girls R And MIST Species
+	# Warship Girls R And MIST Species.
 	custom_tooltip = {
 		fail_text = requires_recipient_not_warshipgirls
 		exists = owner
@@ -256,7 +254,7 @@ can_build_branch_office_on_planet = {
 		}
 	}
 	# More Corportate Authorities
-	# principled rogues won't build branch offices in countries they like
+	# Principled rogues won't build branch offices in countries they like.
 	hidden_trigger = {
 		OR = {
 			NOT = {
@@ -333,11 +331,11 @@ can_be_part_of_galactic_community = {
 	}
 	custom_tooltip = {
 		fail_text = "community_declared_crisis_failtext"
-		#fail_text = "community_overlord_declared_crisis_failtext"
+		# fail_text = "community_overlord_declared_crisis_failtext"
 		OR = {
 			NOT = { exists = overlord }
 			overlord = { has_been_declared_crisis = no }
-			# Warship Girls R And MIST Species
+			# Warship Girls R And MIST Species.
 			NOT = { has_country_flag = wgfm_quit_community }
 		}
 	}

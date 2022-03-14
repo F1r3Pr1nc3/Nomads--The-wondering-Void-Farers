@@ -218,10 +218,10 @@ country_event = {
 							has_technology = tech_sapient_ai
 							has_technology = tech_synthetic_workers
 						}
-						any_system = {
+						any_system_within_border = {
 							distance = {
 								source = root.capital_scope
-								max_distance = 200
+								max_distance <= 200
 							}
 						}
 					}

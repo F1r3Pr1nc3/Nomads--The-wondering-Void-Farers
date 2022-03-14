@@ -320,7 +320,7 @@ void_farer = {
 		standard_event_module = {}
 		standard_economy_module = {}
 		standard_leader_module = {}
-		standard_diplomacy_module = {}
+		standard_diplomacy_module = { contact_rule = does_first_contact_sites }
 		standard_technology_module = {}
 		standard_trade_routes_module = {}
 		standard_pop_factions_module = {}
@@ -401,6 +401,7 @@ vf_reaver_shroud = {
 	}
 	custom_diplomacy = yes
 	modules = {
+		standard_event_module = {} # Needed for events
 		basic_technology_module = {}
 		exclusive_diplomacy_module = {
 			contact_rule = on_action_only

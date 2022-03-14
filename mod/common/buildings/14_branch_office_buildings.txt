@@ -111,7 +111,7 @@ building_food_conglomerate = {
 
 	ai_weight = {
 		weight = 1
-	}#AI has many other sources for this resource
+	}# AI has many other sources for this resource.
 }
 
 building_virtual_entertainment_studios = {

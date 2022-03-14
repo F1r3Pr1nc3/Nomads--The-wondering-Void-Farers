@@ -285,20 +285,20 @@ entity = {
 
 entity = {
 	name = "starbase_marauder_outpost"
-	pdxmesh = "pirate_01_base_mesh"
-	scale = 1.0
+	clone = "pirate_01_pirate_base_entity"
+	scale = 1.5
 
 	locator = { name = "slot1"				position = { 0	0  0 } }
 
-	default_state = idle
-	state = { name = "idle"	animation = "idle" animation_speed = 0.5
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
-	}
-	state = { name = "death" animation = "death" looping = no animation_blend_time = 10
+	# default_state = idle
+	# state = { name = "idle"	animation = "idle" animation_speed = 0.5
+	# 	start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
+	# }
+	# state = { name = "death" animation = "death" looping = no animation_blend_time = 10
 		# event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes }
 		# event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes }
 		# event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes }
-	}
+	# }
 }
 
 entity = {

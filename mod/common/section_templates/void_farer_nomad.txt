@@ -7,9 +7,8 @@
 ship_section_template = {
 	key = "capital_ark_ship_section"
 	ship_size = capital_ark_ship
-	fits_on_slot = mid
-	# entity = "colony_ship_entity"
-	entity = "capital_ark_ship_entity"
+	fits_on_slot = ship
+	entity = "capital_ark_ship_entity" # "colony_ship_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { tech_nomad_ships }
@@ -23,8 +22,8 @@ ship_section_template = {
 ship_section_template = {
 	key = "capital_ark_ship_armed_section"
 	ship_size = capital_ark_ship
-	fits_on_slot = mid
-	entity = "colony_ship_entity"
+	fits_on_slot = ship
+	entity = "capital_ark_ship_entity" # "colony_ship_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { tech_arm_civilian_fleet }
@@ -54,8 +53,8 @@ ship_section_template = {
 ship_section_template = {
 	key = "capital_ark_ship_XL_section"
 	ship_size = capital_ark_ship
-	fits_on_slot = mid
-	entity = "colony_ship_entity"
+	fits_on_slot = ship
+	entity = "capital_ark_ship_entity" # "colony_ship_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { tech_arm_civilian_fleet }
@@ -89,7 +88,7 @@ ship_section_template = {
 	key = "ark_ship_support_section"
 	ship_size = support_ark_ship
 	fits_on_slot = mid
-	entity = "colony_ship_entity"
+	entity = "ark_ship_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { tech_nomad_ships }
@@ -104,7 +103,7 @@ ship_section_template = {
 	key = "ark_ship_support_armed_section"
 	ship_size = support_ark_ship
 	fits_on_slot = mid
-	entity = "colony_ship_entity"
+	entity = "ark_ship_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { tech_arm_civilian_fleet }
@@ -135,7 +134,7 @@ ship_section_template = {
 	key = "ark_ship_support_xl_section"
 	ship_size = support_ark_ship
 	fits_on_slot = mid
-	entity = "colony_ship_entity"
+	entity = "ark_ship_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { tech_arm_civilian_fleet }
@@ -338,7 +337,7 @@ ship_section_template = {
 	key = "station_void_farer_dwelling"
 	ship_size = void_farer_void_dwelling
 	fits_on_slot = "mid"
-	entity = "void_farer_void_dwelling_hull_entity"
+	entity = "void_farer_void_dwelling_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	component_slot = {

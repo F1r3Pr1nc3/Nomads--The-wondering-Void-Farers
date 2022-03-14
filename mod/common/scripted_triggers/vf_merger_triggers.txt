@@ -17,7 +17,7 @@ is_unfriendly = {
 	}
 }
 
-# Merger of Rules scripted triggers
+# Merger of Rules scripted triggers.
 # Extended Merger of Rules with Nomads: The wondering Void Farers
 # These triggers are also meant as a library for modders who want to reuse them in their own mods.
 
@@ -73,7 +73,7 @@ merg_is_fallen_empire = {
 	}
 }
 
-# List of awakened Fallen Empires
+# List of awakened Fallen Empires.
 merg_is_awakened_fe = {
 	OR = {
 		is_country_type = awakened_fallen_empire
@@ -94,7 +94,7 @@ merg_is_awakened_fe = {
 	}
 }
 
-# List of all habitable ringworld sections
+# List of all habitable ringworld sections.
 merg_is_hab_ringworld = {
 	OR = {
 		is_planet_class = pc_ringworld_habitable
@@ -108,7 +108,7 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ringworld_machine
 		is_planet_class = pc_ringworld_hive
 		# Ancient Empire
-		# listed planet types are for colors only, they're all ideal
+		# Listed planet types are for colors only, they're all ideal
 		is_planet_class = pc_ag_ringworld_desert
 		is_planet_class = pc_ag_ringworld_arid
 		is_planet_class = pc_ag_ringworld_savannah
@@ -121,7 +121,7 @@ merg_is_hab_ringworld = {
 		is_planet_class = pc_ag_ringworld_machine
 		is_planet_class = pc_ag_ringworld_city
 		is_planet_class = pc_ag_ringworld_gaia
-		# Warship Girls and MIST species
+		# Warship Girls and MIST species.
 		is_planet_class = pc_ringworld_habitable_sh
 		is_planet_class = pc_ringworld_habitable_wsg
 	}

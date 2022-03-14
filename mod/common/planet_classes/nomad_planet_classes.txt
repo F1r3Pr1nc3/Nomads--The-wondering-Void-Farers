@@ -49,7 +49,6 @@
 # Special Planets
 # ###########
 
-
 # ####################
 # Nomad Megastructures
 # ####################
@@ -57,7 +56,6 @@
 pc_nomad_habitat = {
 	habitat = yes
 	entity = "orbital_habitat"
-	outliner_planet_type = special
 	icon = GFX_planet_type_habitat
 	entity_scale = 1.0
 	enable_tilt = no
@@ -84,7 +82,6 @@ pc_nomad_habitat = {
 pc_ark_habitat = {
 	habitat = yes
 	entity = "ark_ship_entity"
-	outliner_planet_type = special
 	icon = GFX_planet_type_habitat
 	entity_scale = 1.0
 	enable_tilt = no

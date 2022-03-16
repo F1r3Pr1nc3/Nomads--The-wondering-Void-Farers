@@ -1,4 +1,4 @@
-version="3.3.2.0"
+version="3.3.2.1"
 tags={
 	"Spaceships"
 	"Overhaul"
@@ -10,6 +10,6 @@ tags={
 	"Void Farers"
 }
 picture="thumbnail.png"
-name="Nomads: The wondering Void Farers (Beta) [3.3]"
+name="Nomads: The wondering Void Farers (Alpha) [3.3]"
 supported_version="3.3.*"
 remote_file_id="2779075585"

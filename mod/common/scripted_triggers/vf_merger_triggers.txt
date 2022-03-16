@@ -9,10 +9,7 @@ is_homicidal = {
 
 is_unfriendly = {
 	OR = {
-		has_valid_civic = civic_fanatic_purifiers
-		has_valid_civic = civic_machine_terminator
-		has_valid_civic = civic_hive_devouring_swarm
-		has_origin = origin_void_reavers
+		is_homicidal = yes
 		has_valid_civic = civic_barbaric_despoilers
 	}
 }
@@ -27,8 +24,9 @@ merg_is_standard_empire = {
 		is_country_type = fallen_empire
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		# is_country_type = ascended_empire
+		# is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 		is_country_type = fallen_empire_ev
@@ -46,8 +44,9 @@ merg_is_default_empire = {
 	OR = {
 		is_country_type = default
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		# is_country_type = ascended_empire
+		# is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 		# Nomads: The wondering Void Farers.

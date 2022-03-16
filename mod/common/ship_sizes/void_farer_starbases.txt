@@ -816,7 +816,7 @@ vf_energy_station = {
 	base_buildtime = 180
 
 	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
-	class = shipclass_mining_station # shipclass_military_station
+	class = shipclass_military_station # shipclass_mining_station not usable as it breaks limit
 	construction_type = starbase_defenses
 	is_designable = no
 	valid_target_aggressive_stance = no
@@ -860,7 +860,7 @@ vf_research_station = {
 	base_buildtime = 180
 
 	enable_default_design = yes	# If yes, countries will have an auto-generated design at start.
-	class = shipclass_research_station # shipclass_military_station
+	class = shipclass_military_station # shipclass_research_station not usable as it breaks limit
 	construction_type = starbase_defenses
 	is_designable = no
 	valid_target_aggressive_stance = no

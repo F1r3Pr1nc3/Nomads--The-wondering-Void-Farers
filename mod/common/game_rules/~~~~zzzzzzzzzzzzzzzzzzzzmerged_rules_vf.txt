@@ -160,7 +160,7 @@ can_build_branch_office_on_planet = {
 					# Reworked Advanced Ascension
 					is_subject_type = AAR_SBJ_subsidiary
 				}
-				overlord = { is_same_value = prevprev.owner }
+				overlord = { is_same_empire = prevprev.owner }
 			}
 			owner = {
 				is_subject = yes
@@ -188,7 +188,7 @@ can_build_branch_office_on_planet = {
 				OR = {
 					root = {
 						is_subject = yes
-						overlord = { is_same_value = prevprev.owner }
+						overlord = { is_same_empire = prevprev.owner }
 					}
 					owner = {
 						is_subject = yes

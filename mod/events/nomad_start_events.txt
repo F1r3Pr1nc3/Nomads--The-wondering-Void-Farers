@@ -252,16 +252,20 @@ country_event = {
 		# Ark
 		if = {
 			limit = { is_country_type = void_farer }
+			# add_global_ship_design = "NAME_ark"
+			if = { limit = { NOT = {  has_technology = tech_nomad_ships } }
+				give_technology = { tech = tech_nomad_ships }
+			}
+			create_ship_design = { design = "NAME_ark" }
+			add_ship_design = last_created_design
 			create_fleet = {
 				set_take_point = yes
 				effect = {
 					set_owner = prev
-					while = {
-						count = 1
-						create_ship = {
-							name = random
-							random_existing_design = capital_ark_ship
-						}
+					create_ship = {
+						name = random
+						design = "NAME_ark"
+						graphical_culture = root
 					}
 				}
 			}

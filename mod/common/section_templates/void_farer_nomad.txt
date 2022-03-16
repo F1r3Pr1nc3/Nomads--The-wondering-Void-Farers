@@ -16,7 +16,7 @@ ship_section_template = {
 	small_utility_slots = 2
 	medium_utility_slots = 2
 	large_utility_slots = 2
-	aux_utility_slots = 2
+	aux_utility_slots = 3
 }
 
 ship_section_template = {
@@ -224,7 +224,7 @@ ship_section_template = {
 	key = "nomad_freighter_section"
 	ship_size = nomad_mining_ship
 	fits_on_slot = mid
-	entity = "nomad_mining_ship_hull_entity"
+	entity = "nomad_mining_ship_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { "tech_nomad_ships" }
@@ -238,7 +238,7 @@ ship_section_template = {
 	key = "civilian_freighter_armed_section"
 	ship_size = nomad_mining_ship
 	fits_on_slot = mid
-	entity = "nomad_mining_ship_hull_entity"
+	entity = "nomad_mining_ship_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { "tech_nomad_ships" }
@@ -265,7 +265,7 @@ ship_section_template = {
 	key = "nomad_energy_tanker_section"
 	ship_size = nomad_energy_tanker
 	fits_on_slot = mid
-	entity = "nomad_energy_tanker_hull_entity"
+	entity = "nomad_energy_tanker_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { "tech_nomad_ships" }
@@ -279,7 +279,7 @@ ship_section_template = {
 	key = "nomad_energy_tanker_armed_section"
 	ship_size = nomad_energy_tanker
 	fits_on_slot = mid
-	entity = "nomad_energy_tanker_hull_entity"
+	entity = "nomad_energy_tanker_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	prerequisites = { "tech_nomad_ships" }

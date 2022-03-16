@@ -1,41 +1,51 @@
 # This is called in initializers for all standard empires, before the empire actually exists.
 
-create_start_void_farer_ark = {
-	if = {
-		limit = {
-			owner = { is_country_type = void_farer }
-		}
-		create_fleet = {
-			effect = {
-				set_owner = prev.owner
-				while = {
-					count = 1
-					create_ship = {
-						name = random
-						random_existing_design = capital_ark_ship
-						# effect = {
-						# 	set_ship_flag = capital_ark_ship
-						# }
-					}
-				}
-				set_location = prev.capital_star
-			}
-		}
-	}
-}
+# create_start_void_farer_ark = {
+# 	if = {
+# 		limit = {
+# 			owner = { is_country_type = void_farer }
+# 		}
+# 		create_fleet = {
+# 			effect = {
+# 				set_owner = prev.owner
+# 				while = {
+# 					count = 1
+# 					create_ship = {
+# 						name = random
+# 						random_existing_design = capital_ark_ship
+# 						# effect = {
+# 						# 	set_ship_flag = capital_ark_ship
+# 						# }
+# 					}
+# 				}
+# 				set_location = prev.capital_star
+# 			}
+# 		}
+# 	}
+# }
 
-create_void_farer_ark = {
-	if = {
-		limit = {
-			owner = { is_country_type = void_farer }
-		}
-		create_ship = {
-			name = random
-			design = "NAME_ark"
-			graphical_culture = owner
-		}
-	}
-}
+# # scope fleet
+# create_void_farer_ark = {
+# 	if = {
+# 		limit = { owner = { is_country_type = void_farer } }
+# 		if = { limit = { NOT = {  has_technology = tech_nomad_ships } }
+# 			give_technology = { tech = tech_nomad_ships }
+# 		}
+# 		create_ship_design = { design = "NAME_ark" }
+# 		add_ship_design = last_created_design
+# 		create_fleet = {
+# 			set_take_point = yes
+# 			effect = {
+# 				set_owner = prev
+# 				create_ship = {
+# 					name = random
+# 					design = "NAME_ark"
+# 					graphical_culture = owner
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 generate_start_void_farer_buildings_and_districts = {
 	if = {

@@ -252,6 +252,8 @@ entity = {
 	name = "avian_01_void_farer_void_dwelling_section_entity"
 	pdxmesh = "avian_01_starport_mesh"
 
+    locator = { name = "part1"	position = { 0	0  0 } }
+
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
@@ -662,9 +664,9 @@ entity = {
 ###																				###
 ###################################################################################
 
-entity = { name = "nemesis_01_capital_ark_ship_entity" clone = "nemesis_01_colony_ship_entity" scale = 1.3 }
-entity = { name = "necroid_01_capital_ark_ship_entity" clone = "necroid_01_colony_ship_entity" scale = 1.3 }
-entity = { name = "aquatic_01_capital_ark_ship_entity" clone = "aquatic_01_colony_ship_entity" scale = 1.3 }
+entity = { name = "nemesis_01_capital_ark_ship_entity" clone = "nemesis_01_colony_ship_entity" scale = 1.3 locator = { name = "root" } }
+entity = { name = "necroid_01_capital_ark_ship_entity" clone = "necroid_01_colony_ship_entity" scale = 1.3 locator = { name = "root" } }
+entity = { name = "aquatic_01_capital_ark_ship_entity" clone = "aquatic_01_colony_ship_entity" scale = 1.3 locator = { name = "root" } }
 
 # Arthropoid Ark
 entity = {
@@ -906,6 +908,7 @@ entity = {
 entity = {
 	name = "humanoid_01_capital_ark_ship_entity"
 	pdxmesh = "humanoid_01_colony_ship_mesh"
+    locator = { name = "root" }
 
 	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "engine_large_01" particle = "mammalian_01_3_35_exhaust_idle_particle" trigger_once = yes keep_particle = yes }
@@ -957,6 +960,7 @@ entity = {
 entity = {
 	name = "lithoid_01_capital_ark_ship_entity"
 	pdxmesh = "lithoid_01_colony_ship_mesh"
+    locator = { name = "root" }
 
 	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "light_locator_01" particle = "lithoid_01_ship_light_effect" trigger_once = yes keep_particle = yes }

@@ -5,8 +5,9 @@ is_country_type_with_subjects = {
 		merg_is_default_empire = yes
 		is_country_type = awakened_fallen_empire
 		# ZOFE
-		is_country_type = ascended_empire
-		is_country_type = lost_empire
+		# is_country_type = ascended_empire
+		# is_country_type = lost_empire
+		is_zofe_country = yes
 		# The Empty Vagrant
 		is_country_type = default_ev
 		# ACOT

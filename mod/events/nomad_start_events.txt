@@ -5,7 +5,7 @@ namespace = nomad_start_events
 namespace = vf_marauder_start_events
 namespace = reaver_start_events
 namespace = drone_start_events
-namespace = void_farer
+namespace = void_farer_start_events
 country_event = {
 	id = nomad_start_events.1
 	hide_window = yes
@@ -34,10 +34,10 @@ country_event = {
 }
 
 planet_event = {
-	id = void_farer.2
+	id = void_farer_start_events.2
 	hide_window = yes
-	# title = void_farer.2.name
-	# desc = void_farer.2.desc
+	# title = void_farer_start_events.2.name
+	# desc = void_farer_start_events.2.desc
 	# picture = GFX_evt_fleet_neutral
 	is_triggered_only = yes
 	pre_triggers = {
@@ -48,15 +48,19 @@ planet_event = {
 		owner = { is_country_type = void_farer }
 	}
 	immediate = {
+		change_planet_size = 16
+		owner = { establish_communications_no_message = root.space_owner } # TODO some bug fix try on
+		establish_communications_no_message = root
 		if = {
-			limit = {
-				owner = { has_origin = origin_ancient_drones }
+			limit = { is_artificial = no }
+			if = {
+				limit = { owner = { has_origin = origin_ancient_drones } }
+				change_pc = pc_gray_goo
+			} else = {
+				change_pc = pc_barren
 			}
-			change_pc = pc_gray_goo
-		} else = {
-			change_pc = pc_barren
+			destroy_colony = yes
 		}
-		destroy_colony = yes
 	}
 	# option = { name = OK }
 }
@@ -136,8 +140,8 @@ country_event = {
 			give_technology = { message = no tech = "tech_thrusters_2" }
 			give_technology = { message = no tech = "tech_sensors_2" }
 			give_technology = { message = no tech = "tech_wormhole_stabilization" }
-			give_technology = { message = no tech = "tech_void_farer_engineering" }
-			give_technology = { message = no tech = "tech_robotic_workers" }
+			# give_technology = { message = no tech = "tech_void_farer_engineering" }
+			# give_technology = { message = no tech = "tech_robotic_workers" }
 			give_technology = { message = no tech = "tech_powered_exoskeletons" }
 			set_country_flag = void_scavenger_bots
 			set_country_type = void_farer
@@ -146,106 +150,10 @@ country_event = {
 	}
 }
 
-### Void Farer Communication Spread MTTH.
-country_event = {
-	id = void_farer.1
-	hide_window = yes
-	mean_time_to_happen = { months = 1 }
-	trigger = {
-		is_country_type = void_farer
-		# Always if we're awakened
-		# root = { is_country_type = awakened_fallen_empire }
-		any_country = {
-			OR = {
-				merg_is_default_empire = yes	# For compat.
-				is_fallen_empire = yes				# For compat.
-				is_country_type = dormant_marauders
-				is_country_type = nomad
-				is_country_type = neutral_faction
-				is_country_type = enclave
-				# is_country_type = swarm
-				# is_country_type = extradimensional
-				# is_country_type = extradimensional_2
-				# is_country_type = extradimensional_3
-				# is_country_type = ai_empire
-				is_crisis_faction = yes
-				is_country_type = cybrex_empire
-				is_country_type = tiyanki
-				is_country_type = amoeba
-				is_country_type = crystal
-				is_country_type = drone
-				is_country_type = cloud
-				# If we're both void farer empires, we know of each other.
-				# is_country_type = void_farer
-				# Also contact if we border them.
-				any_system_within_border = { is_neighbor_of = root }
-			}
-			NOT = { has_communications = root }
-		}
-	}
-	immediate = {
-		random_country = {
-			limit = {
-				OR = {
-					merg_is_default_empire = yes		# For compat.
-					is_fallen_empire = yes					# For compat.
-					is_country_type = dormant_marauders
-					is_country_type = nomad
-					is_country_type = neutral_faction
-					is_country_type = enclave
-					# is_country_type = swarm
-					# is_country_type = extradimensional
-					# is_country_type = extradimensional_2
-					# is_country_type = extradimensional_3
-					# is_country_type = ai_empire
-					is_crisis_faction = yes
-					is_country_type = cybrex_empire
-					is_country_type = tiyanki
-					is_country_type = amoeba
-					is_country_type = crystal
-					is_country_type = drone
-					is_country_type = cloud
-				}
-				NOT = { has_communications = root }
-				OR = {
-					AND = {
-						root = { has_ai_personality = fallen_empire_spiritualist }
-						any_owned_planet = { has_modifier = "holy_planet" }
-					}
-					AND = {
-						root = { has_ai_personality = fallen_empire_materialist }
-						OR = {
-							has_technology = tech_sapient_ai
-							has_technology = tech_synthetic_workers
-						}
-						any_system_within_border = {
-							distance = {
-								source = root.capital_scope
-								max_distance <= 200
-							}
-						}
-					}
-					# Also contact if we border them.
-					any_owned_planet = { is_neighbor_of = root }
-					any_owned_fleet = {
-						is_ship_class = shipclass_starbase
-						distance_to_empire = {
-							who = root
-							distance = 75
-						}
-					}
-				}
-			}
-			establish_communications_no_message = root
-			root = { save_event_target_as = contact_empire }
-			country_event = { id = action.1 }
-		}
-	}
-}
 
 ### Void farer init - add ships
 country_event = {
-	id = void_farer.9
+	id = void_farer_start_events.9
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {

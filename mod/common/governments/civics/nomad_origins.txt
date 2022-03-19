@@ -6,6 +6,7 @@ origin_void_nomads = {
 
 	starting_colony = pc_habitat
 	habitability_preference = pc_habitat
+	initializers = { void_dweller_system  }
 	max_once_global = yes
 	preferred_planet_class_neighbor = no
 
@@ -55,6 +56,7 @@ origin_void_marauders = {
 
 	starting_colony = pc_habitat
 	habitability_preference = pc_habitat
+	initializers = { void_dweller_system  }
 	max_once_global = yes
 	preferred_planet_class_neighbor = no
 
@@ -113,6 +115,7 @@ origin_void_reavers = {
 
 	starting_colony = pc_habitat
 	habitability_preference = pc_habitat
+	initializers = { void_reavers_system }
 	max_once_global = yes
 	preferred_planet_class_neighbor = no
 
@@ -173,6 +176,7 @@ origin_ancient_drones = {
 
 	starting_colony = pc_habitat
 	habitability_preference = pc_habitat
+	initializers = { ancient_drones_system }
 	max_once_global = yes
 	preferred_planet_class_neighbor = no
 

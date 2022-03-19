@@ -90,21 +90,28 @@ void_nomad_system = {
 	}
 
 	planet = {
-		class = pc_habitat
-		orbit_angle = 55
-		size = 25
-		starting_planet = yes
-		flags = { ignore_startup_effect has_megastructure void_farer_habitat_1 special_start_planet megastructure habitat }
-		deposit_blockers = none
-	}
-
-	planet = {
 		class = pc_barren
 		orbit_distance = 25
 		size = 15
 		orbit_angle = 120
+		flags = { ignore_startup_effect habitat_1_planet has_megastructure }
 
 		change_orbit = @base_moon_distance
+
+		moon = {
+			class = pc_habitat
+			orbit_angle = 55
+			size = 18
+			starting_planet = yes
+			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat } # has_megastructure
+			deposit_blockers = none
+			home_planet = yes
+			init_effect = {
+				set_deposit = d_minerals_4
+				generate_empire_home_planet = yes
+				prevent_anomaly = yes
+			}
+		}
 
 		moon = {
 			class = pc_frozen
@@ -112,7 +119,10 @@ void_nomad_system = {
 			orbit_angle = 90
 			orbit_distance = 6
 		}
+
 	}
+
+
 
 	planet = {
 		class = "pc_asteroid"
@@ -308,14 +318,37 @@ void_marauder_system = {
 		}
 	}
 
+
 	planet = {
-		class = pc_habitat
-		orbit_angle = 55
-		size = 25
-		starting_planet = yes
-		flags = { ignore_startup_effect has_megastructure void_farer_habitat_1 special_start_planet megastructure habitat }
-		deposit_blockers = none
+		count = { min = 2 max = 10 }
+		orbit_distance = 20
+		orbit_angle = { min = 90 max = 270 }
+
+		change_orbit = @base_moon_distance
+		flags = { ignore_startup_effect habitat_1_planet has_megastructure }
+
+		# Homeworld
+		moon = {
+			class = pc_habitat
+			orbit_angle = 55
+			size = 18
+			starting_planet = yes
+			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
+			deposit_blockers = none
+			home_planet = yes
+			init_effect = {
+				generate_empire_home_planet = yes
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
 	}
+
 
 	planet = {
 		class = pc_gas_giant
@@ -449,17 +482,40 @@ void_reavers_system = {
 		orbit_angle = 220
 		orbit_distance = 50
 		size = 25
+		flags = { ignore_startup_effect has_megastructure habitat_1_planet }
+		init_effect = {
+			# prevent_anomaly = yes
+			# clear_deposits = yes
+			add_deposit = d_society_3
+		}
 
 		change_orbit = @base_moon_distance
 
+		# moon = {
+		# 	class = pc_habitat
+		# 	orbit_angle = { min = 90 max = 270 }
+		# 	orbit_distance = 6
+		# 	size = 16
+		# 	# starting_planet = yes
+		# 	flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
+		# 	deposit_blockers = none
+		# 	# init_effect = {
+		# 	# 	generate_empire_home_planet = yes
+		# 	# 	prevent_anomaly = yes
+		# 	# }
+		# }
 		moon = {
 			class = pc_habitat
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 6
-			size = 25
+			orbit_angle = 55
+			size = 18
 			starting_planet = yes
-			flags = { ignore_startup_effect has_megastructure void_farer_habitat_1 special_start_planet megastructure habitat }
+			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
 			deposit_blockers = none
+			home_planet = yes
+			init_effect = {
+				generate_empire_home_planet = yes
+				prevent_anomaly = yes
+			}
 		}
 	}
 
@@ -514,15 +570,6 @@ void_reavers_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 10
 		}
-	}
-
-	planet = {
-		class = pc_habitat
-		orbit_angle = 55
-		size = 25
-		starting_planet = yes
-		flags = { ignore_startup_effect has_megastructure void_farer_habitat_1 special_start_planet megastructure habitat }
-		deposit_blockers = none
 	}
 
 	planet = {
@@ -997,21 +1044,13 @@ ancient_drones_system = {
 		}
 	}
 
-	planet = {
-		class = pc_habitat
-		orbit_angle = 55
-		size = 25
-		starting_planet = yes
-		flags = { ignore_startup_effect has_megastructure void_farer_habitat_1 special_start_planet megastructure habitat }
-		deposit_blockers = none
-	}
-
 	change_orbit = 40
 
 	planet = {
 		count = 1
 		class = "pc_broken"
 		size = { min = 10 max = 15 }
+		flags = { ignore_startup_effect habitat_1_planet has_megastructure }
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -1019,6 +1058,19 @@ ancient_drones_system = {
 			add_deposit = d_minerals_4
 			add_deposit = d_minerals_4
 			add_deposit = d_minerals_4
+		}
+		moon = {
+			class = pc_habitat
+			orbit_angle = 55
+			size = 18
+			starting_planet = yes
+			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
+			deposit_blockers = none
+			home_planet = yes
+			init_effect = {
+				generate_empire_home_planet = yes
+				prevent_anomaly = yes
+			}
 		}
 	}
 

@@ -313,7 +313,11 @@ can_use_galactic_market = {
 can_be_part_of_galactic_community = {
 	custom_tooltip = {
 		fail_text = "community_default_failtext"
-		merg_is_default_empire = yes
+		OR = {
+			merg_is_default_empire = yes
+			# ACOT
+			is_country_type = original_empire_active
+		}
 	}
 	custom_tooltip = {
 		fail_text = "community_homicidal_failtext"

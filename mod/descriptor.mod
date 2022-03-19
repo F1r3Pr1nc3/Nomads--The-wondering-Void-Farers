@@ -1,4 +1,4 @@
-version="3.3.2.1"
+version="3.3.3.0"
 tags={
 	"Spaceships"
 	"Overhaul"
@@ -9,6 +9,10 @@ tags={
 	"Scavengers"
 	"Void Farers"
 }
+dependencies={
+	"! The Merger of Rules 3.3" 
+}
+
 picture="thumbnail.png"
 name="Nomads: The wondering Void Farers (Alpha) [3.3]"
 supported_version="3.3.*"

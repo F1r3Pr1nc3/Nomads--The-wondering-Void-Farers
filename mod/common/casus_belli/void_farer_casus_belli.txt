@@ -12,12 +12,13 @@ cb_defeat_Khan = {
 	show_in_diplomacy = no
 	show_notification = no
 	potential = {
-		OR = {
-			merg_is_default_empire = yes
-			# is_country_type = celestial_empire
-			# is_country_type = dimensional_shroud
-			# is_country_type = void_farer
-		}
+		merg_is_default_empire = yes
+		# OR = {
+		# 	is_country_type = deuault_empire
+		# 	is_country_type = celestial_empire
+		# 	is_country_type = dimensional_shroud
+		# 	is_country_type = void_farer
+		# }
 		NOR = {
 			has_ascension_perk = ap_khan
 			has_ascension_perk = ap_wild_hunt

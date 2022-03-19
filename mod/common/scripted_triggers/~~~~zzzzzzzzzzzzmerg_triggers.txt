@@ -19,21 +19,23 @@ is_country_type_with_subjects = {
 	}
 }
 
-# is_regular_empire = {
-# 	OR = {
-# 		merg_is_default_empire = yes
-# 		is_country_type = fallen_empire
-# 		is_country_type = awakened_fallen_empire
-# 		# ZOFE
-# 		is_country_type = ascended_empire
-# 		is_country_type = lost_empire
-# 		# The Empty Vagrant
-# 		is_country_type = default_ev
-# 		is_country_type = fallen_empire_ev
-# 		is_country_type = awakened_fallen_empire_ev
-# 		# Human Fallen Empire
-# 		is_country_type = human_fallen_empire
-# 		is_country_type = hfe_pirate
-# 	}
-# 	NOT = { has_ethic = ethic_gestalt_consciousness }
-# }
+is_regular_empire = {
+	OR = {
+		merg_is_standard_empire = yes
+	# 	is_country_type = fallen_empire
+	# 	is_country_type = awakened_fallen_empire
+	# 	# ZOFE
+	# 	is_country_type = ascended_empire
+	# 	is_country_type = lost_empire
+	# 	# The Empty Vagrant
+	# 	is_country_type = default_ev
+	# 	is_country_type = fallen_empire_ev
+	# 	is_country_type = awakened_fallen_empire_ev
+	# 	# Human Fallen Empire
+	# 	is_country_type = human_fallen_empire
+	# 	is_country_type = hfe_pirate
+		is_country_type =  awakened_gate_builders
+		is_country_type = awakened_marauders
+	}
+	is_gestalt = no
+}

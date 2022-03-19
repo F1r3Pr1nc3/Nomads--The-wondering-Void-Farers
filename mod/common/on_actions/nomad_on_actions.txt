@@ -9,20 +9,20 @@
 
 empire_init_capital_planet = {
 	events = {
-		void_farer.2
+		void_farer_start_events.2
 	}
 }
 
 empire_init_create_ships = {
 	events = {
-		void_farer.9
+		void_farer_start_events.9
 	}
 }
 
 on_game_start_country = {
 	events = {
 		# nomad_start_events.34
-		# void_farer.3 # starbase?
+		# void_farer_start_events.3 # starbase?
 		# reaver_shroud.10 create the Reaver country?
 	}
 }

@@ -21,14 +21,15 @@ country_event = {
 		NOT = { has_country_flag = starting_event }
 		any_neighbor_country = {
 			merg_is_default_empire = yes
-			NOT = { is_country = root }
+			NOT = { is_same_empire = root }
+			# NOT = { is_country_type = void_farer } # TODO remove this bug workaround
 			has_communications = root
 			any_neighbor_country = {
 				OR = {
 					merg_is_default_empire = yes
 					is_country_type = fallen_empire
 				}
-				NOT = { is_country = root }
+				NOT = { is_same_empire = root }
 				has_communications = prev
 				NOT = { has_communications = root }
 			}
@@ -39,14 +40,15 @@ country_event = {
 		random_neighbor_country = {
 			limit = {
 				merg_is_default_empire = yes
-				NOT = { is_country = root }
+				NOT = { is_same_empire = root }
+				# NOT = { is_country_type = void_farer } # TODO remove this bug workaround
 				has_communications = root
 				any_neighbor_country = {
 					OR = {
 						merg_is_default_empire = yes
 						is_country_type = fallen_empire
 					}
-					NOT = { is_country = root }
+					NOT = { is_same_empire = root }
 					has_communications = prev
 					NOT = { has_communications = root }
 				}
@@ -58,7 +60,7 @@ country_event = {
 						merg_is_default_empire = yes
 						is_country_type = fallen_empire
 					}
-					NOT = { is_country = root }
+					NOT = { is_same_empire = root }
 					has_communications = prev
 					NOT = { has_communications = root }
 				}
@@ -69,10 +71,21 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		months = 120
 		modifier = {
 			factor = 0.5
-			years_passed > 50
+			check_modifier_value = {
+				modifier = intel_decryption_add
+				value >= 4
+			}
+		}
+		modifier = {
+			factor = 0.5
+			years_passed > 40
+		}
+		modifier = {
+			factor = 0.5
+			years_passed > 70
 		}
 		modifier = {
 			factor = 0.5
@@ -80,11 +93,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.5
-			years_passed > 150
-		}
-		modifier = {
-			factor = 0.5
-			years_passed > 200
+			years_passed > 120
 		}
 	}
 
@@ -118,3 +127,107 @@ country_event = {
 		}
 	}
 }
+
+# Why? Already handled by nomad_communications_spread fallen_empires.10
+### Void Farer Communication Spread MTTH.
+# country_event = {
+# 	id = void_farer.1
+# 	hide_window = yes
+# 	mean_time_to_happen = { months = 1 }
+# 	trigger = {
+# 		is_country_type = void_farer
+# 		# Always if we're awakened
+# 		# root = { is_country_type = awakened_fallen_empire }
+# 		any_country = {
+# 			OR = {
+# 				merg_is_default_empire = yes	# For compat.
+# 				is_fallen_empire = yes				# For compat.
+# 				is_country_type = dormant_marauders
+# 				is_country_type = nomad
+# 				is_country_type = neutral_faction
+# 				is_country_type = enclave
+# 				# is_country_type = swarm
+# 				# is_country_type = extradimensional
+# 				# is_country_type = extradimensional_2
+# 				# is_country_type = extradimensional_3
+# 				# is_country_type = ai_empire
+# 				is_crisis_faction = yes
+# 				is_country_type = cybrex_empire
+# 				is_country_type = tiyanki
+# 				is_country_type = amoeba
+# 				is_country_type = crystal
+# 				is_country_type = drone
+# 				is_country_type = cloud
+# 				# If we're both void farer empires, we know of each other.
+# 				# is_country_type = void_farer
+# 				# Also contact if we border them.
+# 				any_system_within_border = { is_neighbor_of = root }
+# 			}
+# 			NOR = {
+# 				is_same_empire = root
+# 				has_communications = root
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		random_country = {
+# 			limit = {
+# 				OR = {
+# 					merg_is_default_empire = yes		# For compat.
+# 					is_fallen_empire = yes					# For compat.
+# 					is_country_type = dormant_marauders
+# 					is_country_type = nomad
+# 					is_country_type = neutral_faction
+# 					is_country_type = enclave
+# 					# is_country_type = swarm
+# 					# is_country_type = extradimensional
+# 					# is_country_type = extradimensional_2
+# 					# is_country_type = extradimensional_3
+# 					# is_country_type = ai_empire
+# 					is_crisis_faction = yes
+# 					is_country_type = cybrex_empire
+# 					is_country_type = tiyanki
+# 					is_country_type = amoeba
+# 					is_country_type = crystal
+# 					is_country_type = drone
+# 					is_country_type = cloud
+# 				}
+# 				NOR = {
+# 					is_same_empire = root
+# 					has_communications = root
+# 				}
+# 				OR = {
+# 					AND = {
+# 						root = { has_ai_personality = fallen_empire_spiritualist }
+# 						any_owned_planet = { has_modifier = "holy_planet" }
+# 					}
+# 					AND = {
+# 						root = { has_ai_personality = fallen_empire_materialist }
+# 						OR = {
+# 							has_technology = tech_sapient_ai
+# 							has_technology = tech_synthetic_workers
+# 						}
+# 						any_system_within_border = {
+# 							distance = {
+# 								source = root.capital_scope
+# 								max_distance <= 200
+# 							}
+# 						}
+# 					}
+# 					# Also contact if we border them.
+# 					any_owned_planet = { is_neighbor_of = root }
+# 					any_owned_fleet = {
+# 						is_ship_class = shipclass_starbase
+# 						distance_to_empire = {
+# 							who = root
+# 							distance = 75
+# 						}
+# 					}
+# 				}
+# 			}
+# 			establish_communications_no_message = root
+# 			root = { save_event_target_as = contact_empire }
+# 			country_event = { id = action.1 }
+# 		}
+# 	}
+# }

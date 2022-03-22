@@ -22,7 +22,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_1
 			}
 		}
@@ -35,7 +35,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_2
 			}
 		}
@@ -48,7 +48,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_3
 			}
 		}
@@ -61,7 +61,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_4
 			}
 		}
@@ -74,7 +74,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_5
 			}
 		}
@@ -98,7 +98,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_1
 			}
 		}
@@ -111,7 +111,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_2
 			}
 		}
@@ -124,7 +124,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_3
 			}
 		}
@@ -137,7 +137,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_4
 			}
 		}
@@ -150,7 +150,7 @@ building_vf_astro_mining_bay = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_5
 			}
 		}
@@ -226,7 +226,7 @@ building_vf_power_conduits = {
 		potential = {
 			exists = owner
 			owner = {
-				is_country_type = void_farer
+				is_void_farer = yes
 			}
 			owner = {
 				is_gestalt = no
@@ -241,7 +241,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_1
 			}
 		}
@@ -254,7 +254,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_2
 			}
 		}
@@ -267,7 +267,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_3
 			}
 		}
@@ -280,7 +280,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_4
 			}
 		}
@@ -293,7 +293,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = no
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_5
 			}
 		}
@@ -317,7 +317,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_1
 			}
 		}
@@ -330,7 +330,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_2
 			}
 		}
@@ -343,7 +343,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_3
 			}
 		}
@@ -356,7 +356,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_4
 			}
 		}
@@ -369,7 +369,7 @@ building_vf_power_conduits = {
 			exists = owner
 			owner = {
 				is_gestalt = yes
-				is_country_type = void_farer
+				is_void_farer = yes
 				has_technology = tech_space_mining_5
 			}
 		}

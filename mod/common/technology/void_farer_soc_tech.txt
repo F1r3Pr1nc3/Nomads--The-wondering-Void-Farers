@@ -49,7 +49,7 @@ tech_rights_of_claim = {
 	weight = @tier4weight1
 
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 	}
 
 	modifier = {

@@ -49,10 +49,10 @@ on_leader_spawned = {
 
 empire_init_add_technologies = {
 	events = {
-		nomad_start_events.1
-		vf_marauder_start_events.1
-		reaver_start_events.1
-		drone_start_events.1
+		void_farer_start_events.1
+		# void_farer_start_events.2
+		# void_farer_start_events.3
+		# void_farer_start_events.4
 	}
 }
 
@@ -104,9 +104,9 @@ on_pop_abducted = {
 # on_planet_zero_health = {
 on_planet_bombarded = {
 	events = {
-		# vf_marauder_bounty.12
-		# vf_marauder_bounty.13
-		# vf_marauder_bounty.14
+		# marauder_bounty.12
+		# marauder_bounty.13
+		# marauder_bounty.14
 	}
 }
 
@@ -221,5 +221,13 @@ on_pre_communications_established = {
 # on_building_completed = {
 # 	events = {
 
+# 	}
+# }
+
+# Executed when a country picks an ascension perk.
+# THIS = country
+# on_ascension_perk_picked = {
+# 	events = {
+# 		void_marauder_raid_event.12
 # 	}
 # }

@@ -197,7 +197,7 @@ entity = {
 
 
 # entity = {
-# 	name = "ancient_drone_01_mining_station_entity"
+# 	name = "ancient_mining_station_entity"
 # 	pdxmesh = "ancient_drone_station_mesh"
 
 # 	locator = { name = "part1" 			position = { 0 0 0 } }

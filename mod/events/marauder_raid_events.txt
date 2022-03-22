@@ -222,3 +222,17 @@ event = {
 	}
 
 }
+
+# on_ascension_perk_picked
+# THIS = country
+# country_event = {
+# 	id = void_marauder_raid_event.12
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		has_ascension_perk = ap_become_the_crisis
+# 	}
+# 	immediate = {
+# 		give_technology = { message = no tech = "tech_marauder_ships" }
+# 	}
+# }

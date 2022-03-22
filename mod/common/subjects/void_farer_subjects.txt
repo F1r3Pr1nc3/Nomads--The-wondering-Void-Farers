@@ -22,7 +22,7 @@ marauder_satrapy = {
 	potential = {
 		merg_is_default_empire = yes
 		has_been_declared_crisis = no
-		from = { is_country_type = void_farer }
+		from = { is_void_farer = yes }
 	}
 
 	effect = {
@@ -30,7 +30,7 @@ marauder_satrapy = {
 			limit = {
 				from = {
 					NOR = {
-						is_country_type = void_farer
+						is_void_farer = yes
 						is_country_type = awakened_marauders
 					}
 				}

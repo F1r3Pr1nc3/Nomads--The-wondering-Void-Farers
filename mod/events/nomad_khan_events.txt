@@ -16,7 +16,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		has_origin = origin_void_marauders
 		has_ascension_perk = ap_khan
 		NOR = {
@@ -216,13 +216,13 @@ country_event = {
 		name = "khan_response.1.c"
 		trigger = {
 			is_at_war_with = from
-			is_country_type = void_farer
+			is_void_farer = yes
 		}
 	}
 	option = {
 		name = "khan_response.1.d"
 		trigger = {
-			is_country_type = void_farer
+			is_void_farer = yes
 		}
 	}
 	option = {
@@ -250,7 +250,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		fromfrom = {
 			exists = leader
 			fleet = { num_ships < 1 }
@@ -342,7 +342,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		has_origin = origin_void_marauders
 		has_ascension_perk = ap_khan
 		NOR = {

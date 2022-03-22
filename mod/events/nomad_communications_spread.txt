@@ -17,12 +17,12 @@ country_event = {
 	show_sound = event_alien_signal
 
 	trigger = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		NOT = { has_country_flag = starting_event }
 		any_neighbor_country = {
 			merg_is_default_empire = yes
 			NOT = { is_same_empire = root }
-			# NOT = { is_country_type = void_farer } # TODO remove this bug workaround
+			# NOT = { is_void_farer = yes } # TODO remove this bug workaround.
 			has_communications = root
 			any_neighbor_country = {
 				OR = {
@@ -41,7 +41,7 @@ country_event = {
 			limit = {
 				merg_is_default_empire = yes
 				NOT = { is_same_empire = root }
-				# NOT = { is_country_type = void_farer } # TODO remove this bug workaround
+				# NOT = { is_void_farer = yes } # TODO remove this bug workaround.
 				has_communications = root
 				any_neighbor_country = {
 					OR = {
@@ -135,7 +135,7 @@ country_event = {
 # 	hide_window = yes
 # 	mean_time_to_happen = { months = 1 }
 # 	trigger = {
-# 		is_country_type = void_farer
+# 		is_void_farer = yes
 # 		# Always if we're awakened
 # 		# root = { is_country_type = awakened_fallen_empire }
 # 		any_country = {
@@ -159,7 +159,7 @@ country_event = {
 # 				is_country_type = drone
 # 				is_country_type = cloud
 # 				# If we're both void farer empires, we know of each other.
-# 				# is_country_type = void_farer
+# 				# is_void_farer = yes
 # 				# Also contact if we border them.
 # 				any_system_within_border = { is_neighbor_of = root }
 # 			}

@@ -214,7 +214,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		exists = from
 	}
 	immediate = {

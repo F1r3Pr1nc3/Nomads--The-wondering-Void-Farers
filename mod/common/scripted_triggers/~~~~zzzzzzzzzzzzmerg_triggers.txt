@@ -15,7 +15,7 @@ is_country_type_with_subjects = {
 		is_country_type = original_empire_passive
 		is_country_type = original_empire_active
 		# Nomads: The wondering Void Farers.
-		is_country_type = void_farer
+		is_void_farer = yes
 	}
 }
 

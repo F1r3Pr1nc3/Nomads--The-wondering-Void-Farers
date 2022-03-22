@@ -550,7 +550,7 @@ starbase_marauder_citadel = {
 	}
 }
 
-# starbase_vf_marauder = {
+# starbase_marauder = {
 # 	graphical_culture = no
 # 	max_speed = 0.0
 # 	acceleration = 0.0
@@ -645,13 +645,13 @@ void_farer_void_dwelling = {
 	required_component_set = "power_core"
 
 	potential_country = {
-		is_country_type = void_farer
+		is_void_farer = yes
 	}
 }
 
-################
+#####################
 # CIVILIAN STATIONS #
-################
+#####################
 
 vf_mining_station = {
 	max_speed = 6
@@ -694,7 +694,7 @@ vf_mining_station = {
 
 	potential_country = {
 		OR = {
-			is_country_type = void_farer
+			is_void_farer = yes
 			has_ascension_perk = ap_voidborn
 		}
 	}
@@ -742,7 +742,7 @@ vf_alloy_station = {
 
 	potential_country = {
 		OR = {
-			is_country_type = void_farer
+			is_void_farer = yes
 			has_ascension_perk = ap_voidborn
 		}
 	}
@@ -790,7 +790,7 @@ vf_factory_station = {
 
 	potential_country = {
 		OR = {
-			is_country_type = void_farer
+			is_void_farer = yes
 			has_ascension_perk = ap_voidborn
 		}
 	}
@@ -834,7 +834,7 @@ vf_energy_station = {
 
 	potential_country = {
 		OR = {
-			is_country_type = void_farer
+			is_void_farer = yes
 			has_ascension_perk = ap_voidborn
 		}
 	}
@@ -884,7 +884,7 @@ vf_research_station = {
 
 	potential_country = {
 		OR = {
-			is_country_type = void_farer
+			is_void_farer = yes
 			has_ascension_perk = ap_voidborn
 		}
 	}

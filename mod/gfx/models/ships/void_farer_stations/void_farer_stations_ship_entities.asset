@@ -281,24 +281,23 @@ entity = {
 	name = "avian_01_vf_alloy_station_entity"
 	pdxmesh = "avian_01_terraforming_station_mesh"
 
-	default_state = "idle"
-	state = { name = "idle" state_time = 5
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_wormhole_station_idle" } }
+    default_state = "idle"
+	state = { name = "idle" animation = "rotate"
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_terraforming_station_idle_hum" } }
+        event = { time = 1 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+        event = { time = 2 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+        event = { time = 0.7 node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+        event = { time = 0 node = "light_locator_04" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+    }
 
-		event = { time = 0.8 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 3 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 2 node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 1 node = "light_locator_04" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-		event = { time = 2.6 node = "light_locator_05" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
-	}
+    state = { name = "death" animation = "death" looping = no
+        event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+        event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+        event = { time = 0.9 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+        event = { time = 1.4 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 
-	state = { name = "death" state_time = 3 looping = no
-		event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
-		event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
-		event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
-
-		event = { time = 2.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
-	}
+        event = { time = 1.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+    }
 
 	locator = { name = "explosion_1" 		position = { 2 4.5 -2 } }
 	locator = { name = "explosion_2" 		position = { -0.5 8 1.5 } }

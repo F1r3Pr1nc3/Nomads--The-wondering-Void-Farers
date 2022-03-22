@@ -1,34 +1,68 @@
 ##################################################################################################################################
 ##### Adding traits bonus to eligible nations.
 ##################################################################################################################################
-namespace = nomad_start_events
-namespace = vf_marauder_start_events
-namespace = reaver_start_events
-namespace = drone_start_events
 namespace = void_farer_start_events
+
 country_event = {
-	id = nomad_start_events.1
+	id = void_farer_start_events.1
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_origin = origin_void_nomads
+			has_origin = origin_void_marauders
+			has_origin = origin_void_reavers
+			has_origin = origin_ancient_drones
+		}
+	}
 	immediate = {
+		# set_country_type = void_farer # TODO needs more work
+		set_country_flag = void_farer
+
+		# namespace = nomad_start_events
+		### Nomads Start events
+		give_technology = { message = no tech = "tech_starbase_3" }
+		give_technology = { message = no tech = "tech_habitat_1" }
+		give_technology = { message = no tech = "tech_automated_exploration" }
+		give_technology = { message = no tech = "tech_shields_2" }
+		give_technology = { message = no tech = "tech_fusion_power" }
+		give_technology = { message = no tech = "tech_ship_armor_2" }
+		give_technology = { message = no tech = "tech_thrusters_2" }
+		give_technology = { message = no tech = "tech_sensors_2" }
+		give_technology = { message = no tech = "tech_wormhole_stabilization" }
+		give_technology = { message = no tech = "tech_powered_exoskeletons" }
+		give_technology = { message = no tech = "tech_nomad_ships" }
+		add_resource = { energy = 200 minerals = 100 alloys = 200 influence = 100 food = 100 }
+		# namespace = drone_start_events
+		###	Scavenger Start events
 		if = {
-			limit = { has_origin = "origin_void_nomads" }
-			give_technology = { message = no tech = "tech_starbase_3" }
-			give_technology = { message = no tech = "tech_habitat_1" }
-			give_technology = { message = no tech = "tech_automated_exploration" }
-			give_technology = { message = no tech = "tech_shields_2" }
-			give_technology = { message = no tech = "tech_fusion_power" }
-			give_technology = { message = no tech = "tech_ship_armor_2" }
-			give_technology = { message = no tech = "tech_thrusters_2" }
-			give_technology = { message = no tech = "tech_sensors_2" }
-			give_technology = { message = no tech = "tech_wormhole_stabilization" }
+			limit = { has_origin = origin_ancient_drones }
+			# give_technology = { message = no tech = "tech_void_farer_engineering" }
+			# give_technology = { message = no tech = "tech_robotic_workers" }
+			set_country_flag = void_scavenger_bots
+			add_resource = { energy = 100 }
+			set_graphical_culture = ancient_01
+		} else = {
 			give_technology = { message = no tech = "tech_void_farer_engineering" }
 			give_technology = { message = no tech = "tech_robotic_workers" }
-			give_technology = { message = no tech = "tech_powered_exoskeletons" }
 			give_technology = { message = no tech = "tech_hydroponics" }
-			set_country_flag = void_nomad
-			set_country_type = void_farer
-			add_resource = { energy = 200 minerals = 100 consumer_goods = 100 alloys = 200 influence = 100 food = 100 }
+			add_resource = { consumer_goods = 100 }
+
+			if = { limit = { has_origin = origin_void_nomads }
+				set_country_flag = void_nomad
+			}
+			# namespace = marauder_start_events
+			### Marauder Start events
+			else_if = { limit = { has_origin = origin_void_marauders }
+				set_country_flag = void_marauders
+				set_graphical_culture = pirate_01
+			}
+			# namespace = reaver_start_events
+			###	Reaver Start events
+			else_if = { limit = { has_origin = origin_void_reavers }
+				set_country_flag = void_reavers
+				set_graphical_culture = pirate_01
+			}
 		}
 	}
 }
@@ -45,12 +79,11 @@ planet_event = {
 	}
 	trigger = {
 		exists = owner
-		owner = { is_country_type = void_farer }
+		owner = { is_void_farer = yes }
 	}
 	immediate = {
 		change_planet_size = 16
-		owner = { establish_communications_no_message = root.space_owner } # TODO some bug fix try on
-		establish_communications_no_message = root
+		owner = { establish_communications_no_message = root.space_owner }
 		if = {
 			limit = { is_artificial = no }
 			if = {
@@ -65,118 +98,50 @@ planet_event = {
 	# option = { name = OK }
 }
 
-### Marauder Start events
-country_event = {
-	id = vf_marauder_start_events.1
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		if = {
-			limit = { has_origin = origin_void_marauders }
-			give_technology = { message = no tech = "tech_starbase_3" }
-			give_technology = { message = no tech = "tech_habitat_1" }
-			give_technology = { message = no tech = "tech_automated_exploration" }
-			give_technology = { message = no tech = "tech_shields_2" }
-			give_technology = { message = no tech = "tech_fusion_power" }
-			give_technology = { message = no tech = "tech_ship_armor_2" }
-			give_technology = { message = no tech = "tech_thrusters_2" }
-			give_technology = { message = no tech = "tech_sensors_2" }
-			give_technology = { message = no tech = "tech_wormhole_stabilization" }
-			give_technology = { message = no tech = "tech_void_farer_engineering" }
-			give_technology = { message = no tech = "tech_robotic_workers" }
-			give_technology = { message = no tech = "tech_powered_exoskeletons" }
-			set_country_flag = void_marauders
-			set_country_type = void_farer
-			add_resource = { energy = 200 minerals = 100 consumer_goods = 100 alloys = 200 influence = 100 food = 100 }
-		}
-	}
-}
-
-###########################
-#	Reaver Start events
-###########################
-country_event = {
-	id = reaver_start_events.1
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		if = {
-			limit = { has_origin = origin_void_reavers }
-			give_technology = { message = no tech = "tech_starbase_3" }
-			give_technology = { message = no tech = "tech_habitat_1" }
-			give_technology = { message = no tech = "tech_automated_exploration" }
-			give_technology = { message = no tech = "tech_shields_2" }
-			give_technology = { message = no tech = "tech_fusion_power" }
-			give_technology = { message = no tech = "tech_ship_armor_2" }
-			give_technology = { message = no tech = "tech_thrusters_2" }
-			give_technology = { message = no tech = "tech_sensors_2" }
-			give_technology = { message = no tech = "tech_wormhole_stabilization" }
-			give_technology = { message = no tech = "tech_void_farer_engineering" }
-			give_technology = { message = no tech = "tech_robotic_workers" }
-			give_technology = { message = no tech = "tech_powered_exoskeletons" }
-			set_country_flag = void_reavers
-			set_country_type = void_farer
-			add_resource = { energy = 200 minerals = 100 consumer_goods = 100 alloys = 200 influence = 100 food = 100 }
-		}
-	}
-}
-
-###########################
-#	Scavenger Start events
-###########################
-country_event = {
-	id = drone_start_events.1
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		if = {
-			limit = { has_origin = origin_ancient_drones }
-			give_technology = { message = no tech = "tech_starbase_3" }
-			give_technology = { message = no tech = "tech_habitat_1" }
-			give_technology = { message = no tech = "tech_automated_exploration" }
-			give_technology = { message = no tech = "tech_shields_2" }
-			give_technology = { message = no tech = "tech_fusion_power" }
-			give_technology = { message = no tech = "tech_ship_armor_2" }
-			give_technology = { message = no tech = "tech_thrusters_2" }
-			give_technology = { message = no tech = "tech_sensors_2" }
-			give_technology = { message = no tech = "tech_wormhole_stabilization" }
-			# give_technology = { message = no tech = "tech_void_farer_engineering" }
-			# give_technology = { message = no tech = "tech_robotic_workers" }
-			give_technology = { message = no tech = "tech_powered_exoskeletons" }
-			set_country_flag = void_scavenger_bots
-			set_country_type = void_farer
-			add_resource = { energy = 300 minerals = 100 alloys = 200 influence = 100 }
-		}
-	}
-}
-
-
-### Void farer init - add ships
+### Void farer init - add ships (empire_init_create_ships)
 country_event = {
 	id = void_farer_start_events.9
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {
+		is_void_farer = yes
+	}
 	immediate = {
 		# Ark
-		if = {
-			limit = { is_country_type = void_farer }
-			# add_global_ship_design = "NAME_ark"
-			if = { limit = { NOT = {  has_technology = tech_nomad_ships } }
-				give_technology = { tech = tech_nomad_ships }
-			}
-			create_ship_design = { design = "NAME_ark" }
-			add_ship_design = last_created_design
-			create_fleet = {
-				set_take_point = yes
-				effect = {
-					set_owner = prev
-					create_ship = {
-						name = random
-						design = "NAME_ark"
-						graphical_culture = root
-					}
+		# add_global_ship_design = "NAME_ark"
+		if = { limit = { NOT = {  has_technology = tech_nomad_ships } }
+			give_technology = { tech = tech_nomad_ships }
+		}
+		create_ship_design = { design = "NAME_ark" }
+		add_ship_design = last_created_design
+		create_fleet = {
+			set_take_point = yes
+			effect = {
+				set_owner = prev
+				create_ship = {
+					name = random
+					design = "NAME_ark"
+					graphical_culture = root
 				}
 			}
 		}
+		# capital_scope = {
+		# 	set_planet_size = 22
+		# }
+		# if = {
+		# 	limit = {
+		# 		OR = {
+		# 			has_origin = origin_void_marauders
+		# 			has_origin = origin_void_reavers
+		# 		}
+		# 	}
+		# 	random_owned_megastructure = {
+		# 		limit = {
+		# 			is_megastructure_type = habitat_0
+		# 		}
+		# 		set_graphical_culture = mammalian_01
+		# 	}
+		# 	set_graphical_culture = pirate_01
+		# }
 	}
 }

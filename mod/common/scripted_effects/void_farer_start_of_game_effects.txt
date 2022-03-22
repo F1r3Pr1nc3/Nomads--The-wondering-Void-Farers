@@ -3,7 +3,7 @@
 # create_start_void_farer_ark = {
 # 	if = {
 # 		limit = {
-# 			owner = { is_country_type = void_farer }
+# 			owner = { is_void_farer = yes }
 # 		}
 # 		create_fleet = {
 # 			effect = {
@@ -24,10 +24,10 @@
 # 	}
 # }
 
-# # scope fleet
+# # Scope fleet
 # create_void_farer_ark = {
 # 	if = {
-# 		limit = { owner = { is_country_type = void_farer } }
+# 		limit = { owner = { is_void_farer = yes } }
 # 		if = { limit = { NOT = {  has_technology = tech_nomad_ships } }
 # 			give_technology = { tech = tech_nomad_ships }
 # 		}
@@ -50,10 +50,15 @@
 generate_start_void_farer_buildings_and_districts = {
 	if = {
 		limit = {
-			owner = { is_country_type = void_farer }
+			owner = { is_void_farer = yes }
 		}
 		if = {
-			limit = { owner = { is_organic_void_farer = yes } }
+			limit = {
+				owner = {
+					is_void_farer = yes
+					is_gestalt = no
+				}
+			}
 			while = {
 				limit = { num_pops < 26 }
 				create_pop = {
@@ -74,7 +79,7 @@ generate_start_void_farer_buildings_and_districts = {
 		if = {
 			limit = {
 				owner = {
-					is_country_type = void_farer
+					is_void_farer = yes
 					is_gestalt = no
 				}
 			}

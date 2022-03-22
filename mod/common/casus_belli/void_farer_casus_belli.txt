@@ -17,7 +17,7 @@ cb_defeat_Khan = {
 		# 	is_country_type = deuault_empire
 		# 	is_country_type = celestial_empire
 		# 	is_country_type = dimensional_shroud
-		# 	is_country_type = void_farer
+		# 	is_void_farer = yes
 		# }
 		NOR = {
 			has_ascension_perk = ap_khan
@@ -57,7 +57,7 @@ cb_defeat_wild_hunt = {
 			merg_is_default_empire = yes
 			# is_country_type = celestial_empire
 			# is_country_type = dimensional_shroud
-			# is_country_type = void_farer
+			# is_void_farer = yes
 		}
 		NOR = {
 			has_ascension_perk = ap_khan
@@ -93,7 +93,7 @@ cb_void_farer_claim = {
 	show_in_diplomacy = yes
 	show_notification = no
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		has_technology = tech_rights_of_claim
 	}
 	is_valid = {
@@ -135,7 +135,7 @@ cb_nomad_ideology = {
 	show_in_diplomacy = yes
 	show_notification = yes
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
 	is_valid = {

@@ -71,7 +71,7 @@ vf_scavenger_drone = {
 	required_component_set = "sensor_components"
 
 	is_designable = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 vf_scavenger_corvette = {
@@ -101,7 +101,7 @@ vf_scavenger_corvette = {
 	required_component_set = "sensor_components"
 
 	is_designable = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 vf_scavenger_destroyer = {
@@ -131,7 +131,7 @@ vf_scavenger_destroyer = {
 	required_component_set = "sensor_components"
 
 	is_designable = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 vf_scavenger_cruiser = {
@@ -160,7 +160,7 @@ vf_scavenger_cruiser = {
 	required_component_set = "sensor_components"
 
 	is_designable = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 vf_scavenger_battleship = {
@@ -196,7 +196,7 @@ vf_scavenger_battleship = {
 	required_component_set = "sensor_components"
 
 	is_designable = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 # Ancient Manufactory object
@@ -269,5 +269,5 @@ vf_scavenger_core = {
 	}
 	class = shipclass_military
 	is_designable = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }

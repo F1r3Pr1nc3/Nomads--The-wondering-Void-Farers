@@ -84,7 +84,7 @@ can_build_branch_offices = {
 			# Girls Frontline
 			has_civic = civic_gf_GK
 			# Nomads
-			is_country_type = void_farer
+			is_void_farer = yes
 		}
 	}
 }

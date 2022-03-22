@@ -80,7 +80,7 @@ tech_arm_civilian_fleet = {
 	weight = 1
 	potential = {
 		OR = {
-			is_country_type = void_farer
+			is_void_farer = yes
 			has_ascension_perk = ap_voidborn
 		}
 	}
@@ -130,15 +130,15 @@ tech_marauder_corvette_build_speed = {
 	}
 	weight = @tier1weight2
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
 	modifier = {
-		shipsize_vf_marauder_corvette_build_speed_mult = 0.25
-		ship_vf_marauder_corvette_cost_mult = -0.05
+		shipsize_marauder_corvette_build_speed_mult = 0.25
+		ship_marauder_corvette_cost_mult = -0.05
 	}
 	weight_modifier = {
 		modifier = {
@@ -171,13 +171,13 @@ tech_marauder_corvette_hull_1 = {
 	}
 	weight = @tier1weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_corvette_hull_add = 125 }
+	modifier = { shipsize_marauder_corvette_hull_add = 125 }
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -211,13 +211,13 @@ tech_marauder_corvette_hull_2 = {
 	}
 	weight = @tier2weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_corvette_hull_add = 125 }
+	modifier = { shipsize_marauder_corvette_hull_add = 125 }
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -267,15 +267,15 @@ tech_marauder_frigate_build_speed = {
 	}
 	weight = @tier1weight2
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
 	modifier = {
-		shipsize_vf_marauder_frigate_build_speed_mult = 0.25
-		ship_vf_marauder_frigate_cost_mult = -0.05
+		shipsize_marauder_frigate_build_speed_mult = 0.25
+		ship_marauder_frigate_cost_mult = -0.05
 	}
 	weight_modifier = {
 		modifier = {
@@ -308,13 +308,13 @@ tech_marauder_frigate_hull_1 = {
 	}
 	weight = @tier1weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_frigate_hull_add = 250 }
+	modifier = { shipsize_marauder_frigate_hull_add = 250 }
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -348,13 +348,13 @@ tech_marauder_frigate_hull_2 = {
 	}
 	weight = @tier2weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_frigate_hull_add = 250 }
+	modifier = { shipsize_marauder_frigate_hull_add = 250 }
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -404,15 +404,15 @@ tech_marauder_cruiser_build_speed = {
 	}
 	weight = @tier1weight2
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
 	modifier = {
-		shipsize_vf_marauder_cruiser_build_speed_mult = 0.25
-		ship_vf_marauder_cruiser_cost_mult = -0.05
+		shipsize_marauder_cruiser_build_speed_mult = 0.25
+		ship_marauder_cruiser_cost_mult = -0.05
 	}
 	weight_modifier = {
 		modifier = {
@@ -445,13 +445,13 @@ tech_marauder_cruiser_hull_1 = {
 	}
 	weight = @tier1weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_cruiser_hull_add = 600 }
+	modifier = { shipsize_marauder_cruiser_hull_add = 600 }
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -486,13 +486,13 @@ tech_marauder_cruiser_hull_2 = {
 	}
 	weight = @tier2weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_cruiser_hull_add = 600 }
+	modifier = { shipsize_marauder_cruiser_hull_add = 600 }
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -542,15 +542,15 @@ tech_marauder_galleon_build_speed = {
 	}
 	weight = @tier1weight2
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
 	modifier = {
-		shipsize_vf_marauder_galleon_build_speed_mult = 0.25
-		ship_vf_marauder_galleon_cost_mult = -0.05
+		shipsize_marauder_galleon_build_speed_mult = 0.25
+		ship_marauder_galleon_cost_mult = -0.05
 	}
 	weight_modifier = {
 		modifier = {
@@ -583,13 +583,13 @@ tech_marauder_galleon_hull_1 = {
 	}
 	weight = @tier1weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_galleon_hull_add = 1000 }
+	modifier = { shipsize_marauder_galleon_hull_add = 1000 }
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -624,13 +624,13 @@ tech_marauder_galleon_hull_2 = {
 	}
 	weight = @tier2weight3
 	potential = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = origin_void_marauders
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_vf_marauder_galleon_hull_add = 1000 }
+	modifier = { shipsize_marauder_galleon_hull_add = 1000 }
 	weight_modifier = {
 		modifier = {
 			factor = 0.25
@@ -727,7 +727,7 @@ tech_way_stations = {
 	category = { voidcraft }
 	tier = 0
 	start_tech = yes
-	potential = { is_country_type = void_farer }
+	potential = { is_void_farer = yes }
 	## Unlock the ability to build nomad ships and stations.
 	# weight_modifier = { factor = 0 }
 }

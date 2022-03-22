@@ -78,12 +78,12 @@ reavers = {
 		robot_liberator = no
 		propagator = yes
 		multispecies = no # lol
-		crisis_fighter = no
+		marauder_fighter = no
 		attack_neutrals = yes
 	}
 
 	allow = {
-		is_country_type = void_farer
+		is_void_farer = yes
 		OR = {
 			has_origin = "origin_void_reavers"
 		}
@@ -134,7 +134,7 @@ shrouded_reavers = {
 		robot_liberator = no
 		propagator = yes
 		multispecies = no # lol
-		crisis_fighter = no
+		marauder_fighter = no
 		attack_neutrals = yes
 	}
 

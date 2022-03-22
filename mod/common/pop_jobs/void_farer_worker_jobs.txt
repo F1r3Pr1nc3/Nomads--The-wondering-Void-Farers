@@ -15,7 +15,7 @@ scabber = {
 		hidden_trigger = { exists = owner }
 		owner = {
 			is_gestalt = no
-			is_country_type = void_farer
+			is_void_farer = yes
 		}
 		planet = { is_planet_class = pc_habitat }
 	}

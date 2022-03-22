@@ -33,27 +33,96 @@
 # Marauder #
 ############
 
-vf_marauder_corvette = {
-	max_speed = 160
+marauder_corvette = {
+	graphical_culture = { "pirate_01" }
+	entity = pirate_01_pirate_corvette_entity
+	graphical_culture = no
+	max_speed = @speed_very_fast
 	acceleration = 0.35
 	rotation_speed = 0.1
 	collision_radius = @corvette_collision_radius
-	modifier = { ship_armor_add = 3 ship_evasion_add = 60 }
-	max_hitpoints = 450
+	modifier = {
+		ship_armor_add = 3
+		ship_evasion_add = 60
+		ship_piracy_suppression_add = 10
+	}
+	max_hitpoints = 450 # 350
 	size_multiplier = 1
 	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
+	can_have_federation_design = no
 	icon = ship_size_military_1
-	base_buildtime = 60
+	# icon_frame = 2
+	base_buildtime = 60 # 30
+	components_add_to_cost = no
+	default_behavior = swarm
+
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	is_designable = yes
+	enable_default_design = yes
+	use_shipnames_from = corvette
+	prerequisites = { "tech_marauder_ships" }
+	potential_country = {
+		OR = {
+			has_crisis_level = crisis_level_2
+			is_void_raiders = yes
+		}
+	}
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
 
 	resources = {
 		category = ships
 		cost = { alloys = 15 }
-		produces = {
-			trigger = { has_technology = tech_alloys_2 }
-			alloys = 5
+		upkeep = {
+			trigger = { from = { is_void_raiders = no } }
+			energy = @corvette_upkeep_energy
+			minerals = @corvette_upkeep_minerals
+		}
+		# produces = {
+		# 	trigger = { has_technology = tech_alloys_2 }
+		# 	alloys = 5
+		# }
+	}
+}
+
+marauder_destroyer = {
+	graphical_culture = { "pirate_01" }
+	entity = pirate_01_pirate_destroyer_entity
+	graphical_culture = no
+	max_speed = @speed_fast
+	acceleration = 0.3
+	rotation_speed = 0.2
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = 25
+		ship_armor_add = 15
+		ship_piracy_suppression_add = 8
+	}
+	max_hitpoints = 900 # 700
+	size_multiplier = 2
+	fleet_slot_size = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 3
+	icon = ship_size_military_2
+	base_buildtime = 120 # 60
+	is_space_station = no
+	can_have_federation_design = no
+	components_add_to_cost = no
+	default_behavior = line
+
+	potential_country = {
+		OR = {
+			has_crisis_level = crisis_level_3
+			is_void_raiders = yes
 		}
 	}
 
@@ -61,59 +130,60 @@ vf_marauder_corvette = {
 	construction_type = starbase_shipyard
 	is_designable = yes
 	enable_default_design = yes
-	prerequisites = { "tech_marauder_ships" }
-
-	required_component_set = "power_core"
-	required_component_set = "ftl_components"
-	required_component_set = "combat_computers"
-	required_component_set = "thruster_components"
-	required_component_set = "sensor_components"
-
-	potential_country = { is_void_raiders = yes }
-}
-
-vf_marauder_frigate = {
-	max_speed = 140
-	acceleration = 0.3
-	rotation_speed = 0.2
-	collision_radius = @destroyer_collision_radius
-	modifier = { ship_evasion_add = 25 ship_armor_add = 15 }
-	max_hitpoints = 900
-	size_multiplier = 2
-	fleet_slot_size = 2
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	icon_frame = 3
-	base_buildtime = 120
-	is_space_station = no
-
-	class = shipclass_military
-	construction_type = starbase_shipyard
-	is_designable = yes
-	enable_default_design = yes
+	use_shipnames_from = destroyer
 	prerequisites = { "tech_destroyers" "tech_marauder_ships" }
 
 	required_component_set = "power_core"
 	required_component_set = "ftl_components"
-	required_component_set = "combat_computers"
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			minerals = 550
+		}
+		upkeep = {
+			trigger = { from = { is_void_raiders = no } }
+			energy = @destroyer_upkeep_energy
+			minerals = @destroyer_upkeep_minerals
+		}
+	}
 }
 
-vf_marauder_cruiser = {
-	max_speed = 140
+marauder_cruiser = {
+	graphical_culture = { "pirate_01" }
+	entity = pirate_01_pirate_cruiser_entity
+	graphical_culture = no
+	max_speed = @speed_fast
 	acceleration = 0.2
 	rotation_speed = 0.2
 	collision_radius = @destroyer_collision_radius
-	modifier = { ship_evasion_add = 10 ship_armor_add = 34 }
+	modifier = {
+		ship_evasion_add = 10
+		ship_armor_add = 34
+		ship_piracy_suppression_add = 6
+	}
 	max_hitpoints = 2000
 	size_multiplier = 4
-	fleet_slot_size = 3
+	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
-	icon_frame = 3
-	base_buildtime = 240
+	icon_frame = 4
+	icon = ship_size_military_4
+	base_buildtime = 240 # 120
 	is_space_station = no
+	can_have_federation_design = no
+	components_add_to_cost = no
+	default_behavior = line
+
+	potential_country = {
+		OR = {
+			has_crisis_level = crisis_level_4
+			is_void_raiders = yes
+		}
+	}
 
 	class = shipclass_military
 	construction_type = starbase_shipyard
@@ -123,20 +193,34 @@ vf_marauder_cruiser = {
 
 	required_component_set = "power_core"
 	required_component_set = "ftl_components"
-	required_component_set = "combat_computers"
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
 
-	potential_country = { is_void_raiders = yes }
+	resources = {
+		category = ships
+		cost = {
+			minerals = 900
+		}
+		upkeep = {
+			trigger = { from = { is_void_raiders = no } }
+			energy = @cruiser_upkeep_energy
+			minerals = @cruiser_upkeep_minerals
+		}
+	}
 }
 
-vf_marauder_galleon = {
-	max_speed = 80
+marauder_galleon = {
+	is_space_object = yes
+	graphical_culture = { "pirate_01" }
+	entity = pirate_01_galleon_entity
+	graphical_culture = no
+	max_speed = @speed_very_slow
 	acceleration = 0.3
 	rotation_speed = 0.05
 	collision_radius = 7
 	modifier = { ship_evasion_add = 35 ship_armor_add = 100 }
-	max_hitpoints = 5000
+	max_hitpoints = 40000 # 5000
 	size_multiplier = 8
 	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part1" } }
@@ -161,13 +245,19 @@ vf_marauder_galleon = {
 	potential_country = { is_void_raiders = yes }
 }
 
-vf_marauder_station = {
+# Marauder Asteroid Base
+marauder_station = {
 	graphical_culture = { "pirate_01" }
 	entity = pirate_01_pirate_station_entity
+	graphical_culture = no
 	max_speed = 0.0
 	acceleration = 0.0
 	rotation_speed = 0.0
-	modifier = { ship_evasion_mult = -1 ship_armor_add = 35 ship_weapon_range_mult = 0.20 }
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 35
+		ship_weapon_range_mult = 0.20
+	}
 	max_hitpoints = 2000
 	size_multiplier = 4
 	fleet_slot_size = 4
@@ -186,6 +276,7 @@ vf_marauder_station = {
 
 	class = shipclass_military_station
 	is_designable = no
+	icon = ship_size_military_station
 
 	potential_country = { is_void_raiders = yes }
 }

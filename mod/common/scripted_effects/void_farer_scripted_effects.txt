@@ -49,7 +49,7 @@
 create_shroud_admiral = {
 	create_leader = {
 		class = admiral
-		species = species # event_target:vf_marauder_species
+		species = species # event_target:marauder_species
 		name = random
 		event_leader = yes
 		skill = 3

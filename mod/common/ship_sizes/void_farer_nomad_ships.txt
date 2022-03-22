@@ -30,7 +30,8 @@
 #################
 
 # Vanilla
-# probe = {
+# vf_probe = {
+	# entity = "vf_probe_entity"
 #	 max_speed = @speed_very_fast
 #	 rotation_speed = 0.15
 #	 acceleration = 0.35
@@ -221,7 +222,7 @@ capital_ark_ship = {
 		base = 1
 		max = 1
 	}
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 support_ark_ship = {
@@ -263,11 +264,11 @@ support_ark_ship = {
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	auto_upgrade = yes
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }
 
 factory_ship = {
-	entity = factory_ship_entity
+	# entity = factory_ship_entity
 	max_speed = @speed_very_fast
 	rotation_speed = 0.15
 	acceleration = 0.3
@@ -310,5 +311,5 @@ factory_ship = {
 		}
 		upkeep = { minerals = 40 }
 	}
-	potential_country = { is_country_type = void_farer }
+	potential_country = { is_void_farer = yes }
 }

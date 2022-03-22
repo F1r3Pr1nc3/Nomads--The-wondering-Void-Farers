@@ -101,7 +101,7 @@ void_nomad_system = {
 		moon = {
 			class = pc_habitat
 			orbit_angle = 55
-			size = 18
+			size = 6
 			starting_planet = yes
 			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat } # has_megastructure
 			deposit_blockers = none
@@ -121,8 +121,6 @@ void_nomad_system = {
 		}
 
 	}
-
-
 
 	planet = {
 		class = "pc_asteroid"
@@ -318,7 +316,6 @@ void_marauder_system = {
 		}
 	}
 
-
 	planet = {
 		count = { min = 2 max = 10 }
 		orbit_distance = 20
@@ -331,7 +328,7 @@ void_marauder_system = {
 		moon = {
 			class = pc_habitat
 			orbit_angle = 55
-			size = 18
+			size = 6
 			starting_planet = yes
 			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
 			deposit_blockers = none
@@ -348,7 +345,6 @@ void_marauder_system = {
 			orbit_distance = 5
 		}
 	}
-
 
 	planet = {
 		class = pc_gas_giant
@@ -484,8 +480,8 @@ void_reavers_system = {
 		size = 25
 		flags = { ignore_startup_effect has_megastructure habitat_1_planet }
 		init_effect = {
-			# prevent_anomaly = yes
-			# clear_deposits = yes
+			prevent_anomaly = yes
+			clear_deposits = yes
 			add_deposit = d_society_3
 		}
 
@@ -507,7 +503,7 @@ void_reavers_system = {
 		moon = {
 			class = pc_habitat
 			orbit_angle = 55
-			size = 18
+			size = 6
 			starting_planet = yes
 			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
 			deposit_blockers = none
@@ -1062,7 +1058,7 @@ ancient_drones_system = {
 		moon = {
 			class = pc_habitat
 			orbit_angle = 55
-			size = 18
+			size = 6
 			starting_planet = yes
 			flags = { ignore_startup_effect void_dweller_habitat_1 special_start_planet megastructure habitat }
 			deposit_blockers = none

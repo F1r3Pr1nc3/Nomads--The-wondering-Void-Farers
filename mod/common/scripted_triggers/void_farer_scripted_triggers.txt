@@ -31,22 +31,25 @@
 # }
 
 is_void_farer = {
-	is_country_type = void_farer
+	OR = {
+		is_country_type = void_farer
+		has_country_flag = void_farer
+	}
 }
 
 # is_void_nomads = {
 # 	has_origin = origin_void_nomads
 # }
 
-is_organic_void_farer = {
-	is_country_type = void_farer
-	NOT = { has_authority = auth_machine_intelligence }
-	# OR = {
-	# 	has_origin = origin_void_nomads
-	# 	has_origin = origin_void_marauders
-	# 	has_origin = origin_void_reavers
-	# }
-}
+# is_organic_void_farer = {
+# 	is_void_farer = yes
+# 	NOT = { has_authority = auth_machine_intelligence }
+# 	# OR = {
+# 	# 	has_origin = origin_void_nomads
+# 	# 	has_origin = origin_void_marauders
+# 	# 	has_origin = origin_void_reavers
+# 	# }
+# }
 
 is_void_raiders = {
 	OR = {
@@ -64,5 +67,9 @@ is_void_raiders = {
 # }
 
 is_void_ancient_drones = {
-	has_civic = civic_ancient_drones
+	OR = {
+		has_civic = civic_ancient_drones
+		has_origin = origin_ancient_drones
+		# has_country_flag = void_scavenger_bots
+	}
 }

@@ -10,7 +10,7 @@ event = {
 
 	trigger = {
 		any_country = {
-			is_country_type = void_farer
+			is_void_farer = yes
 		}
 	}
 
@@ -18,13 +18,13 @@ event = {
 		if = {
 			limit = {
 				any_country = {
-					is_country_type = void_farer
+					is_void_farer = yes
 					num_ships < 2
 					NOT = {
 						any_system = {
 							any_system_planet = {
 								exists = controller
-								controller = { is_country_type = void_farer }
+								controller = { is_void_farer = yes }
 							}
 						}
 					}
@@ -32,21 +32,21 @@ event = {
 						any_system = {
 							any_system_planet = {
 								exists = owner
-								owner = { is_country_type = void_farer }
+								owner = { is_void_farer = yes }
 							}
 						}
 					}
 					NOT = {
 						any_system = {
 							exists = owner
-							owner = { is_country_type = void_farer }
+							owner = { is_void_farer = yes }
 						}
 					}
 				}
 			}
 			random_country = {
 				limit = {
-					is_country_type = void_farer
+					is_void_farer = yes
 				}
 				destroy_country = yes
 			}

@@ -220,7 +220,7 @@ entity = {
 
 	locator = { name = "slot1"				position = { 0	0  0 } }
 
-	# default_state = idle
+	# default_state = "idle"
 	# state = { name = "idle"	animation = "idle" animation_speed = 0.5
 	# 	start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
 	# }
@@ -248,7 +248,7 @@ entity = {
 
 	locator = { name = "slot1"				position = { 0	0  0 } }
 
-	default_state = idle
+	default_state = "idle"
 	state = { name = "idle"	animation = "idle" animation_speed = 0.5
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
 	}
@@ -266,7 +266,7 @@ entity = {
 
 	locator = { name = "slot1"				position = { 0	0  0 } }
 
-	default_state = idle
+	default_state = "idle"
 	state = { name = "idle"	animation = "idle" animation_speed = 0.5
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
 	}
@@ -284,7 +284,7 @@ entity = {
 
 	locator = { name = "slot1"				position = { 0	0  0 } }
 
-	default_state = idle
+	default_state = "idle"
 	state = { name = "idle"	animation = "idle" animation_speed = 0.5
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
 	}
@@ -302,7 +302,7 @@ entity = {
 
 	locator = { name = "slot1"				position = { 0	0  0 } }
 
-	default_state = idle
+	default_state = "idle"
 	state = { name = "idle"	animation = "idle" animation_speed = 0.5
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_generic_station_idle" } }
 	}

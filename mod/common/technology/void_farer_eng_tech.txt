@@ -274,7 +274,7 @@ tech_marauder_frigate_build_speed = {
 		}
 	}
 	modifier = {
-		shipsize_marauder_frigate_build_speed_mult = 0.25
+		shipsize_vf_marauder_frigate_build_speed_mult = 0.25
 		ship_marauder_frigate_cost_mult = -0.05
 	}
 	weight_modifier = {
@@ -314,7 +314,7 @@ tech_marauder_frigate_hull_1 = {
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_marauder_frigate_hull_add = 250 }
+	modifier = { shipsize_vf_marauder_frigate_hull_add = 250 }
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -354,7 +354,7 @@ tech_marauder_frigate_hull_2 = {
 			has_origin = origin_void_reavers
 		}
 	}
-	modifier = { shipsize_marauder_frigate_hull_add = 250 }
+	modifier = { shipsize_vf_marauder_frigate_hull_add = 250 }
 	weight_modifier = {
 		modifier = {
 			factor = 0.25

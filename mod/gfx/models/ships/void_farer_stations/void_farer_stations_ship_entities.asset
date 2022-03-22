@@ -281,7 +281,7 @@ entity = {
 	name = "avian_01_vf_alloy_station_entity"
 	pdxmesh = "avian_01_terraforming_station_mesh"
 
-    default_state = "idle"
+   default_state = "idle"
 	state = { name = "idle" animation = "rotate"
         start_event = { trigger_once = yes sound = { soundeffect = "amb_terraforming_station_idle_hum" } }
         event = { time = 1 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
@@ -1443,7 +1443,7 @@ entity = {
 
 		locator = { name = "part1" 			position = { 0 	0 	0 } }
 
-		default_state = idle
+		default_state = "idle"
 		state = { name = "idle" state_time = 5
 			start_event = { trigger_once = yes sound = { soundeffect = "amb_mining_station_signals" } }
 			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
@@ -1489,7 +1489,7 @@ entity = {
 
 		locator = { name = "part1" 			position = { 0 	0 	0 } }
 
-		default_state = idle
+		default_state = "idle"
 		state = { name = "idle" state_time = 5
 			start_event = { trigger_once = yes sound = { soundeffect = "amb_mining_station_signals" } }
 			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
@@ -1545,7 +1545,7 @@ entity = {
 
 		scale = 1.0
 
-		default_state = idle
+		default_state = "idle"
 		state = { name = "idle" state_time = 5
 			start_event = { trigger_once = yes sound = { soundeffect = "amb_terraforming_station_idle_hum" } }
 			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
@@ -1596,7 +1596,7 @@ entity = {
 
 		scale = 1.0
 
-		default_state = idle
+		default_state = "idle"
 		state = { name = "idle" state_time = 5
 			start_event = { trigger_once = yes sound = { soundeffect = "amb_terraforming_station_idle_hum" } }
 			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
@@ -1649,7 +1649,7 @@ entity = {
 	#	}
 		scale = 1.0
 
-		default_state = idle
+		default_state = "idle"
 		state = { name = "idle" state_time = 5
 			start_event = { trigger_once = yes sound = { soundeffect = "amb_research_station_signals" } }
 			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }

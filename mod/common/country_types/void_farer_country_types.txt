@@ -94,174 +94,80 @@ void_farer = {
 
 			battleship = {
 				fraction = {
-					modifier = {
-						add = 25
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_marauders
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_reavers
-					}
+					modifier = { add = 25 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_marauders }
+					modifier = { add = -100 has_civic = civic_reavers }
 				}
 			}
 
 			cruiser = {
 				fraction = {
-					modifier = {
-						add = 35
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_marauders
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_reavers
-					}
+					modifier = { add = 35 has_technology = tech_cruisers }
+					modifier = { add = -10 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_marauders }
+					modifier = { add = -100 has_civic = civic_reavers }
 				}
 			}
 
 			destroyer = {
 				fraction = {
-					modifier = {
-						add = 50
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -15
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_marauders
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_reavers
-					}
+					modifier = { add = 50 has_technology = tech_destroyers }
+					modifier = { add = -15 has_technology = tech_cruisers }
+					modifier = { add = -10 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_marauders }
+					modifier = { add = -100 has_civic = civic_reavers }
 				}
 			}
 
 			corvette = {
 				fraction = {
 					base = 100
-					modifier = {
-						add = -25
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -45
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -5
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_marauders
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_reavers
-					}
+					modifier = { add = -25 has_technology = tech_destroyers }
+					modifier = { add = -45 has_technology = tech_cruisers }
+					modifier = { add = -5 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_marauders }
+					modifier = { add = -100 has_civic = civic_reavers }
 				}
 			}
 
-			marauder_galleon = {
+			vf_marauder_galleon = {
 				fraction = {
-					modifier = {
-						add = 25
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_nomads
-					}
+					modifier = { add = 25 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_nomads }
 				}
 			}
 
-			marauder_cruiser = {
+			vf_marauder_cruiser = {
 				fraction = {
-					modifier = {
-						add = 35
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_nomads
-					}
+					modifier = { add = 35 has_technology = tech_cruisers }
+					modifier = { add = -10 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_nomads }
 				}
 			}
 
-			# marauder_destroyer = {
-			marauder_destroyer = {
+			vf_marauder_frigate = {
 				fraction = {
-					modifier = {
-						add = 50
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -15
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_nomads
-					}
+					modifier = { add = 50 has_technology = tech_destroyers }
+					modifier = { add = -15 has_technology = tech_cruisers }
+					modifier = { add = -10 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_nomads }
 				}
 			}
 
-			marauder_corvette = {
+			vf_marauder_corvette = {
 				fraction = {
 					base = 100
-					modifier = {
-						add = -25
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -45
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -5
-						has_technology = tech_battleships
-					}
-					modifier = {
-						add = -100
-						has_civic = civic_nomads
-					}
+					modifier = { add = -25 has_technology = tech_destroyers }
+					modifier = { add = -45 has_technology = tech_cruisers }
+					modifier = { add = -5 has_technology = tech_battleships }
+					modifier = { add = -100 has_civic = civic_nomads }
 				}
 			}
 
 			space_dragon_origin_baby = {
 				max = 10
 				fraction = {
-					modifier = {
-						add = 1000
-						is_dragon_breeder_country = yes
-					}
+					modifier = { add = 1000 is_dragon_breeder_country = yes }
 				}
 			}
 		}
@@ -277,10 +183,7 @@ void_farer = {
 							has_technology = tech_telepathy
 							has_technology = tech_gene_seed_purification
 							AND = {
-								OR = {
-									has_ethic = ethic_militarist
-									has_ethic = ethic_fanatic_militarist
-								}
+								is_militarist = yes
 								has_technology = tech_gene_banks
 							}
 							AND = {
@@ -306,10 +209,7 @@ void_farer = {
 							has_technology = tech_telepathy
 							has_technology = tech_gene_seed_purification
 							AND = {
-								OR = {
-									has_ethic = ethic_militarist
-									has_ethic = ethic_fanatic_militarist
-								}
+								is_militarist = yes
 								has_technology = tech_gene_banks
 							}
 							NAND = {
@@ -350,17 +250,12 @@ void_farer = {
 					modifier = {
 						factor = 0
 						OR = {
-							OR = {
-								NOT = { has_authority = auth_machine_intelligence }
-								has_civic = civic_machine_assimilator
-							}
+							NOT = { has_authority = auth_machine_intelligence }
+							has_civic = civic_machine_assimilator
 							has_technology = tech_telepathy
 							has_technology = tech_gene_seed_purification
 							NAND = {
-								OR = {
-									has_ethic = ethic_militarist
-									has_ethic = ethic_fanatic_militarist
-								}
+								is_militarist = yes
 								has_technology = tech_gene_banks
 							}
 						}
@@ -412,17 +307,12 @@ void_farer = {
 			machine_assault_2 = {
 				fraction = {
 					factor = 100
-					modifier = {
-						factor = -25
-						has_technology = tech_biomechanics
-					}
+					modifier = { factor = -25 has_technology = tech_biomechanics }
 					modifier = {
 						factor = 0
-						OR = {
-							NOR = {
-								has_authority = auth_machine_intelligence 
-								has_technology = tech_adaptive_combat_algorithms 
-							}
+						NAND = {
+							has_authority = auth_machine_intelligence
+							has_technology = tech_adaptive_combat_algorithms
 						}
 					}
 				}
@@ -433,11 +323,9 @@ void_farer = {
 					factor = 25
 					modifier = {
 						factor = 0
-						OR = {
-							NOR = {
-								has_authority = auth_machine_intelligence 
-								has_technology = tech_biomechanics 
-							}
+						NAND = {
+							has_authority = auth_machine_intelligence
+							has_technology = tech_biomechanics
 						}
 					}
 				}
@@ -445,9 +333,7 @@ void_farer = {
 		}
 	}
 
-	trade_routes_available = {
-		is_gestalt = no
-	}
+	trade_routes_available = { NOT = { has_authority = auth_machine_intelligence } }
 
 	modules = {
 		standard_event_module = {}
@@ -476,7 +362,7 @@ void_farer = {
 		produces = {
 			trigger = {
 				OR = {
-					is_gestalt = no
+					NOT = { has_authority = auth_machine_intelligence }
 					has_valid_civic = civic_machine_servitor
 				}
 			}
@@ -503,9 +389,7 @@ void_farer = {
 			minerals = 10
 		}
 		produces = {
-			trigger = {
-				is_machine_empire = yes
-			}
+			trigger = { is_machine_empire = yes }
 			energy = 20
 			minerals = 10
 		}
@@ -533,9 +417,7 @@ vf_reaver_shroud = {
 	government = no
 	observable = no
 	uses_origins = no
-	ai = {
-		enabled = no
-	}
+	ai = { enabled = no }
 	faction = {
 		hostile = no
 		needs_border_access = no
@@ -547,8 +429,6 @@ vf_reaver_shroud = {
 	modules = {
 		standard_event_module = {} # Needed for events
 		basic_technology_module = {}
-		exclusive_diplomacy_module = {
-			contact_rule = on_action_only
-		}
+		exclusive_diplomacy_module = { contact_rule = on_action_only }
 	}
 }

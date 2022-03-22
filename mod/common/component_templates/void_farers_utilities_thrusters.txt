@@ -98,7 +98,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "SHIP_VF_THRUSTER_2"
 
 	ai_weight = {
@@ -124,7 +124,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -150,7 +150,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_cruiser capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_cruiser capital_ark_ship support_ark_ship }
 	upgrades_to = "CRUISER_VF_SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -176,7 +176,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_galleon }
+	size_restriction = { vf_marauder_galleon }
 	upgrades_to = "BATTLESHIP_VF_SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -205,7 +205,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "SHIP_VF_THRUSTER_3"
 
 	ai_weight = {
@@ -233,7 +233,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -261,7 +261,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_cruiser capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_cruiser capital_ark_ship support_ark_ship }
 	upgrades_to = "CRUISER_VF_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -289,7 +289,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_galleon }
+	size_restriction = { vf_marauder_galleon }
 	upgrades_to = "BATTLESHIP_VF_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -318,7 +318,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "SHIP_VF_THRUSTER_4"
 
 	ai_weight = {
@@ -345,7 +345,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -372,7 +372,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_cruiser capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_cruiser capital_ark_ship support_ark_ship }
 	upgrades_to = "CRUISER_VF_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -399,7 +399,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_galleon }
+	size_restriction = { vf_marauder_galleon }
 	upgrades_to = "BATTLESHIP_VF_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -428,7 +428,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "SHIP_VF_THRUSTER_5"
 
 	ai_weight = {
@@ -455,7 +455,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -482,7 +482,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_cruiser capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_cruiser capital_ark_ship support_ark_ship }
 	upgrades_to = "CRUISER_VF_SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -509,7 +509,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_galleon }
+	size_restriction = { vf_marauder_galleon }
 	upgrades_to = "BATTLESHIP_VF_SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -539,7 +539,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 
 	ai_weight = {
 		weight = 5
@@ -566,7 +566,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 
 	ai_weight = {
 		weight = 5
@@ -593,7 +593,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_cruiser capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_cruiser capital_ark_ship support_ark_ship }
 
 	ai_weight = {
 		weight = 5
@@ -620,7 +620,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = "thruster_components"
-	size_restriction = { marauder_galleon }
+	size_restriction = { vf_marauder_galleon }
 
 	ai_weight = {
 		weight = 5

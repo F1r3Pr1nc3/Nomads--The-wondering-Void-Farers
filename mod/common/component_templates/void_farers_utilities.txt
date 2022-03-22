@@ -124,7 +124,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "CORVETTE_VF_FUSION_REACTOR"
 
 	ai_weight = {
@@ -151,7 +151,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_FUSION_REACTOR"
 
 	ai_weight = {
@@ -178,7 +178,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_cruiser }
+	size_restriction = { vf_marauder_cruiser }
 	upgrades_to = "CRUISER_VF_FUSION_REACTOR"
 
 	ai_weight = {
@@ -205,7 +205,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_galleon capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_galleon capital_ark_ship support_ark_ship }
 	upgrades_to = "BATTLESHIP_VF_FUSION_REACTOR"
 
 	ai_weight = {
@@ -266,7 +266,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "CORVETTE_VF_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -293,7 +293,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -320,7 +320,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_cruiser }
+	size_restriction = { vf_marauder_cruiser }
 	upgrades_to = "CRUISER_VF_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -347,7 +347,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_galleon capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_galleon capital_ark_ship support_ark_ship }
 	upgrades_to = "BATTLESHIP_VF_COLD_FUSION_REACTOR"
 
 	ai_weight = {
@@ -406,7 +406,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "CORVETTE_VF_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -433,7 +433,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -460,7 +460,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_cruiser }
+	size_restriction = { vf_marauder_cruiser }
 	upgrades_to = "CRUISER_VF_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -487,7 +487,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_galleon capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_galleon capital_ark_ship support_ark_ship }
 	upgrades_to = "BATTLESHIP_VF_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -546,7 +546,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "CORVETTE_VF_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -573,7 +573,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -600,7 +600,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_cruiser }
+	size_restriction = { vf_marauder_cruiser }
 	upgrades_to = "CRUISER_VF_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -627,7 +627,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_galleon capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_galleon capital_ark_ship support_ark_ship }
 	upgrades_to = "BATTLESHIP_VF_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -686,7 +686,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 	upgrades_to = "CORVETTE_VF_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -713,7 +713,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	upgrades_to = "DESTROYER_VF_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -740,7 +740,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_cruiser }
+	size_restriction = { vf_marauder_cruiser }
 	upgrades_to = "CRUISER_VF_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -767,7 +767,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "power_core"
-	size_restriction = { marauder_galleon capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_galleon capital_ark_ship support_ark_ship }
 	upgrades_to = "BATTLESHIP_VF_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -827,7 +827,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
-	size_restriction = { marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
+	size_restriction = { vf_marauder_corvette nomad_mining_ship nomad_energy_tanker factory_ship }
 
 	ai_weight = {
 		weight = 6
@@ -854,7 +854,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 
 	ai_weight = {
 		weight = 6
@@ -881,7 +881,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
-	size_restriction = { marauder_cruiser }
+	size_restriction = { vf_marauder_cruiser }
 
 	ai_weight = {
 		weight = 6
@@ -908,7 +908,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
-	size_restriction = { marauder_galleon capital_ark_ship support_ark_ship }
+	size_restriction = { vf_marauder_galleon capital_ark_ship support_ark_ship }
 
 	ai_weight = {
 		weight = 6

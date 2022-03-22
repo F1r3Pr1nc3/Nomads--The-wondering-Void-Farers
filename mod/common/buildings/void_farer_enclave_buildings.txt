@@ -171,7 +171,7 @@ building_vf_astro_mining_bay = {
 		}
 	}
 	prerequisites = {
-		tech_void_farer_engineering
+		"tech_void_farer_engineering"
 	}
 	triggered_desc = {
 		trigger = {
@@ -220,16 +220,14 @@ building_vf_power_conduits = {
 		is_planet_class = pc_habitat
 	}
 	prerequisites = {
-		"tech_void_farer_engineering"
+		tech_void_farer_engineering
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				is_void_farer = yes
-			}
-			owner = {
 				is_gestalt = no
+				is_void_farer = yes
 			}
 		}
 		modifier = {

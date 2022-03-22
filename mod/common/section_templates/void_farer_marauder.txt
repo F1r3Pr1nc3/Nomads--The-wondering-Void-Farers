@@ -4,7 +4,7 @@
 # M1S1
 ship_section_template = {
 	key = "VF_MARAUDER_CORVETTE_MID_M1S1"
-	ship_size = marauder_corvette
+	ship_size = vf_marauder_corvette
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "pirate_01_corvette_M1S1_entity"
@@ -29,7 +29,7 @@ ship_section_template = {
 
 ship_section_template = {
 	key = "VF_MARAUDER_CORVETTE_MID_S3"
-	ship_size = marauder_corvette
+	ship_size = vf_marauder_corvette
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "pirate_01_corvette_S3_entity"
@@ -59,7 +59,7 @@ ship_section_template = {
 
 ship_section_template = {
 	key = "VF_MARAUDER_CORVETTE_MID_S1"
-	ship_size = marauder_corvette
+	ship_size = vf_marauder_corvette
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "pirate_01_corvette_S1_entity"
@@ -83,7 +83,7 @@ ship_section_template = {
 # 1M2S1M
 ship_section_template = {
 	key = "VF_MARAUDER_DESTROYER_MID_M1S2M1"
-	ship_size = marauder_destroyer
+	ship_size = vf_marauder_frigate
 	fits_on_slot = mid
 	entity = "crisis_destroyer_1M2S1M_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -118,7 +118,7 @@ ship_section_template = {
 
 ship_section_template = {
 	key = "VF_MARAUDER_DESTROYER_MID_L1S2"
-	ship_size = marauder_destroyer
+	ship_size = vf_marauder_frigate
 	fits_on_slot = mid
 	entity = "crisis_destroyer_1L2S_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -148,7 +148,7 @@ ship_section_template = {
 
 ship_section_template = {
 	key = "VF_MARAUDER_DESTROYER_MID_TORPEDO"
-	ship_size = marauder_destroyer
+	ship_size = vf_marauder_frigate
 	fits_on_slot = mid
 	entity = "crisis_destroyer_1L2S_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -179,7 +179,7 @@ ship_section_template = {
 ### Cruiser
 ship_section_template = {
 	key = "VF_MARAUDER_CRUISER_TEMPLATE"
-	ship_size = marauder_cruiser
+	ship_size = vf_marauder_cruiser
 	fits_on_slot = mid
 	should_draw_components = yes
 	entity = "pirate_01_cruiser_hull_entity"
@@ -221,7 +221,7 @@ ship_section_template = {
 # Marauder Galleon
 ship_section_template = {
 	key = "pirate_01_galleon_key"
-	ship_size = marauder_galleon
+	ship_size = vf_marauder_galleon
 	fits_on_slot = mid
 	entity = "pirate_01_galleon_hull_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -344,7 +344,7 @@ ship_section_template = {
 ### Large Station
 ship_section_template = {
 	key = "vf_station_pirate_large_key"
-	ship_size = marauder_station
+	ship_size = vf_marauder_station
 
 	fits_on_slot = "mid"
 	entity = "station_generic_01_entity"

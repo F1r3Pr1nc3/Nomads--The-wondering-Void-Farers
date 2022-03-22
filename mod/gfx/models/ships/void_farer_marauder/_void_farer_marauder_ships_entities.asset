@@ -4,7 +4,7 @@
 # @battleship_scale = 16.0
 
 entity = {
-	name = "marauder_corvette_entity"
+	name = "vf_marauder_corvette_entity"
 	locator = { name = "part1"			position = {  0 0 0	} }
 	game_data = {
 		size = 8
@@ -12,7 +12,7 @@ entity = {
 }
 
 # entity = {
-# 	name = "marauder_corvette_M1S1_entity"
+# 	name = "vf_marauder_corvette_M1S1_entity"
 # 	pdxmesh = "pirate_01_corvette_M1S1_mesh"
 
 # 	default_state = "idle"
@@ -31,7 +31,7 @@ entity = {
 # }
 
 # entity = {
-# 	name = "marauder_corvette_S3_entity"
+# 	name = "vf_marauder_corvette_S3_entity"
 # 	pdxmesh = "pirate_01_corvette_S3_mesh"
 
 # 	default_state = "idle"
@@ -51,7 +51,7 @@ entity = {
 # }
 
 # entity = {
-# 	name = "marauder_corvette_S1_entity"
+# 	name = "vf_marauder_corvette_S1_entity"
 # 	pdxmesh = "pirate_01_corvette_S1_mesh"
 
 # 	default_state = "idle"
@@ -72,7 +72,7 @@ entity = {
 ## DESTROYER
 
 entity = {
-	name = "marauder_frigate_entity"
+	name = "vf_marauder_frigate_entity"
 	locator = { name = "part1"			position = {  0 0 0	} }
 	game_data = {
 		size = 10
@@ -80,7 +80,7 @@ entity = {
 }
 
 # entity = {
-# 	name = "marauder_frigate_artiliery_entity"
+# 	name = "vf_marauder_frigate_artiliery_entity"
 # 	pdxmesh = "pirates_destroyer01_1l_2s_mesh"
 
 # 	default_state = "idle"
@@ -98,7 +98,7 @@ entity = {
 # }
 
 # entity = {
-# 	name = "marauder_frigate_intercepter_entity"
+# 	name = "vf_marauder_frigate_intercepter_entity"
 # 	pdxmesh = "pirates_destroyer01_1m_2s_1m_mesh"
 
 # 	default_state = "idle"
@@ -119,7 +119,7 @@ entity = {
 ## CRUISER
 
 entity = {
-	name = "marauder_cruiser_entity"
+	name = "vf_marauder_cruiser_entity"
 	locator = { name = "part1"			position = {  0 0 0	} }
 	game_data = {
 		size = 14
@@ -127,7 +127,7 @@ entity = {
 }
 
 # entity = {
-# 	name = "marauder_cruiser_hull_entity"
+# 	name = "vf_marauder_cruiser_hull_entity"
 # 	pdxmesh = "pirate_01_cruiser_mesh"
 # 	scale = 1.0
 
@@ -160,7 +160,7 @@ entity = {
 ### Marauder Galleon
 
 entity = {
-	name = "marauder_galleon_entity"
+	name = "vf_marauder_galleon_entity"
     pdxmesh = "locator_mesh"
 
 	locator = { name = "part1" 	position = { 0 0 0 } }
@@ -180,13 +180,13 @@ entity = {
 }
 
 entity = {
-	name = "marauder_galleon_hull_entity"
+	name = "vf_marauder_galleon_hull_entity"
 	clone = "pirate_01_galleon_hull_entity"
 	scale = 1.0 # 2.7
 }
 
 entity = {
-	name = "marauder_galleon_destroyed_entity"
+	name = "vf_marauder_galleon_destroyed_entity"
 	pdxmesh = "pirate_01_galleon_destroyed_mesh"
 	scale = 1.0 # 2.7
 
@@ -195,12 +195,12 @@ entity = {
 }
 
 # animation = {
-# 	name = "marauder_galleon_idle_animation"
+# 	name = "vf_marauder_galleon_idle_animation"
 # 	file = "pirate_01_galleon_idle.anim"
 # }
 
 # animation = {
-# 	name = "marauder_galleon_death_animation"
+# 	name = "vf_marauder_galleon_death_animation"
 # 	file = "pirate_01_galleon_death.anim"
 # }
 
@@ -213,7 +213,7 @@ entity = {
 #########################################
 
 entity = {
-	name = "starbase_marauder_outpost"
+	name = "starbase_marauder_outpost_entity"
     # name = "pirate_01_pirate_base_entity"
 	clone = "pirate_01_pirate_base_entity"
 	scale = 1.5

@@ -78,7 +78,7 @@ reavers = {
 		robot_liberator = no
 		propagator = yes
 		multispecies = no # lol
-		marauder_fighter = no
+		crisis_fighter = no
 		attack_neutrals = yes
 	}
 
@@ -134,7 +134,7 @@ shrouded_reavers = {
 		robot_liberator = no
 		propagator = yes
 		multispecies = no # lol
-		marauder_fighter = no
+		crisis_fighter = no
 		attack_neutrals = yes
 	}
 

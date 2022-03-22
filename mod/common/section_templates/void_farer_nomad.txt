@@ -11,7 +11,7 @@ ship_section_template = {
 	entity = "capital_ark_ship_entity" # "colony_ship_entity"
 	icon = "GFX_ship_part_core_mid"
 
-	prerequisites = { tech_nomad_ships }
+	prerequisites = { "tech_nomad_ships" }
 
 	small_utility_slots = 2
 	medium_utility_slots = 2
@@ -91,7 +91,7 @@ ship_section_template = {
 	entity = "ark_ship_section_entity"
 	icon = "GFX_ship_part_core_mid"
 
-	prerequisites = { tech_nomad_ships }
+	prerequisites = { "tech_nomad_ships" }
 
 	small_utility_slots = 2
 	medium_utility_slots = 2

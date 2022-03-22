@@ -59,7 +59,7 @@
 # Nomad mining ship
 nomad_mining_ship = {
 	graphical_culture = no
-	entity = nomad_mining_ship_entity
+	# entity = nomad_mining_ship_entity
 	max_speed = @speed_very_fast
 	acceleration = 0.3
 	rotation_speed = 0.2

@@ -28,7 +28,7 @@ dragon_hatching = {
 	potential = {
 		has_technology = tech_dragon_armor
 		OR = {
-			has_country_flag = void_nomad
+			has_country_flag = void_nomads
 			has_country_flag = void_marauders
 		}
 	}
@@ -113,7 +113,7 @@ salvage_fallen_empire_ships = {
 		has_technology = "tech_dark_matter_propulsion"
 		has_technology = "tech_dark_matter_deflector"
 		OR = {
-			has_country_flag = void_nomad
+			has_country_flag = void_nomads
 			has_country_flag = void_marauders
 		}
 	}

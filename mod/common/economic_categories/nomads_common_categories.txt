@@ -189,7 +189,7 @@ ships = {
 		modifier_types = { mult }
 		trigger = {
 			is_scope_valid = yes
-			is_ship_size = marauder_corvette
+			is_ship_size = vf_marauder_corvette
 		}
 	}
 	triggered_cost_modifier = {
@@ -198,7 +198,7 @@ ships = {
 		modifier_types = { mult }
 		trigger = {
 			is_scope_valid = yes
-			is_ship_size = marauder_destroyer
+			is_ship_size = vf_marauder_frigate
 		}
 	}
 	triggered_cost_modifier = {
@@ -207,7 +207,7 @@ ships = {
 		modifier_types = { mult }
 		trigger = {
 			is_scope_valid = yes
-			is_ship_size = marauder_cruiser
+			is_ship_size = vf_marauder_cruiser
 		}
 	}
 	triggered_cost_modifier = {
@@ -216,7 +216,7 @@ ships = {
 		modifier_types = { mult }
 		trigger = {
 			is_scope_valid = yes
-			is_ship_size = marauder_galleon
+			is_ship_size = vf_marauder_galleon
 		}
 	}
 }

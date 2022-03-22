@@ -8,6 +8,7 @@
 
 namespace = nomad_communications_spread
 
+# TODO: only needed if country_type changed
 # Communications - neighbor
 country_event = {
 	id = nomad_communications_spread.1
@@ -22,7 +23,6 @@ country_event = {
 		any_neighbor_country = {
 			merg_is_default_empire = yes
 			NOT = { is_same_empire = root }
-			# NOT = { is_void_farer = yes } # TODO remove this bug workaround.
 			has_communications = root
 			any_neighbor_country = {
 				OR = {
@@ -41,7 +41,6 @@ country_event = {
 			limit = {
 				merg_is_default_empire = yes
 				NOT = { is_same_empire = root }
-				# NOT = { is_void_farer = yes } # TODO remove this bug workaround.
 				has_communications = root
 				any_neighbor_country = {
 					OR = {

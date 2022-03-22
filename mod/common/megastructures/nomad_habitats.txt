@@ -17,7 +17,7 @@ habitat_nomad = {
 	construction_blocks_others = no
 	potential = {
 		OR = {
-			has_country_flag = void_nomad
+			has_country_flag = void_nomads
 			has_country_flag = void_marauders
 			has_country_flag = void_reavers
 		}

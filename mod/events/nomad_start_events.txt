@@ -37,31 +37,30 @@ country_event = {
 		###	Scavenger Start events
 		if = {
 			limit = { has_origin = origin_ancient_drones }
-			# give_technology = { message = no tech = "tech_void_farer_engineering" }
 			# give_technology = { message = no tech = "tech_robotic_workers" }
 			set_country_flag = void_scavenger_bots
 			add_resource = { energy = 100 }
 			set_graphical_culture = ancient_01
 		} else = {
-			give_technology = { message = no tech = "tech_void_farer_engineering" }
 			give_technology = { message = no tech = "tech_robotic_workers" }
 			give_technology = { message = no tech = "tech_hydroponics" }
 			add_resource = { consumer_goods = 100 }
 
 			if = { limit = { has_origin = origin_void_nomads }
-				set_country_flag = void_nomad
+				# give_technology = { message = no tech = "tech_void_farer_engineering" }
+				set_country_flag = void_nomads
 			}
 			# namespace = marauder_start_events
 			### Marauder Start events
 			else_if = { limit = { has_origin = origin_void_marauders }
 				set_country_flag = void_marauders
-				set_graphical_culture = pirate_01
+				# set_graphical_culture = pirate_01
 			}
 			# namespace = reaver_start_events
 			###	Reaver Start events
 			else_if = { limit = { has_origin = origin_void_reavers }
 				set_country_flag = void_reavers
-				set_graphical_culture = pirate_01
+				# set_graphical_culture = pirate_01
 			}
 		}
 	}
@@ -74,9 +73,7 @@ planet_event = {
 	# desc = void_farer_start_events.2.desc
 	# picture = GFX_evt_fleet_neutral
 	is_triggered_only = yes
-	pre_triggers = {
-		has_owner = yes
-	}
+	pre_triggers = { has_owner = yes }
 	trigger = {
 		exists = owner
 		owner = { is_void_farer = yes }
@@ -89,9 +86,7 @@ planet_event = {
 			if = {
 				limit = { owner = { has_origin = origin_ancient_drones } }
 				change_pc = pc_gray_goo
-			} else = {
-				change_pc = pc_barren
-			}
+			} else = { change_pc = pc_barren }
 			destroy_colony = yes
 		}
 	}
@@ -103,9 +98,7 @@ country_event = {
 	id = void_farer_start_events.9
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		is_void_farer = yes
-	}
+	trigger = { is_void_farer = yes }
 	immediate = {
 		# Ark
 		# add_global_ship_design = "NAME_ark"
@@ -125,9 +118,6 @@ country_event = {
 				}
 			}
 		}
-		# capital_scope = {
-		# 	set_planet_size = 22
-		# }
 		# if = {
 		# 	limit = {
 		# 		OR = {
@@ -136,12 +126,28 @@ country_event = {
 		# 		}
 		# 	}
 		# 	random_owned_megastructure = {
-		# 		limit = {
-		# 			is_megastructure_type = habitat_0
-		# 		}
+		# 		limit = { is_megastructure_type = habitat_0 }
 		# 		set_graphical_culture = mammalian_01
 		# 	}
 		# 	set_graphical_culture = pirate_01
+		# 	if = {
+		# 		limit = { NOT = { graphical_culture = pirate_01 } }
+		# 		log="marauders are NOT pirates"
+		# 	}
 		# }
+		# Workaround: for unknown reason sometimes habitats get black
+		if = {
+			limit = {
+				NOT = { graphical_culture = "mammalian_01" }
+			}
+			capital_scope = {
+				# change_pc = { class = pc_habitat inherit_entity = yes }
+				set_planet_entity = {
+					entity = "habitat_phase_02_entity"
+					graphical_culture = "mammalian_01"
+				}
+			}
+			# set_planet_size = 22
+		}
 	}
 }

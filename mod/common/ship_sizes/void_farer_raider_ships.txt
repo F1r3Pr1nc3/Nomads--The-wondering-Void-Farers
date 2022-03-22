@@ -33,8 +33,8 @@
 # Marauder #
 ############
 
-marauder_corvette = {
-	graphical_culture = { "pirate_01" }
+vf_marauder_corvette = {
+	# graphical_culture = { "pirate_01" }
 	entity = pirate_01_pirate_corvette_entity
 	graphical_culture = no
 	max_speed = @speed_very_fast
@@ -66,10 +66,8 @@ marauder_corvette = {
 	use_shipnames_from = corvette
 	prerequisites = { "tech_marauder_ships" }
 	potential_country = {
-		OR = {
-			has_crisis_level = crisis_level_2
-			is_void_raiders = yes
-		}
+		# OR = { has_crisis_level = crisis_level_2
+		is_void_raiders = yes
 	}
 
 	required_component_set = "power_core"
@@ -93,8 +91,8 @@ marauder_corvette = {
 	}
 }
 
-marauder_destroyer = {
-	graphical_culture = { "pirate_01" }
+vf_marauder_frigate = {
+	# graphical_culture = { "pirate_01" }
 	entity = pirate_01_pirate_destroyer_entity
 	graphical_culture = no
 	max_speed = @speed_fast
@@ -120,10 +118,8 @@ marauder_destroyer = {
 	default_behavior = line
 
 	potential_country = {
-		OR = {
-			has_crisis_level = crisis_level_3
-			is_void_raiders = yes
-		}
+		# OR = { has_crisis_level = crisis_level_3
+		is_void_raiders = yes
 	}
 
 	class = shipclass_military
@@ -152,8 +148,8 @@ marauder_destroyer = {
 	}
 }
 
-marauder_cruiser = {
-	graphical_culture = { "pirate_01" }
+vf_marauder_cruiser = {
+	# graphical_culture = { "pirate_01" }
 	entity = pirate_01_pirate_cruiser_entity
 	graphical_culture = no
 	max_speed = @speed_fast
@@ -179,10 +175,8 @@ marauder_cruiser = {
 	default_behavior = line
 
 	potential_country = {
-		OR = {
-			has_crisis_level = crisis_level_4
-			is_void_raiders = yes
-		}
+		# OR = { has_crisis_level = crisis_level_4
+		is_void_raiders = yes
 	}
 
 	class = shipclass_military
@@ -210,9 +204,9 @@ marauder_cruiser = {
 	}
 }
 
-marauder_galleon = {
+vf_marauder_galleon = {
 	is_space_object = yes
-	graphical_culture = { "pirate_01" }
+	# graphical_culture = { "pirate_01" }
 	entity = pirate_01_galleon_entity
 	graphical_culture = no
 	max_speed = @speed_very_slow
@@ -220,7 +214,7 @@ marauder_galleon = {
 	rotation_speed = 0.05
 	collision_radius = 7
 	modifier = { ship_evasion_add = 35 ship_armor_add = 100 }
-	max_hitpoints = 40000 # 5000
+	max_hitpoints = 5000 # 40000
 	size_multiplier = 8
 	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part1" } }
@@ -246,8 +240,8 @@ marauder_galleon = {
 }
 
 # Marauder Asteroid Base
-marauder_station = {
-	graphical_culture = { "pirate_01" }
+vf_marauder_station = {
+	# graphical_culture = { "pirate_01" }
 	entity = pirate_01_pirate_station_entity
 	graphical_culture = no
 	max_speed = 0.0

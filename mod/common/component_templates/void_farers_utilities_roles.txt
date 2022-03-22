@@ -48,7 +48,7 @@ utility_component_template = {
 	ship_behavior = "swarm"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette }
+	size_restriction = { vf_marauder_corvette }
 	component_set = "combat_computers"
 	upgrades_to = "COMBAT_COMPUTER_SWARM_BASIC_VOIDFARER"
 
@@ -72,7 +72,7 @@ utility_component_template = {
 	ship_behavior = "picket"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_destroyer }
+	size_restriction = { vf_marauder_frigate }
 	component_set = "combat_computers"
 	upgrades_to = "COMBAT_COMPUTER_PICKET_BASIC_VOIDFARER"
 
@@ -96,7 +96,7 @@ utility_component_template = {
 	ship_behavior = "line"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_cruiser marauder_galleon }
+	size_restriction = { vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	upgrades_to = "COMBAT_COMPUTER_LINE_BASIC_VOIDFARER"
 
@@ -120,7 +120,7 @@ utility_component_template = {
 	ship_behavior = "artillery"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_galleon }
+	size_restriction = { vf_marauder_galleon }
 	component_set = "combat_computers"
 	upgrades_to = "COMBAT_COMPUTER_ARTILLERY_BASIC_VOIDFARER"
 
@@ -173,7 +173,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette }
+	size_restriction = { vf_marauder_corvette }
 	component_set = "combat_computers"
 	ship_behavior = "swarm"
 	prerequisites = { "tech_combat_computers_1" }
@@ -204,7 +204,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette }
+	size_restriction = { vf_marauder_corvette }
 	component_set = "combat_computers"
 	ship_behavior = "swarm"
 	prerequisites = { "tech_combat_computers_2" }
@@ -235,7 +235,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette }
+	size_restriction = { vf_marauder_corvette }
 	component_set = "combat_computers"
 	ship_behavior = "swarm"
 	prerequisites = { "tech_combat_computers_3" }
@@ -275,7 +275,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette }
+	size_restriction = { vf_marauder_corvette }
 	component_set = "combat_computers"
 	ship_behavior = "swarm"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -305,7 +305,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette }
+	size_restriction = { vf_marauder_corvette }
 	component_set = "combat_computers"
 	ship_behavior = "swarm"
 	prerequisites = { "tech_precognition_interface" }
@@ -339,7 +339,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette marauder_destroyer marauder_cruiser }
+	size_restriction = { vf_marauder_corvette vf_marauder_frigate vf_marauder_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_1" }
@@ -368,7 +368,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette marauder_destroyer marauder_cruiser }
+	size_restriction = { vf_marauder_corvette vf_marauder_frigate vf_marauder_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_2" }
@@ -397,7 +397,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette marauder_destroyer marauder_cruiser }
+	size_restriction = { vf_marauder_corvette vf_marauder_frigate vf_marauder_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_3" }
@@ -438,7 +438,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette marauder_destroyer marauder_cruiser }
+	size_restriction = { vf_marauder_corvette vf_marauder_frigate vf_marauder_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -469,7 +469,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_corvette marauder_destroyer marauder_cruiser }
+	size_restriction = { vf_marauder_corvette vf_marauder_frigate vf_marauder_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "picket"
 	prerequisites = { "tech_precognition_interface" }
@@ -500,7 +500,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { nomad_energy_tanker nomad_mining_ship marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { nomad_energy_tanker nomad_mining_ship vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
@@ -529,7 +529,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { nomad_energy_tanker nomad_mining_ship marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { nomad_energy_tanker nomad_mining_ship vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_2" }
@@ -558,7 +558,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { nomad_energy_tanker nomad_mining_ship marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { nomad_energy_tanker nomad_mining_ship vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_3" }
@@ -596,7 +596,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { nomad_energy_tanker nomad_mining_ship marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { nomad_energy_tanker nomad_mining_ship vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -624,7 +624,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { nomad_energy_tanker nomad_mining_ship marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { nomad_energy_tanker nomad_mining_ship vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_precognition_interface" }
@@ -656,7 +656,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
@@ -685,7 +685,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
@@ -714,7 +714,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_3" }
@@ -752,7 +752,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -780,7 +780,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { marauder_destroyer marauder_cruiser marauder_galleon }
+	size_restriction = { vf_marauder_frigate vf_marauder_cruiser vf_marauder_galleon }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_precognition_interface" }
